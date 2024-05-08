@@ -274,6 +274,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "fDatSan";
             this.Text = "fDatSan";
+            this.Load += new System.EventHandler(this.fDatSan_Load);
             this.gbChucNang.ResumeLayout(false);
             this.gbTTKH.ResumeLayout(false);
             this.gbTTKH.PerformLayout();

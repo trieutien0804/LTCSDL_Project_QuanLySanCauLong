@@ -1,6 +1,7 @@
-﻿namespace BTL_QLSCV
+﻿
+namespace BTL_QLSCV
 {
-    partial class fQLsan
+    partial class fQLSan
     {
         /// <summary>
         /// Required designer variable.
@@ -79,6 +80,7 @@
             this.gbSan.Controls.Add(this.label2);
             this.gbSan.Controls.Add(this.txtMaSan);
             this.gbSan.Controls.Add(this.label1);
+            this.gbSan.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbSan.Location = new System.Drawing.Point(12, 21);
             this.gbSan.Name = "gbSan";
             this.gbSan.Size = new System.Drawing.Size(517, 85);
@@ -120,10 +122,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(32, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 13);
+            this.label1.Size = new System.Drawing.Size(48, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã Sân:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // dsSan
             // 
@@ -149,13 +150,13 @@
             this.gbChucNang.Controls.Add(this.btHuySan);
             this.gbChucNang.Controls.Add(this.txtTimSan);
             this.gbChucNang.Controls.Add(this.btTimSan);
+            this.gbChucNang.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbChucNang.Location = new System.Drawing.Point(12, 112);
             this.gbChucNang.Name = "gbChucNang";
             this.gbChucNang.Size = new System.Drawing.Size(517, 128);
             this.gbChucNang.TabIndex = 1;
             this.gbChucNang.TabStop = false;
             this.gbChucNang.Text = "Chức năng";
-            this.gbChucNang.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // btXoaSan
             // 
@@ -165,6 +166,7 @@
             this.btXoaSan.TabIndex = 14;
             this.btXoaSan.Text = "Xoá sân";
             this.btXoaSan.UseVisualStyleBackColor = true;
+            this.btXoaSan.Click += new System.EventHandler(this.btXoaSan_Click_1);
             // 
             // btSuaSan
             // 
@@ -174,6 +176,7 @@
             this.btSuaSan.TabIndex = 13;
             this.btSuaSan.Text = "Cập nhật sân";
             this.btSuaSan.UseVisualStyleBackColor = true;
+            this.btSuaSan.Click += new System.EventHandler(this.btSuaSan_Click_1);
             // 
             // btThemSan
             // 
@@ -183,6 +186,7 @@
             this.btThemSan.TabIndex = 12;
             this.btThemSan.Text = "Thêm sân";
             this.btThemSan.UseVisualStyleBackColor = true;
+            this.btThemSan.Click += new System.EventHandler(this.btThemSan_Click_1);
             // 
             // btHuySan
             // 
@@ -216,6 +220,7 @@
             // 
             this.gbTimCa.Controls.Add(this.txtTimCa);
             this.gbTimCa.Controls.Add(this.btTimCa);
+            this.gbTimCa.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbTimCa.Location = new System.Drawing.Point(12, 259);
             this.gbTimCa.Name = "gbTimCa";
             this.gbTimCa.Size = new System.Drawing.Size(517, 66);
@@ -228,9 +233,9 @@
             this.txtTimCa.BackColor = System.Drawing.Color.White;
             this.txtTimCa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTimCa.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimCa.Location = new System.Drawing.Point(35, 22);
+            this.txtTimCa.Location = new System.Drawing.Point(43, 22);
             this.txtTimCa.Name = "txtTimCa";
-            this.txtTimCa.Size = new System.Drawing.Size(329, 25);
+            this.txtTimCa.Size = new System.Drawing.Size(321, 25);
             this.txtTimCa.TabIndex = 6;
             // 
             // btTimCa
@@ -254,6 +259,7 @@
             this.gbCaTheoSan.Controls.Add(this.label4);
             this.gbCaTheoSan.Controls.Add(this.txtMaCa);
             this.gbCaTheoSan.Controls.Add(this.label3);
+            this.gbCaTheoSan.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbCaTheoSan.Location = new System.Drawing.Point(12, 345);
             this.gbCaTheoSan.Name = "gbCaTheoSan";
             this.gbCaTheoSan.Size = new System.Drawing.Size(517, 152);
@@ -312,10 +318,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(198, 29);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 13);
+            this.label5.Size = new System.Drawing.Size(52, 13);
             this.label5.TabIndex = 6;
             this.label5.Text = "Loại sân:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // txtGia
             // 
@@ -330,9 +335,9 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(35, 84);
+            this.label4.Location = new System.Drawing.Point(35, 73);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(26, 13);
+            this.label4.Size = new System.Drawing.Size(27, 13);
             this.label4.TabIndex = 4;
             this.label4.Text = "Giá:";
             // 
@@ -341,9 +346,9 @@
             this.txtMaCa.BackColor = System.Drawing.Color.White;
             this.txtMaCa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMaCa.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaCa.Location = new System.Drawing.Point(35, 45);
+            this.txtMaCa.Location = new System.Drawing.Point(38, 45);
             this.txtMaCa.Name = "txtMaCa";
-            this.txtMaCa.Size = new System.Drawing.Size(123, 25);
+            this.txtMaCa.Size = new System.Drawing.Size(120, 25);
             this.txtMaCa.TabIndex = 3;
             // 
             // label3
@@ -354,23 +359,24 @@
             this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "Mã ca:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(555, 21);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 13);
+            this.label6.Size = new System.Drawing.Size(85, 13);
             this.label6.TabIndex = 4;
             this.label6.Text = "Danh sách sân:";
             // 
             // dsCaTheoSan
             // 
             this.dsCaTheoSan.AutoSize = true;
+            this.dsCaTheoSan.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dsCaTheoSan.Location = new System.Drawing.Point(555, 213);
             this.dsCaTheoSan.Name = "dsCaTheoSan";
-            this.dsCaTheoSan.Size = new System.Drawing.Size(140, 13);
+            this.dsCaTheoSan.Size = new System.Drawing.Size(148, 13);
             this.dsCaTheoSan.TabIndex = 5;
             this.dsCaTheoSan.Text = "Danh sách ca theo loại sân:";
             // 
@@ -392,6 +398,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "fQLsan";
             this.Text = "fQLsan";
+            this.Load += new System.EventHandler(this.fQLsan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.gbSan.ResumeLayout(false);
             this.gbSan.PerformLayout();

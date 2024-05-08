@@ -56,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS\BUS_NGUOIDUNG.cs" />
+    <Compile Include="BUS\BUS_SAN.cs" />
     <Compile Include="CA.cs">
       <DependentUpon>ModelQLSCL.tt</DependentUpon>
     </Compile>
@@ -66,6 +67,7 @@
       <DependentUpon>ModelQLSCL.tt</DependentUpon>
     </Compile>
     <Compile Include="DAL\DAL_NGUOIDUNG.cs" />
+    <Compile Include="DAL\DAL_SAN.cs" />
     <Compile Include="fAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,11 +92,11 @@
     <Compile Include="fQLKhachHang.Designer.cs">
       <DependentUpon>fQLKhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="fQLsan.cs">
+    <Compile Include="fQLSan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fQLsan.Designer.cs">
-      <DependentUpon>fQLsan.cs</DependentUpon>
+    <Compile Include="fQLSan.Designer.cs">
+      <DependentUpon>fQLSan.cs</DependentUpon>
     </Compile>
     <Compile Include="HOADON.cs">
       <DependentUpon>ModelQLSCL.tt</DependentUpon>
@@ -146,8 +148,8 @@
     <EmbeddedResource Include="fQLKhachHang.resx">
       <DependentUpon>fQLKhachHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fQLsan.resx">
-      <DependentUpon>fQLsan.cs</DependentUpon>
+    <EmbeddedResource Include="fQLSan.resx">
+      <DependentUpon>fQLSan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

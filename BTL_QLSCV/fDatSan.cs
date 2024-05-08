@@ -16,5 +16,10 @@ namespace BTL_QLSCV
         {
             InitializeComponent();
         }
+
+        private void fDatSan_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
