@@ -56,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS\BUS_NGUOIDUNG.cs" />
+    <Compile Include="BUS\BUS_SAN.cs" />
     <Compile Include="CA.cs">
       <DependentUpon>ModelQLSCL.tt</DependentUpon>
     </Compile>
@@ -66,6 +67,7 @@
       <DependentUpon>ModelQLSCL.tt</DependentUpon>
     </Compile>
     <Compile Include="DAL\DAL_NGUOIDUNG.cs" />
+    <Compile Include="DAL\DAL_SAN.cs" />
     <Compile Include="fAdmin.cs">
       <SubType>Form</SubType>
     </Compile>

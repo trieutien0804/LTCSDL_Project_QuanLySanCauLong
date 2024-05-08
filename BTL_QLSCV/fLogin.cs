@@ -14,7 +14,8 @@ namespace BTL_QLSCV
     public partial class fLogin : Form
     {
         BUS_NGUOIDUNG BUS_NGUOIDUNG = new BUS_NGUOIDUNG();
-        fAdmin fAdmin;
+        //fAdmin fAdmin;
+        fQLsan fQLsan;
         public fLogin()
         {
             InitializeComponent();
@@ -29,8 +30,8 @@ namespace BTL_QLSCV
             {
                 if (BUS_NGUOIDUNG.Login(username, password))
                 {
-                    fAdmin = new fAdmin();
-                    fAdmin.Show();
+                    fQLsan = new fQLsan();
+                    fQLsan.Show();
                     this.Hide();
                 }
                 else
