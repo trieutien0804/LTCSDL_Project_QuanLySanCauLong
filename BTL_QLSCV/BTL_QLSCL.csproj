@@ -72,11 +72,23 @@
     <Compile Include="fAdmin.Designer.cs">
       <DependentUpon>fAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="fDatSan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fDatSan.Designer.cs">
+      <DependentUpon>fDatSan.cs</DependentUpon>
+    </Compile>
     <Compile Include="fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fQLKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fQLKhachHang.Designer.cs">
+      <DependentUpon>fQLKhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="fQLsan.cs">
       <SubType>Form</SubType>
@@ -125,8 +137,14 @@
     <EmbeddedResource Include="fAdmin.resx">
       <DependentUpon>fAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fDatSan.resx">
+      <DependentUpon>fDatSan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fQLKhachHang.resx">
+      <DependentUpon>fQLKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fQLsan.resx">
       <DependentUpon>fQLsan.cs</DependentUpon>
