@@ -16,5 +16,38 @@ namespace BTL_QLSCV
         {
             InitializeComponent();
         }
+        bool btQuanlyExpand = false;
+     
+        private void btQuanlyTrainsition_Tick_1(object sender, EventArgs e)
+        {
+            if (btQuanlyExpand == false)
+            {
+                flp_quanly.Height += 10;
+                if (flp_quanly.Height >= 203)
+                {
+                    btQuanlyTrainsition.Stop();
+                    btQuanlyExpand = true;
+                }
+            }
+            else
+            {
+                flp_quanly.Height -= 10;
+                if (flp_quanly.Height <= 51)
+                {
+                    btQuanlyTrainsition.Stop();
+                    btQuanlyExpand = false;
+                }
+            }
+        }
+
+        private void btQuanly_Click_1(object sender, EventArgs e)
+        {
+            btQuanlyTrainsition.Start();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
