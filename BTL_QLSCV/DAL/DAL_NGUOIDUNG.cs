@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +25,13 @@ namespace BTL_QLSCV.DAL
                 return true;
             }
             return false;
+        }
+
+        public dynamic getNGUOIDUNG() {
+
+            var dsNGUOIDUNG = db.NGUOIDUNGs.Select(u => u.TenDangNhap == "admin").ToList();
+
+            return dsNGUOIDUNG;
         }
     }
 }

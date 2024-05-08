@@ -7,12 +7,32 @@
       "RelativeMoniker": "D:0:0:{06AF873C-66B0-49F6-834F-4B0524A3D4D5}|BTL_QLSCV\\BTL_QLSCL.csproj|solutionrelative:btl_qlscv\\fadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06AF873C-66B0-49F6-834F-4B0524A3D4D5}|BTL_QLSCV\\BTL_QLSCL.csproj|c:\\users\\tien\\source\\repos\\btl_qlscv\\btl_qlscv\\fadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{06AF873C-66B0-49F6-834F-4B0524A3D4D5}|BTL_QLSCV\\BTL_QLSCL.csproj|C:\\Users\\tien\\source\\repos\\BTL_QLSCV\\btl_qlscv\\bus\\bus_nguoidung.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06AF873C-66B0-49F6-834F-4B0524A3D4D5}|BTL_QLSCV\\BTL_QLSCL.csproj|solutionrelative:btl_qlscv\\bus\\bus_nguoidung.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06AF873C-66B0-49F6-834F-4B0524A3D4D5}|BTL_QLSCV\\BTL_QLSCL.csproj|C:\\Users\\tien\\source\\repos\\BTL_QLSCV\\btl_qlscv\\fadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{06AF873C-66B0-49F6-834F-4B0524A3D4D5}|BTL_QLSCV\\BTL_QLSCL.csproj|solutionrelative:btl_qlscv\\fadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06AF873C-66B0-49F6-834F-4B0524A3D4D5}|BTL_QLSCV\\BTL_QLSCL.csproj|c:\\users\\tien\\source\\repos\\btl_qlscv\\btl_qlscv\\flogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{06AF873C-66B0-49F6-834F-4B0524A3D4D5}|BTL_QLSCV\\BTL_QLSCL.csproj|C:\\Users\\tien\\source\\repos\\BTL_QLSCV\\btl_qlscv\\fadmin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06AF873C-66B0-49F6-834F-4B0524A3D4D5}|BTL_QLSCV\\BTL_QLSCL.csproj|solutionrelative:btl_qlscv\\fadmin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06AF873C-66B0-49F6-834F-4B0524A3D4D5}|BTL_QLSCV\\BTL_QLSCL.csproj|C:\\Users\\tien\\source\\repos\\BTL_QLSCV\\btl_qlscv\\flogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{06AF873C-66B0-49F6-834F-4B0524A3D4D5}|BTL_QLSCV\\BTL_QLSCL.csproj|solutionrelative:btl_qlscv\\flogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06AF873C-66B0-49F6-834F-4B0524A3D4D5}|BTL_QLSCV\\BTL_QLSCL.csproj|C:\\Users\\tien\\source\\repos\\BTL_QLSCV\\btl_qlscv\\dal\\dal_nguoidung.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06AF873C-66B0-49F6-834F-4B0524A3D4D5}|BTL_QLSCV\\BTL_QLSCL.csproj|solutionrelative:btl_qlscv\\dal\\dal_nguoidung.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06AF873C-66B0-49F6-834F-4B0524A3D4D5}|BTL_QLSCV\\BTL_QLSCL.csproj|C:\\Users\\tien\\source\\repos\\BTL_QLSCV\\btl_qlscv\\modelqlscl.context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06AF873C-66B0-49F6-834F-4B0524A3D4D5}|BTL_QLSCV\\BTL_QLSCL.csproj|solutionrelative:btl_qlscv\\modelqlscl.context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06AF873C-66B0-49F6-834F-4B0524A3D4D5}|BTL_QLSCV\\BTL_QLSCL.csproj|C:\\Users\\tien\\source\\repos\\BTL_QLSCV\\btl_qlscv\\flogin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06AF873C-66B0-49F6-834F-4B0524A3D4D5}|BTL_QLSCV\\BTL_QLSCL.csproj|solutionrelative:btl_qlscv\\flogin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,8 +42,44 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "fAdmin.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\tien\\source\\repos\\BTL_QLSCV\\BTL_QLSCV\\fAdmin.Designer.cs",
+              "RelativeDocumentMoniker": "BTL_QLSCV\\fAdmin.Designer.cs",
+              "ToolTip": "C:\\Users\\tien\\source\\repos\\BTL_QLSCV\\BTL_QLSCV\\fAdmin.Designer.cs",
+              "RelativeToolTip": "BTL_QLSCV\\fAdmin.Designer.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAvwCsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T02:56:53.525Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "fLogin.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\tien\\source\\repos\\BTL_QLSCV\\BTL_QLSCV\\fLogin.cs",
+              "RelativeDocumentMoniker": "BTL_QLSCV\\fLogin.cs",
+              "ToolTip": "C:\\Users\\tien\\source\\repos\\BTL_QLSCV\\BTL_QLSCV\\fLogin.cs [Design]",
+              "RelativeToolTip": "BTL_QLSCV\\fLogin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T02:44:36.688Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BUS_NGUOIDUNG.cs",
+              "DocumentMoniker": "C:\\Users\\tien\\source\\repos\\BTL_QLSCV\\BTL_QLSCV\\BUS\\BUS_NGUOIDUNG.cs",
+              "RelativeDocumentMoniker": "BTL_QLSCV\\BUS\\BUS_NGUOIDUNG.cs",
+              "ToolTip": "C:\\Users\\tien\\source\\repos\\BTL_QLSCV\\BTL_QLSCV\\BUS\\BUS_NGUOIDUNG.cs",
+              "RelativeToolTip": "BTL_QLSCV\\BUS\\BUS_NGUOIDUNG.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAYwBgAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T02:39:41.23Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -32,34 +88,57 @@
               "RelativeDocumentMoniker": "BTL_QLSCV\\fAdmin.cs",
               "ToolTip": "C:\\Users\\tien\\source\\repos\\BTL_QLSCV\\BTL_QLSCV\\fAdmin.cs",
               "RelativeToolTip": "BTL_QLSCV\\fAdmin.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAJAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAjwB4AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-08T00:56:11.531Z",
+              "WhenOpened": "2024-05-08T02:35:07.64Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "fAdmin.cs [Design]",
               "DocumentMoniker": "C:\\Users\\tien\\source\\repos\\BTL_QLSCV\\BTL_QLSCV\\fAdmin.cs",
               "RelativeDocumentMoniker": "BTL_QLSCV\\fAdmin.cs",
               "ToolTip": "C:\\Users\\tien\\source\\repos\\BTL_QLSCV\\BTL_QLSCV\\fAdmin.cs [Design]",
               "RelativeToolTip": "BTL_QLSCV\\fAdmin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-08T00:56:02.485Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-05-08T02:34:48.888Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "fLogin.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\tien\\source\\repos\\BTL_QLSCV\\BTL_QLSCV\\fLogin.cs",
-              "RelativeDocumentMoniker": "BTL_QLSCV\\fLogin.cs",
-              "ToolTip": "C:\\Users\\tien\\source\\repos\\BTL_QLSCV\\BTL_QLSCV\\fLogin.cs [Design]",
-              "RelativeToolTip": "BTL_QLSCV\\fLogin.cs [Design]",
+              "DocumentIndex": 5,
+              "Title": "DAL_NGUOIDUNG.cs",
+              "DocumentMoniker": "C:\\Users\\tien\\source\\repos\\BTL_QLSCV\\BTL_QLSCV\\DAL\\DAL_NGUOIDUNG.cs",
+              "RelativeDocumentMoniker": "BTL_QLSCV\\DAL\\DAL_NGUOIDUNG.cs",
+              "ToolTip": "C:\\Users\\tien\\source\\repos\\BTL_QLSCV\\BTL_QLSCV\\DAL\\DAL_NGUOIDUNG.cs",
+              "RelativeToolTip": "BTL_QLSCV\\DAL\\DAL_NGUOIDUNG.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAkwB0AAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-08T00:21:16.573Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-05-08T02:40:46.138Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "fLogin.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\tien\\source\\repos\\BTL_QLSCV\\BTL_QLSCV\\fLogin.Designer.cs",
+              "RelativeDocumentMoniker": "BTL_QLSCV\\fLogin.Designer.cs",
+              "ToolTip": "C:\\Users\\tien\\source\\repos\\BTL_QLSCV\\BTL_QLSCV\\fLogin.Designer.cs",
+              "RelativeToolTip": "BTL_QLSCV\\fLogin.Designer.cs",
+              "ViewState": "AQIAAGgAAAAAAAAAAAAMwG4AAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T02:33:28.817Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ModelQLSCL.Context.cs",
+              "DocumentMoniker": "C:\\Users\\tien\\source\\repos\\BTL_QLSCV\\BTL_QLSCV\\ModelQLSCL.Context.cs",
+              "RelativeDocumentMoniker": "BTL_QLSCV\\ModelQLSCL.Context.cs",
+              "ToolTip": "C:\\Users\\tien\\source\\repos\\BTL_QLSCV\\BTL_QLSCV\\ModelQLSCL.Context.cs",
+              "RelativeToolTip": "BTL_QLSCV\\ModelQLSCL.Context.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T02:12:27.133Z"
             }
           ]
         }

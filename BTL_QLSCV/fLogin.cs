@@ -44,5 +44,21 @@ namespace BTL_QLSCV
             }
             
         }
+
+        private void txtLoginName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin.PerformClick();
+            }
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin.PerformClick(); ;
+            }
+        }
     }
 }
