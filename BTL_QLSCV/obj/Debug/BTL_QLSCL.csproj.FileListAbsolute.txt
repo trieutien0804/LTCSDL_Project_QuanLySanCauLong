@@ -1,0 +1,16 @@
+C:\Users\tien\source\repos\BTL_QLSCV\BTL_QLSCV\bin\Debug\BTL_QLSCV.exe.config
+C:\Users\tien\source\repos\BTL_QLSCV\BTL_QLSCV\bin\Debug\BTL_QLSCV.exe
+C:\Users\tien\source\repos\BTL_QLSCV\BTL_QLSCV\bin\Debug\BTL_QLSCV.pdb
+C:\Users\tien\source\repos\BTL_QLSCV\BTL_QLSCV\bin\Debug\EntityFramework.dll
+C:\Users\tien\source\repos\BTL_QLSCV\BTL_QLSCV\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\tien\source\repos\BTL_QLSCV\BTL_QLSCV\bin\Debug\EntityFramework.xml
+C:\Users\tien\source\repos\BTL_QLSCV\BTL_QLSCV\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\tien\source\repos\BTL_QLSCV\BTL_QLSCV\obj\Debug\BTL_QLSCL.csproj.AssemblyReference.cache
+C:\Users\tien\source\repos\BTL_QLSCV\BTL_QLSCV\obj\Debug\BTL_QLSCV.fLogin.resources
+C:\Users\tien\source\repos\BTL_QLSCV\BTL_QLSCV\obj\Debug\BTL_QLSCV.Properties.Resources.resources
+C:\Users\tien\source\repos\BTL_QLSCV\BTL_QLSCV\obj\Debug\BTL_QLSCL.csproj.GenerateResource.cache
+C:\Users\tien\source\repos\BTL_QLSCV\BTL_QLSCV\obj\Debug\BTL_QLSCL.csproj.CoreCompileInputs.cache
+C:\Users\tien\source\repos\BTL_QLSCV\BTL_QLSCV\obj\Debug\BTL_QLSCL.csproj.Up2Date
+C:\Users\tien\source\repos\BTL_QLSCV\BTL_QLSCV\obj\Debug\BTL_QLSCV.exe
+C:\Users\tien\source\repos\BTL_QLSCV\BTL_QLSCV\obj\Debug\BTL_QLSCV.pdb
+C:\Users\tien\source\repos\BTL_QLSCV\BTL_QLSCV\obj\Debug\BTL_QLSCV.fAdmin.resources

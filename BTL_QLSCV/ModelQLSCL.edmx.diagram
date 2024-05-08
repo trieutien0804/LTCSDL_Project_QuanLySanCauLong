@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e549399c11e8451e8b40bcd5fe0a1b8f" Name="Diagram1">
+        <EntityTypeShape EntityType="QLSCLModel.CA" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLSCLModel.CATHUE" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLSCLModel.CHITIETDATSAN" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLSCLModel.HOADON" Width="1.5" PointX="5.25" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLSCLModel.KHACHHANG" Width="1.5" PointX="0.75" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLSCLModel.NGUOIDUNG" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLSCLModel.PHIEUDATSAN" Width="1.5" PointX="3" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLSCLModel.SAN" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLSCLModel.sysdiagram" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLSCLModel.TINHTRANGSAN" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <AssociationConnector Association="QLSCLModel.FK_CATHUE_CA" ManuallyRouted="false" />
+        <AssociationConnector Association="QLSCLModel.FK_CATHUE_SAN" ManuallyRouted="false" />
+        <AssociationConnector Association="QLSCLModel.FK_CATHUE_TINHTRANGSAN" ManuallyRouted="false" />
+        <AssociationConnector Association="QLSCLModel.FK_CHITIETDATSAN_CATHUE" ManuallyRouted="false" />
+        <AssociationConnector Association="QLSCLModel.FK_CHITIETDATSAN_PHIEUDATSAN" ManuallyRouted="false" />
+        <AssociationConnector Association="QLSCLModel.FK_HOADON_PHIEUDATSAN" ManuallyRouted="false" />
+        <AssociationConnector Association="QLSCLModel.FK_PHIEUDATSAN_KHACHHANG" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
