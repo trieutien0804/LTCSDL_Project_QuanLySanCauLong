@@ -86,6 +86,18 @@
     <Compile Include="fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="fNhansan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fNhansan.Designer.cs">
+      <DependentUpon>fNhansan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fQLHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fQLHoaDon.Designer.cs">
+      <DependentUpon>fQLHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="fQLKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +109,18 @@
     </Compile>
     <Compile Include="fQLSan.Designer.cs">
       <DependentUpon>fQLSan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fTaiKhoan.Designer.cs">
+      <DependentUpon>fTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fThongKe.Designer.cs">
+      <DependentUpon>fThongKe.cs</DependentUpon>
     </Compile>
     <Compile Include="HOADON.cs">
       <DependentUpon>ModelQLSCL.tt</DependentUpon>
@@ -145,11 +169,23 @@
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fNhansan.resx">
+      <DependentUpon>fNhansan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fQLHoaDon.resx">
+      <DependentUpon>fQLHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fQLKhachHang.resx">
       <DependentUpon>fQLKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fQLSan.resx">
       <DependentUpon>fQLSan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fTaiKhoan.resx">
+      <DependentUpon>fTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fThongKe.resx">
+      <DependentUpon>fThongKe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

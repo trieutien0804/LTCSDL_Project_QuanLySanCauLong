@@ -56,5 +56,10 @@ namespace BTL_QLSCV
         {
             
         }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -50,3 +50,7 @@ C:\Users\tien\source\repos\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\obj\Debug\B
 D:\MIS\HK8\LTCSDL\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\obj\Debug\BTL_QLSCV.fDatSan.resources
 D:\MIS\HK8\LTCSDL\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\obj\Debug\BTL_QLSCV.fQLKhachHang.resources
 D:\MIS\HK8\LTCSDL\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\obj\Debug\BTL_QLSCV.fQLsan.resources
+D:\MIS\HK8\LTCSDL\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\obj\Debug\BTL_QLSCV.fNhansan.resources
+D:\MIS\HK8\LTCSDL\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\obj\Debug\BTL_QLSCV.fQLHoaDon.resources
+D:\MIS\HK8\LTCSDL\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\obj\Debug\BTL_QLSCV.fTaiKhoan.resources
+D:\MIS\HK8\LTCSDL\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\obj\Debug\BTL_QLSCV.fThongKe.resources

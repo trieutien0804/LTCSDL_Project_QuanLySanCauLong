@@ -48,7 +48,7 @@ namespace BTL_QLSCV
             this.txtTimCa = new System.Windows.Forms.TextBox();
             this.btTimCa = new System.Windows.Forms.Button();
             this.gbCaTheoSan = new System.Windows.Forms.GroupBox();
-            this.btHuyCa = new System.Windows.Forms.Button();
+            this.btHuy = new System.Windows.Forms.Button();
             this.btXoaCa = new System.Windows.Forms.Button();
             this.tbSuaCa = new System.Windows.Forms.Button();
             this.btThemCa = new System.Windows.Forms.Button();
@@ -81,9 +81,11 @@ namespace BTL_QLSCV
             this.gbSan.Controls.Add(this.txtMaSan);
             this.gbSan.Controls.Add(this.label1);
             this.gbSan.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbSan.Location = new System.Drawing.Point(12, 21);
+            this.gbSan.Location = new System.Drawing.Point(16, 26);
+            this.gbSan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbSan.Name = "gbSan";
-            this.gbSan.Size = new System.Drawing.Size(517, 85);
+            this.gbSan.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbSan.Size = new System.Drawing.Size(689, 105);
             this.gbSan.TabIndex = 0;
             this.gbSan.TabStop = false;
             this.gbSan.Text = "Thông tin sân";
@@ -93,15 +95,17 @@ namespace BTL_QLSCV
             this.txtTenSan.BackColor = System.Drawing.Color.White;
             this.txtTenSan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTenSan.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenSan.Location = new System.Drawing.Point(298, 42);
+            this.txtTenSan.Location = new System.Drawing.Point(397, 52);
+            this.txtTenSan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTenSan.Name = "txtTenSan";
-            this.txtTenSan.Size = new System.Drawing.Size(181, 25);
+            this.txtTenSan.Size = new System.Drawing.Size(241, 25);
             this.txtTenSan.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(292, 26);
+            this.label2.Location = new System.Drawing.Point(389, 32);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 13);
             this.label2.TabIndex = 2;
@@ -112,15 +116,17 @@ namespace BTL_QLSCV
             this.txtMaSan.BackColor = System.Drawing.Color.White;
             this.txtMaSan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMaSan.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaSan.Location = new System.Drawing.Point(35, 42);
+            this.txtMaSan.Location = new System.Drawing.Point(47, 52);
+            this.txtMaSan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMaSan.Name = "txtMaSan";
-            this.txtMaSan.Size = new System.Drawing.Size(155, 25);
+            this.txtMaSan.Size = new System.Drawing.Size(206, 25);
             this.txtMaSan.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(32, 26);
+            this.label1.Location = new System.Drawing.Point(43, 32);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 13);
             this.label1.TabIndex = 0;
@@ -129,17 +135,19 @@ namespace BTL_QLSCV
             // dsSan
             // 
             this.dsSan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dsSan.Location = new System.Drawing.Point(558, 37);
+            this.dsSan.Location = new System.Drawing.Point(744, 46);
+            this.dsSan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dsSan.Name = "dsSan";
-            this.dsSan.Size = new System.Drawing.Size(444, 166);
+            this.dsSan.Size = new System.Drawing.Size(592, 204);
             this.dsSan.TabIndex = 2;
             // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(558, 232);
+            this.dataGridView2.Location = new System.Drawing.Point(744, 286);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(444, 265);
+            this.dataGridView2.Size = new System.Drawing.Size(592, 326);
             this.dataGridView2.TabIndex = 3;
             // 
             // gbChucNang
@@ -151,18 +159,21 @@ namespace BTL_QLSCV
             this.gbChucNang.Controls.Add(this.txtTimSan);
             this.gbChucNang.Controls.Add(this.btTimSan);
             this.gbChucNang.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbChucNang.Location = new System.Drawing.Point(12, 112);
+            this.gbChucNang.Location = new System.Drawing.Point(16, 138);
+            this.gbChucNang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbChucNang.Name = "gbChucNang";
-            this.gbChucNang.Size = new System.Drawing.Size(517, 128);
+            this.gbChucNang.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbChucNang.Size = new System.Drawing.Size(689, 158);
             this.gbChucNang.TabIndex = 1;
             this.gbChucNang.TabStop = false;
             this.gbChucNang.Text = "Chức năng";
             // 
             // btXoaSan
             // 
-            this.btXoaSan.Location = new System.Drawing.Point(266, 79);
+            this.btXoaSan.Location = new System.Drawing.Point(355, 97);
+            this.btXoaSan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btXoaSan.Name = "btXoaSan";
-            this.btXoaSan.Size = new System.Drawing.Size(98, 27);
+            this.btXoaSan.Size = new System.Drawing.Size(131, 33);
             this.btXoaSan.TabIndex = 14;
             this.btXoaSan.Text = "Xoá sân";
             this.btXoaSan.UseVisualStyleBackColor = true;
@@ -170,9 +181,10 @@ namespace BTL_QLSCV
             // 
             // btSuaSan
             // 
-            this.btSuaSan.Location = new System.Drawing.Point(150, 79);
+            this.btSuaSan.Location = new System.Drawing.Point(200, 97);
+            this.btSuaSan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btSuaSan.Name = "btSuaSan";
-            this.btSuaSan.Size = new System.Drawing.Size(98, 27);
+            this.btSuaSan.Size = new System.Drawing.Size(131, 33);
             this.btSuaSan.TabIndex = 13;
             this.btSuaSan.Text = "Cập nhật sân";
             this.btSuaSan.UseVisualStyleBackColor = true;
@@ -180,9 +192,10 @@ namespace BTL_QLSCV
             // 
             // btThemSan
             // 
-            this.btThemSan.Location = new System.Drawing.Point(35, 79);
+            this.btThemSan.Location = new System.Drawing.Point(47, 97);
+            this.btThemSan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btThemSan.Name = "btThemSan";
-            this.btThemSan.Size = new System.Drawing.Size(98, 27);
+            this.btThemSan.Size = new System.Drawing.Size(131, 33);
             this.btThemSan.TabIndex = 12;
             this.btThemSan.Text = "Thêm sân";
             this.btThemSan.UseVisualStyleBackColor = true;
@@ -190,9 +203,10 @@ namespace BTL_QLSCV
             // 
             // btHuySan
             // 
-            this.btHuySan.Location = new System.Drawing.Point(381, 79);
+            this.btHuySan.Location = new System.Drawing.Point(508, 97);
+            this.btHuySan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btHuySan.Name = "btHuySan";
-            this.btHuySan.Size = new System.Drawing.Size(98, 27);
+            this.btHuySan.Size = new System.Drawing.Size(131, 33);
             this.btHuySan.TabIndex = 11;
             this.btHuySan.Text = "Huỷ";
             this.btHuySan.UseVisualStyleBackColor = true;
@@ -202,16 +216,18 @@ namespace BTL_QLSCV
             this.txtTimSan.BackColor = System.Drawing.Color.White;
             this.txtTimSan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTimSan.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimSan.Location = new System.Drawing.Point(35, 37);
+            this.txtTimSan.Location = new System.Drawing.Point(47, 46);
+            this.txtTimSan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTimSan.Name = "txtTimSan";
-            this.txtTimSan.Size = new System.Drawing.Size(329, 25);
+            this.txtTimSan.Size = new System.Drawing.Size(438, 25);
             this.txtTimSan.TabIndex = 4;
             // 
             // btTimSan
             // 
-            this.btTimSan.Location = new System.Drawing.Point(381, 33);
+            this.btTimSan.Location = new System.Drawing.Point(508, 41);
+            this.btTimSan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btTimSan.Name = "btTimSan";
-            this.btTimSan.Size = new System.Drawing.Size(98, 31);
+            this.btTimSan.Size = new System.Drawing.Size(131, 38);
             this.btTimSan.TabIndex = 3;
             this.btTimSan.Text = "Tìm";
             this.btTimSan.UseVisualStyleBackColor = true;
@@ -221,9 +237,11 @@ namespace BTL_QLSCV
             this.gbTimCa.Controls.Add(this.txtTimCa);
             this.gbTimCa.Controls.Add(this.btTimCa);
             this.gbTimCa.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbTimCa.Location = new System.Drawing.Point(12, 259);
+            this.gbTimCa.Location = new System.Drawing.Point(16, 319);
+            this.gbTimCa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbTimCa.Name = "gbTimCa";
-            this.gbTimCa.Size = new System.Drawing.Size(517, 66);
+            this.gbTimCa.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbTimCa.Size = new System.Drawing.Size(689, 81);
             this.gbTimCa.TabIndex = 2;
             this.gbTimCa.TabStop = false;
             this.gbTimCa.Text = "Tìm kiếm ca";
@@ -233,23 +251,25 @@ namespace BTL_QLSCV
             this.txtTimCa.BackColor = System.Drawing.Color.White;
             this.txtTimCa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTimCa.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimCa.Location = new System.Drawing.Point(43, 22);
+            this.txtTimCa.Location = new System.Drawing.Point(57, 27);
+            this.txtTimCa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTimCa.Name = "txtTimCa";
-            this.txtTimCa.Size = new System.Drawing.Size(321, 25);
+            this.txtTimCa.Size = new System.Drawing.Size(427, 25);
             this.txtTimCa.TabIndex = 6;
             // 
             // btTimCa
             // 
-            this.btTimCa.Location = new System.Drawing.Point(381, 19);
+            this.btTimCa.Location = new System.Drawing.Point(508, 23);
+            this.btTimCa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btTimCa.Name = "btTimCa";
-            this.btTimCa.Size = new System.Drawing.Size(98, 31);
+            this.btTimCa.Size = new System.Drawing.Size(131, 38);
             this.btTimCa.TabIndex = 5;
             this.btTimCa.Text = "Tìm";
             this.btTimCa.UseVisualStyleBackColor = true;
             // 
             // gbCaTheoSan
             // 
-            this.gbCaTheoSan.Controls.Add(this.btHuyCa);
+            this.gbCaTheoSan.Controls.Add(this.btHuy);
             this.gbCaTheoSan.Controls.Add(this.btXoaCa);
             this.gbCaTheoSan.Controls.Add(this.tbSuaCa);
             this.gbCaTheoSan.Controls.Add(this.btThemCa);
@@ -260,45 +280,51 @@ namespace BTL_QLSCV
             this.gbCaTheoSan.Controls.Add(this.txtMaCa);
             this.gbCaTheoSan.Controls.Add(this.label3);
             this.gbCaTheoSan.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbCaTheoSan.Location = new System.Drawing.Point(12, 345);
+            this.gbCaTheoSan.Location = new System.Drawing.Point(16, 425);
+            this.gbCaTheoSan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbCaTheoSan.Name = "gbCaTheoSan";
-            this.gbCaTheoSan.Size = new System.Drawing.Size(517, 152);
+            this.gbCaTheoSan.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbCaTheoSan.Size = new System.Drawing.Size(689, 187);
             this.gbCaTheoSan.TabIndex = 2;
             this.gbCaTheoSan.TabStop = false;
             this.gbCaTheoSan.Text = "Thông tin ca theo loại sân";
             // 
-            // btHuyCa
+            // btHuy
             // 
-            this.btHuyCa.Location = new System.Drawing.Point(362, 117);
-            this.btHuyCa.Name = "btHuyCa";
-            this.btHuyCa.Size = new System.Drawing.Size(117, 27);
-            this.btHuyCa.TabIndex = 10;
-            this.btHuyCa.Text = "Huỷ";
-            this.btHuyCa.UseVisualStyleBackColor = true;
+            this.btHuy.Location = new System.Drawing.Point(483, 144);
+            this.btHuy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btHuy.Name = "btHuy";
+            this.btHuy.Size = new System.Drawing.Size(156, 33);
+            this.btHuy.TabIndex = 10;
+            this.btHuy.Text = "Huỷ";
+            this.btHuy.UseVisualStyleBackColor = true;
             // 
             // btXoaCa
             // 
-            this.btXoaCa.Location = new System.Drawing.Point(362, 84);
+            this.btXoaCa.Location = new System.Drawing.Point(483, 103);
+            this.btXoaCa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btXoaCa.Name = "btXoaCa";
-            this.btXoaCa.Size = new System.Drawing.Size(117, 27);
+            this.btXoaCa.Size = new System.Drawing.Size(156, 33);
             this.btXoaCa.TabIndex = 9;
             this.btXoaCa.Text = "Xoá ca";
             this.btXoaCa.UseVisualStyleBackColor = true;
             // 
             // tbSuaCa
             // 
-            this.tbSuaCa.Location = new System.Drawing.Point(362, 51);
+            this.tbSuaCa.Location = new System.Drawing.Point(483, 63);
+            this.tbSuaCa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbSuaCa.Name = "tbSuaCa";
-            this.tbSuaCa.Size = new System.Drawing.Size(117, 27);
+            this.tbSuaCa.Size = new System.Drawing.Size(156, 33);
             this.tbSuaCa.TabIndex = 8;
             this.tbSuaCa.Text = "Sửa ca";
             this.tbSuaCa.UseVisualStyleBackColor = true;
             // 
             // btThemCa
             // 
-            this.btThemCa.Location = new System.Drawing.Point(362, 18);
+            this.btThemCa.Location = new System.Drawing.Point(483, 22);
+            this.btThemCa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btThemCa.Name = "btThemCa";
-            this.btThemCa.Size = new System.Drawing.Size(117, 27);
+            this.btThemCa.Size = new System.Drawing.Size(156, 33);
             this.btThemCa.TabIndex = 5;
             this.btThemCa.Text = "Thêm ca";
             this.btThemCa.UseVisualStyleBackColor = true;
@@ -308,15 +334,17 @@ namespace BTL_QLSCV
             this.txtLoaiSan.BackColor = System.Drawing.Color.White;
             this.txtLoaiSan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtLoaiSan.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLoaiSan.Location = new System.Drawing.Point(201, 45);
+            this.txtLoaiSan.Location = new System.Drawing.Point(268, 55);
+            this.txtLoaiSan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtLoaiSan.Name = "txtLoaiSan";
-            this.txtLoaiSan.Size = new System.Drawing.Size(120, 25);
+            this.txtLoaiSan.Size = new System.Drawing.Size(159, 25);
             this.txtLoaiSan.TabIndex = 7;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(198, 29);
+            this.label5.Location = new System.Drawing.Point(264, 36);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 13);
             this.label5.TabIndex = 6;
@@ -327,15 +355,17 @@ namespace BTL_QLSCV
             this.txtGia.BackColor = System.Drawing.Color.White;
             this.txtGia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtGia.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGia.Location = new System.Drawing.Point(38, 100);
+            this.txtGia.Location = new System.Drawing.Point(51, 123);
+            this.txtGia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtGia.Name = "txtGia";
-            this.txtGia.Size = new System.Drawing.Size(120, 25);
+            this.txtGia.Size = new System.Drawing.Size(159, 25);
             this.txtGia.TabIndex = 5;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(35, 73);
+            this.label4.Location = new System.Drawing.Point(47, 90);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(27, 13);
             this.label4.TabIndex = 4;
@@ -346,15 +376,17 @@ namespace BTL_QLSCV
             this.txtMaCa.BackColor = System.Drawing.Color.White;
             this.txtMaCa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMaCa.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaCa.Location = new System.Drawing.Point(38, 45);
+            this.txtMaCa.Location = new System.Drawing.Point(51, 55);
+            this.txtMaCa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMaCa.Name = "txtMaCa";
-            this.txtMaCa.Size = new System.Drawing.Size(120, 25);
+            this.txtMaCa.Size = new System.Drawing.Size(159, 25);
             this.txtMaCa.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(35, 25);
+            this.label3.Location = new System.Drawing.Point(47, 31);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 2;
@@ -364,7 +396,8 @@ namespace BTL_QLSCV
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(555, 21);
+            this.label6.Location = new System.Drawing.Point(740, 26);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(85, 13);
             this.label6.TabIndex = 4;
@@ -374,19 +407,20 @@ namespace BTL_QLSCV
             // 
             this.dsCaTheoSan.AutoSize = true;
             this.dsCaTheoSan.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dsCaTheoSan.Location = new System.Drawing.Point(555, 213);
+            this.dsCaTheoSan.Location = new System.Drawing.Point(740, 262);
+            this.dsCaTheoSan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.dsCaTheoSan.Name = "dsCaTheoSan";
             this.dsCaTheoSan.Size = new System.Drawing.Size(148, 13);
             this.dsCaTheoSan.TabIndex = 5;
             this.dsCaTheoSan.Text = "Danh sách ca theo loại sân:";
             // 
-            // fQLsan
+            // fQLSan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1025, 523);
+            this.ClientSize = new System.Drawing.Size(1367, 644);
             this.Controls.Add(this.dsCaTheoSan);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.gbCaTheoSan);
@@ -396,7 +430,8 @@ namespace BTL_QLSCV
             this.Controls.Add(this.dsSan);
             this.Controls.Add(this.gbSan);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "fQLsan";
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "fQLSan";
             this.Text = "fQLsan";
             this.Load += new System.EventHandler(this.fQLsan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
@@ -438,7 +473,7 @@ namespace BTL_QLSCV
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtTimCa;
         private System.Windows.Forms.Button btTimCa;
-        private System.Windows.Forms.Button btHuyCa;
+        private System.Windows.Forms.Button btHuy;
         private System.Windows.Forms.Button btXoaCa;
         private System.Windows.Forms.Button tbSuaCa;
         private System.Windows.Forms.Button btThemCa;

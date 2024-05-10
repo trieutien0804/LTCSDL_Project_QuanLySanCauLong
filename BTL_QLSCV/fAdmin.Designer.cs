@@ -50,8 +50,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -74,10 +74,10 @@
             // panel5
             // 
             this.panel5.Controls.Add(this.button4);
-            this.panel5.Location = new System.Drawing.Point(0, 305);
+            this.panel5.Location = new System.Drawing.Point(0, 376);
             this.panel5.Margin = new System.Windows.Forms.Padding(0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(214, 51);
+            this.panel5.Size = new System.Drawing.Size(285, 63);
             this.panel5.TabIndex = 4;
             // 
             // button4
@@ -86,10 +86,11 @@
             this.button4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(-22, -20);
+            this.button4.Location = new System.Drawing.Point(-29, -25);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(266, 86);
+            this.button4.Padding = new System.Windows.Forms.Padding(53, 0, 0, 0);
+            this.button4.Size = new System.Drawing.Size(355, 106);
             this.button4.TabIndex = 2;
             this.button4.Text = "           Thoát";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -101,10 +102,11 @@
             this.button3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(-22, -20);
+            this.button3.Location = new System.Drawing.Point(-29, -25);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(266, 86);
+            this.button3.Padding = new System.Windows.Forms.Padding(53, 0, 0, 0);
+            this.button3.Size = new System.Drawing.Size(355, 106);
             this.button3.TabIndex = 2;
             this.button3.Text = "           Báo cáo thống kê";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -113,10 +115,10 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.button3);
-            this.panel4.Location = new System.Drawing.Point(0, 254);
+            this.panel4.Location = new System.Drawing.Point(0, 313);
             this.panel4.Margin = new System.Windows.Forms.Padding(0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(218, 51);
+            this.panel4.Size = new System.Drawing.Size(291, 63);
             this.panel4.TabIndex = 4;
             // 
             // button7
@@ -125,10 +127,11 @@
             this.button7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(-8, -31);
+            this.button7.Location = new System.Drawing.Point(-11, -38);
+            this.button7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button7.Name = "button7";
-            this.button7.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button7.Size = new System.Drawing.Size(277, 93);
+            this.button7.Padding = new System.Windows.Forms.Padding(53, 0, 0, 0);
+            this.button7.Size = new System.Drawing.Size(369, 114);
             this.button7.TabIndex = 2;
             this.button7.Text = "           Nhân viên";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -140,10 +143,11 @@
             this.button6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(-8, -27);
+            this.button6.Location = new System.Drawing.Point(-11, -33);
+            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button6.Name = "button6";
-            this.button6.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(277, 93);
+            this.button6.Padding = new System.Windows.Forms.Padding(53, 0, 0, 0);
+            this.button6.Size = new System.Drawing.Size(369, 114);
             this.button6.TabIndex = 2;
             this.button6.Text = "           Khách hàng";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -155,11 +159,11 @@
             this.button5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(-8, -20);
+            this.button5.Location = new System.Drawing.Point(-11, -25);
             this.button5.Margin = new System.Windows.Forms.Padding(0);
             this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(277, 93);
+            this.button5.Padding = new System.Windows.Forms.Padding(53, 0, 0, 0);
+            this.button5.Size = new System.Drawing.Size(369, 114);
             this.button5.TabIndex = 2;
             this.button5.Text = "           Sân";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -171,7 +175,7 @@
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(218, 51);
+            this.panel3.Size = new System.Drawing.Size(291, 63);
             this.panel3.TabIndex = 4;
             // 
             // btQuanly
@@ -180,11 +184,11 @@
             this.btQuanly.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btQuanly.Image = ((System.Drawing.Image)(resources.GetObject("btQuanly.Image")));
             this.btQuanly.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btQuanly.Location = new System.Drawing.Point(-22, -24);
+            this.btQuanly.Location = new System.Drawing.Point(-29, -30);
             this.btQuanly.Margin = new System.Windows.Forms.Padding(0);
             this.btQuanly.Name = "btQuanly";
-            this.btQuanly.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.btQuanly.Size = new System.Drawing.Size(263, 96);
+            this.btQuanly.Padding = new System.Windows.Forms.Padding(53, 0, 0, 0);
+            this.btQuanly.Size = new System.Drawing.Size(351, 118);
             this.btQuanly.TabIndex = 2;
             this.btQuanly.Text = "           Quản lý";
             this.btQuanly.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -194,10 +198,10 @@
             // panel6
             // 
             this.panel6.Controls.Add(this.button5);
-            this.panel6.Location = new System.Drawing.Point(0, 51);
+            this.panel6.Location = new System.Drawing.Point(0, 63);
             this.panel6.Margin = new System.Windows.Forms.Padding(0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(252, 51);
+            this.panel6.Size = new System.Drawing.Size(336, 63);
             this.panel6.TabIndex = 5;
             // 
             // flp_quanly
@@ -207,28 +211,28 @@
             this.flp_quanly.Controls.Add(this.panel6);
             this.flp_quanly.Controls.Add(this.panel7);
             this.flp_quanly.Controls.Add(this.panel8);
-            this.flp_quanly.Location = new System.Drawing.Point(0, 51);
+            this.flp_quanly.Location = new System.Drawing.Point(0, 63);
             this.flp_quanly.Margin = new System.Windows.Forms.Padding(0);
             this.flp_quanly.Name = "flp_quanly";
-            this.flp_quanly.Size = new System.Drawing.Size(218, 203);
+            this.flp_quanly.Size = new System.Drawing.Size(291, 250);
             this.flp_quanly.TabIndex = 7;
             // 
             // panel7
             // 
             this.panel7.Controls.Add(this.button6);
-            this.panel7.Location = new System.Drawing.Point(0, 102);
+            this.panel7.Location = new System.Drawing.Point(0, 126);
             this.panel7.Margin = new System.Windows.Forms.Padding(0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(252, 51);
+            this.panel7.Size = new System.Drawing.Size(336, 63);
             this.panel7.TabIndex = 6;
             // 
             // panel8
             // 
             this.panel8.Controls.Add(this.button7);
-            this.panel8.Location = new System.Drawing.Point(0, 153);
+            this.panel8.Location = new System.Drawing.Point(0, 189);
             this.panel8.Margin = new System.Windows.Forms.Padding(0);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(252, 51);
+            this.panel8.Size = new System.Drawing.Size(336, 63);
             this.panel8.TabIndex = 7;
             // 
             // button1
@@ -237,10 +241,11 @@
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(-21, -16);
+            this.button1.Location = new System.Drawing.Point(-28, -20);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(266, 86);
+            this.button1.Padding = new System.Windows.Forms.Padding(53, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(355, 106);
             this.button1.TabIndex = 2;
             this.button1.Text = "           Lịch đặt sân";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -252,7 +257,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(218, 51);
+            this.panel2.Size = new System.Drawing.Size(291, 63);
             this.panel2.TabIndex = 3;
             // 
             // flowLayoutPanel1
@@ -263,18 +268,20 @@
             this.flowLayoutPanel1.Controls.Add(this.panel4);
             this.flowLayoutPanel1.Controls.Add(this.panel5);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 47);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 58);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(214, 504);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(446, 620);
             this.flowLayoutPanel1.TabIndex = 3;
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(479, 13);
+            this.label1.Location = new System.Drawing.Point(639, 16);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(201, 21);
             this.label1.TabIndex = 1;
@@ -284,9 +291,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 8);
+            this.pictureBox1.Location = new System.Drawing.Point(16, 10);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(41, 30);
+            this.pictureBox1.Size = new System.Drawing.Size(55, 37);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -299,34 +307,35 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1239, 47);
+            this.panel1.Size = new System.Drawing.Size(1652, 58);
             this.panel1.TabIndex = 2;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(285, 58);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(1367, 620);
+            this.flowLayoutPanel2.TabIndex = 4;
             // 
             // fileSystemWatcher1
             // 
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
             // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(214, 47);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(1025, 504);
-            this.flowLayoutPanel2.TabIndex = 4;
-            // 
             // fAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1239, 551);
+            this.ClientSize = new System.Drawing.Size(1652, 678);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "fAdmin";
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);

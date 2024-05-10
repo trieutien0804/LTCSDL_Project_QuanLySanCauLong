@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace BTL_QLSCV
 {
-    public partial class fDatSan : Form
+    public partial class fQLHoaDon : Form
     {
-        public fDatSan()
+        public fQLHoaDon()
         {
             InitializeComponent();
         }
 
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void label13_Click(object sender, EventArgs e)
         {
 
         }
