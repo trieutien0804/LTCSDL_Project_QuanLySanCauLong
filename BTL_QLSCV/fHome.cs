@@ -10,21 +10,21 @@ using System.Windows.Forms;
 
 namespace BTL_QLSCV
 {
-    public partial class fQLHoaDon : Form
+    public partial class fHome : Form
     {
-        public fQLHoaDon()
+        public fHome()
         {
             InitializeComponent();
         }
 
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void fQLHoaDon_Load(object sender, EventArgs e)
+        private void fHome_Load(object sender, EventArgs e)
         {
             this.ControlBox = false;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

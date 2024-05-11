@@ -13,13 +13,22 @@ namespace BTL_QLSCV
 {
     public partial class fAdmin : Form
     {
+        fHome fHome;
+        fDatSan lichDatSan;
+        fNhansan NhanSan;
+        fQLSan QLSan;
+        fQLKhachHang QLKhachHang;
+        fQLHoaDon QLHoaDon;
+        fTaiKhoan taiKhoan;
+        fThongKe thongKe;
+
         BUS_NGUOIDUNG BUS_NGUOIDUNG = new BUS_NGUOIDUNG();
         public fAdmin()
         {
             InitializeComponent();
         }
         bool btQuanlyExpand = false;
-     
+
         private void btQuanlyTrainsition_Tick_1(object sender, EventArgs e)
         {
             if (btQuanlyExpand == false)
@@ -52,14 +61,142 @@ namespace BTL_QLSCV
             Application.Exit();
         }
 
+
+        private void btDatSan_Click(object sender, EventArgs e)
+        {
+            if (pMain.Controls.Count > 0)
+            {
+                Form currentForm = pMain.Controls[0] as Form;
+                currentForm.Close();
+            }
+            lichDatSan = new fDatSan();
+            lichDatSan.TopLevel = false;
+            lichDatSan.Dock = DockStyle.Fill;
+            pMain.Controls.Add(lichDatSan);
+            lichDatSan.Show();
+        }
+
+        private void btQLSan_Click(object sender, EventArgs e)
+        {
+            if (pMain.Controls.Count > 0)
+            {
+                Form currentForm = pMain.Controls[0] as Form;
+                currentForm.Close();
+            }
+            QLSan = new fQLSan();
+            QLSan.TopLevel = false;
+            QLSan.Dock = DockStyle.Fill;
+            pMain.Controls.Add(QLSan);
+            QLSan.Show();
+        }
         private void fAdmin_Load(object sender, EventArgs e)
         {
-            
+            if (pMain.Controls.Count > 0)
+            {
+                Form currentForm = pMain.Controls[0] as Form;
+                currentForm.Close();
+            }
+            fHome = new fHome();
+            fHome.TopLevel = false;
+            fHome.Dock = DockStyle.Fill;
+            pMain.Controls.Add(fHome);
+            fHome.Show();
         }
 
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        private void pMain_Paint(object sender, PaintEventArgs e)
         {
+        }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+            if (pMain.Controls.Count > 0)
+            {
+                Form currentForm = pMain.Controls[0] as Form;
+                currentForm.Close();
+            }
+            fHome = new fHome();
+            fHome.TopLevel = false;
+            fHome.Dock = DockStyle.Fill;
+            pMain.Controls.Add(fHome);
+            fHome.Show();
+        }
+
+        private void btTaiKhoan_Click(object sender, EventArgs e)
+        {
+            if (pMain.Controls.Count > 0)
+            {
+                Form currentForm = pMain.Controls[0] as Form;
+                currentForm.Close();
+            }
+            taiKhoan = new fTaiKhoan();
+            taiKhoan.TopLevel = false;
+            taiKhoan.Dock = DockStyle.Fill;
+            pMain.Controls.Add(taiKhoan);
+            taiKhoan.Show();
+        }
+
+        private void btNhanSan_Click(object sender, EventArgs e)
+        {
+            if (pMain.Controls.Count > 0)
+            {
+                Form currentForm = pMain.Controls[0] as Form;
+                currentForm.Close();
+            }
+            NhanSan = new fNhansan();
+            NhanSan.TopLevel = false;
+            NhanSan.Dock = DockStyle.Fill;
+            pMain.Controls.Add(NhanSan);
+            NhanSan.Show();
+        }
+
+        private void btQLKH_Click(object sender, EventArgs e)
+        {
+            if (pMain.Controls.Count > 0)
+            {
+                Form currentForm = pMain.Controls[0] as Form;
+                currentForm.Close();
+            }
+            QLKhachHang = new fQLKhachHang();
+            QLKhachHang.TopLevel = false;
+            QLKhachHang.Dock = DockStyle.Fill;
+            pMain.Controls.Add(QLKhachHang);
+            QLKhachHang.Show();
+        }
+
+        private void btQLHoaDon_Click(object sender, EventArgs e)
+        {
+            if (pMain.Controls.Count > 0)
+            {
+                Form currentForm = pMain.Controls[0] as Form;
+                currentForm.Close();
+            }
+            QLHoaDon = new fQLHoaDon();
+            QLHoaDon.TopLevel = false;
+            QLHoaDon.Dock = DockStyle.Fill;
+            pMain.Controls.Add(QLHoaDon);
+            QLHoaDon.Show();
+        }
+
+        private void btThongKe_Click(object sender, EventArgs e)
+        {
+            if (pMain.Controls.Count > 0)
+            {
+                Form currentForm = pMain.Controls[0] as Form;
+                currentForm.Close();
+            }
+            thongKe = new fThongKe();
+            thongKe.TopLevel = false;
+            thongKe.Dock = DockStyle.Fill;
+            pMain.Controls.Add(thongKe);
+            thongKe.Show();
+        }
+
+        private void btLogout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            fLogin fLogin = new fLogin();
+            fLogin.Show();
         }
     }
+
 }

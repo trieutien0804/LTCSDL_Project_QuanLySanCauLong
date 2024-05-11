@@ -17,12 +17,18 @@ namespace BTL_QLSCV
             InitializeComponent();
         }
 
-        private void label9_Click(object sender, EventArgs e)
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void fDatSan_Load(object sender, EventArgs e)
+        {
+            this.ControlBox = false;
+        }
+
+        private void fDatSan_FormClosed(object sender, FormClosedEventArgs e)
         {
 
         }

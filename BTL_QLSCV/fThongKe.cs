@@ -21,5 +21,10 @@ namespace BTL_QLSCV
         {
 
         }
+
+        private void fThongKe_Load(object sender, EventArgs e)
+        {
+            this.ControlBox = false;
+        }
     }
 }

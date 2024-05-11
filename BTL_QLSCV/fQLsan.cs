@@ -22,6 +22,7 @@ namespace BTL_QLSCV
         private void fQLsan_Load(object sender, EventArgs e)
         {
             dsSan.DataSource = bus_SAN.getSAN();
+            this.ControlBox = false;
         }
 
        

@@ -21,5 +21,10 @@ namespace BTL_QLSCV
         {
 
         }
+
+        private void fTaiKhoan_Load(object sender, EventArgs e)
+        {
+            this.ControlBox = false;
+        }
     }
 }

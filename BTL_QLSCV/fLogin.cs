@@ -15,6 +15,8 @@ namespace BTL_QLSCV
     {
         BUS_NGUOIDUNG BUS_NGUOIDUNG = new BUS_NGUOIDUNG();
         //fAdmin fAdmin;
+        fAdmin fAdmin;
+        fHome fHome;
         fQLSan fQLsan;
         public fLogin()
         {
@@ -30,8 +32,8 @@ namespace BTL_QLSCV
             {
                 if (BUS_NGUOIDUNG.Login(username, password))
                 {
-                    fQLsan = new fQLSan();
-                    fQLsan.Show();
+                    fAdmin = new fAdmin();
+                    fAdmin.Show();
                     this.Hide();
                 }
                 else
@@ -61,5 +63,6 @@ namespace BTL_QLSCV
                 btnLogin.PerformClick(); ;
             }
         }
+
     }
 }

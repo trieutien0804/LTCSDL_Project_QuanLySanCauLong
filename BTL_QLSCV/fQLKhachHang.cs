@@ -17,6 +17,9 @@ namespace BTL_QLSCV
             InitializeComponent();
         }
 
-
+        private void fQLKhachHang_Load(object sender, EventArgs e)
+        {
+            this.ControlBox = false;
+        }
     }
 }
