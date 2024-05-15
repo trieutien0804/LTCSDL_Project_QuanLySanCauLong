@@ -23,7 +23,7 @@ namespace BTL_QLSCV
         {
             if (txtMaCa.Text != "")
             {
-                if (bus_CA.addCA(Convert.ToInt32(txtMaCa.Text), dtpTGBD.Text, dtpTGKT.Text))
+                if (bus_CA.addCA(dtpTGBD.Text, dtpTGKT.Text))
                 {
                     dgvdsCa.DataSource = bus_CA.getCA();
                     MessageBox.Show("Thêm thành công");

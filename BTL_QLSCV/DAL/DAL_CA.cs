@@ -8,49 +8,52 @@ namespace BTL_QLSCV.DAL
 {
     class DAL_CA
     {
-        QLSCLEntities db;
+        QLSCLEntities1 db;
 
         public DAL_CA()
         {
-            db = new QLSCLEntities();
+            db = new QLSCLEntities1();
         }
 
         public dynamic getCA()
         {
-            var dsCA = db.CAs.Select(s => new {s.MaCa, s.ThoiGianBD, s.ThoiGianKT}).ToList();
+            var dsCA = db.CA.Select(s => new {s.MaCa, s.ThoiGianBD, s.ThoiGianKT}).ToList();
             return dsCA;
         }
-
 
         public dynamic getCaTime()
         {
             //list string
-            var dsCA = db.CAs.Select(s => new { s.ThoiGianBD, s.ThoiGianKT}).ToList();
+            var dsCA = db.CA.Select(s => new { s.ThoiGianBD, s.ThoiGianKT}).ToList();
+            return dsCA;
+        }
+        public dynamic findMaCa()
+        {
+            var dsCA = db.CA.Select(s => new { s.MaCa}).ToList();
             return dsCA;
         }
 
-        public bool addCA(int maCa, string tGBD, string tGKT)
+        public bool addCA(string tGBD, string tGKT)
         {
             var ca = new CA()
             {
-                MaCa = maCa,
                 ThoiGianBD = tGBD,
                 ThoiGianKT = tGKT 
             };
-            db.CAs.Add(ca);
+            db.CA.Add(ca);
             db.SaveChanges();
             return true;
         }
         public bool removeCA(int maCa)
         {
-            CA ca = db.CAs.Where(c => c.MaCa == maCa).FirstOrDefault();
-            db.CAs.Remove(ca);
+            CA ca = db.CA.Where(c => c.MaCa == maCa).FirstOrDefault();
+            db.CA.Remove(ca);
             db.SaveChanges();
             return true;
         }
         public bool editCA(int curMACA, CA ca)
         {
-            CA c = db.CAs.Find(curMACA);
+            CA c = db.CA.Find(curMACA);
             c.ThoiGianBD = ca.ThoiGianBD;
             c.ThoiGianKT = ca.ThoiGianKT;
             db.SaveChanges();

@@ -12,11 +12,13 @@
     <Key>
       <PropertyRef Name="MaCaThue" />
     </Key>
-    <Property Name="MaCaThue" Type="int" Nullable="false" />
+    <Property Name="MaCaThue" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Gia" Type="int" />
-    <Property Name="MaSan" Type="int" StoreGeneratedPattern="Identity" />
-    <Property Name="MaCa" Type="int" StoreGeneratedPattern="Identity" />
+    <Property Name="MaSan" Type="int" />
+    <Property Name="MaCa" Type="int" />
   </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLSCL.dbo.CHITIETDATSAN' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="CHITIETDATSAN">
     <Key>
       <PropertyRef Name="MaPhieu" />
@@ -26,6 +28,8 @@
     <Property Name="MaCaThue" Type="int" Nullable="false" />
     <Property Name="TienCoc" Type="int" />
   </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QLSCL.dbo.CHITIETHOADON' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="CHITIETHOADON">
     <Key>
       <PropertyRef Name="MaHD" />
@@ -71,8 +75,8 @@
       <PropertyRef Name="MaPhieu" />
     </Key>
     <Property Name="MaPhieu" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="NgayLap" Type="datetime" />
-    <Property Name="NgayDat" Type="date" />
+    <Property Name="NgayLap" Type="varchar" MaxLength="15" />
+    <Property Name="NgayDat" Type="varchar" MaxLength="15" />
     <Property Name="MaKH" Type="int" />
   </EntityType>
   <EntityType Name="SAN">
@@ -82,16 +86,6 @@
     <Property Name="MaSan" Type="int" Nullable="false" />
     <Property Name="TenSan" Type="nchar" MaxLength="10" />
   </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="principal_id" Type="int" Nullable="false" />
-    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
-  </EntityType>
   <EntityType Name="TINHTRANGSAN">
     <Key>
       <PropertyRef Name="MaTinhTrang" />
@@ -99,7 +93,7 @@
     <Property Name="MaTinhTrang" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Ngay" Type="nvarchar" MaxLength="50" />
     <Property Name="TinhTrang" Type="nvarchar" MaxLength="50" />
-    <Property Name="MaCaThue" Type="int" StoreGeneratedPattern="Identity" />
+    <Property Name="MaCaThue" Type="int" />
   </EntityType>
   <Association Name="FK_CATHUE_CA">
     <End Role="CA" Type="Self.CA" Multiplicity="0..1" />
@@ -212,15 +206,27 @@
   <EntityContainer Name="QLSCLModelStoreContainer">
     <EntitySet Name="CA" EntityType="Self.CA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CATHUE" EntityType="Self.CATHUE" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="CHITIETDATSAN" EntityType="Self.CHITIETDATSAN" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="CHITIETHOADON" EntityType="Self.CHITIETHOADON" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="HOADON" EntityType="Self.HOADON" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="KHACHHANG" EntityType="Self.KHACHHANG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="NGUOIDUNG" EntityType="Self.NGUOIDUNG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PHIEUDATSAN" EntityType="Self.PHIEUDATSAN" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SAN" EntityType="Self.SAN" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TINHTRANGSAN" EntityType="Self.TINHTRANGSAN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CHITIETDATSAN" EntityType="Self.CHITIETDATSAN" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CHITIETDATSAN].[MaPhieu] AS [MaPhieu], 
+    [CHITIETDATSAN].[MaCaThue] AS [MaCaThue], 
+    [CHITIETDATSAN].[TienCoc] AS [TienCoc]
+    FROM [dbo].[CHITIETDATSAN] AS [CHITIETDATSAN]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CHITIETHOADON" EntityType="Self.CHITIETHOADON" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CHITIETHOADON].[ThoiGianBD] AS [ThoiGianBD], 
+    [CHITIETHOADON].[ThoiGianKT] AS [ThoiGianKT], 
+    [CHITIETHOADON].[MaHD] AS [MaHD], 
+    [CHITIETHOADON].[MaCaThue] AS [MaCaThue]
+    FROM [dbo].[CHITIETHOADON] AS [CHITIETHOADON]</DefiningQuery>
+    </EntitySet>
     <AssociationSet Name="FK_CATHUE_CA" Association="Self.FK_CATHUE_CA">
       <End Role="CA" EntitySet="CA" />
       <End Role="CATHUE" EntitySet="CATHUE" />

@@ -14,6 +14,8 @@ namespace BTL_QLSCV
     public partial class fQLSan : Form
     {
         BUS_SAN bus_SAN = new BUS_SAN();
+        BUS_CA bus_CA = new BUS_CA();
+        BUS_CATHUE bus_CATHUE = new BUS_CATHUE();   
         fCNCa fCNCa;
         public fQLSan()
         {
@@ -22,17 +24,20 @@ namespace BTL_QLSCV
 
         private void fQLsan_Load(object sender, EventArgs e)
         {
+            int maCa = comboTree1.ValueMember.FirstOrDefault();
+            txtTenSan.Text = maCa.ToString();
+            comboTree1.DataSource = bus_CA.getCA();
+            cbTenSan.DataSource = bus_SAN.getTenSan();
+            dsCaThue.DataSource = bus_CATHUE.getCaThue();   
             dsSan.DataSource = bus_SAN.getSAN();
             this.ControlBox = false;
         }
 
-       
-
         private void btThemSan_Click_1(object sender, EventArgs e)
         {
-            if (txtTenSan.Text != "" && txtMaSan.Text != "")
+            if (txtMaSan.Text != "")
             {
-                if (bus_SAN.addSAN(Convert.ToInt32(txtMaSan.Text), txtTenSan.Text))
+                if (bus_SAN.addSAN(txtTenSan.Text))
                 {
                     dsSan.DataSource = bus_SAN.getSAN();
                     MessageBox.Show("Thêm thành công");
@@ -103,6 +108,33 @@ namespace BTL_QLSCV
         private void dsSan_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btThemCaThue_Click(object sender, EventArgs e)
+        {
+            if (cbTenSan.Text != "" && comboTree1.Text != "" && txtGia.Text != "")
+            {
+                string maCaText = comboTree1.SelectedValue.ToString();
+                int startIndex = maCaText.IndexOf("=") + 1;
+                int endIndex = maCaText.IndexOf(",", startIndex);
+                int maCa = Convert.ToInt32(maCaText.Substring(startIndex, endIndex - startIndex).Trim());
+                int maSan = bus_SAN.findMaSanByTenSan(cbTenSan.Text);
+                txtTenSan.Text = maCa.ToString();
+                int gia = Convert.ToInt32(txtGia.Text);
+                if (bus_CATHUE.addCaThue(gia, maSan, maCa))
+                {
+                    dsCaThue.DataSource = bus_CATHUE.getCaThue();
+                    MessageBox.Show("Thêm thành công");
+                }
+                else
+                {
+                    MessageBox.Show("Thêm không thành công");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Xin hãy nhập đầy đủ");
+            }
         }
     }
 }

@@ -20,6 +20,5 @@ namespace BTL_QLSCV
         public Nullable<int> MaCaThue { get; set; }
     
         public virtual CATHUE CATHUE { get; set; }
-        public virtual CATHUE CATHUE1 { get; set; }
     }
 }

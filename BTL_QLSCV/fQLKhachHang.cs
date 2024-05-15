@@ -28,9 +28,9 @@ namespace BTL_QLSCV
 
         private void btThemKH_Click(object sender, EventArgs e)
         {
-            if (txtMaKH.Text != "" && txtHoTen.Text != "" && txtSDT.Text != "" && txtDiaChi.Text != "")
+            if (txtHoTen.Text != "" && txtSDT.Text != "" && txtDiaChi.Text != "")
             {
-                if (bus_KHACHHANG.addKH(Convert.ToInt32(txtMaKH.Text), txtHoTen.Text, txtSDT.Text, txtDiaChi.Text))
+                if (bus_KHACHHANG.addKH(txtHoTen.Text, txtSDT.Text, txtDiaChi.Text))
                 {
                     dsKhachHang.DataSource = bus_KHACHHANG.getKH();
                     MessageBox.Show("Thêm thành công");

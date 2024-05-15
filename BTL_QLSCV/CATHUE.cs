@@ -17,9 +17,9 @@ namespace BTL_QLSCV
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public CATHUE()
         {
-            this.CHITIETDATSANs = new HashSet<CHITIETDATSAN>();
-            this.TINHTRANGSANs = new HashSet<TINHTRANGSAN>();
-            this.CHITIETHOADONs = new HashSet<CHITIETHOADON>();
+            this.CHITIETDATSAN = new HashSet<CHITIETDATSAN>();
+            this.CHITIETHOADON = new HashSet<CHITIETHOADON>();
+            this.TINHTRANGSAN = new HashSet<TINHTRANGSAN>();
         }
     
         public int MaCaThue { get; set; }
@@ -29,12 +29,11 @@ namespace BTL_QLSCV
     
         public virtual CA CA { get; set; }
         public virtual SAN SAN { get; set; }
-        public virtual TINHTRANGSAN TINHTRANGSAN { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CHITIETDATSAN> CHITIETDATSANs { get; set; }
+        public virtual ICollection<CHITIETDATSAN> CHITIETDATSAN { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TINHTRANGSAN> TINHTRANGSANs { get; set; }
+        public virtual ICollection<CHITIETHOADON> CHITIETHOADON { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CHITIETHOADON> CHITIETHOADONs { get; set; }
+        public virtual ICollection<TINHTRANGSAN> TINHTRANGSAN { get; set; }
     }
 }

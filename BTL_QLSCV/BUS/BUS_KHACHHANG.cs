@@ -20,9 +20,9 @@ namespace BTL_QLSCV.BUS
             return dal_KHACHHANG.getKH();
         }
 
-        public bool addKH(int maKH, string tenSan, string sDT, string diaChi)
+        public bool addKH(string tenSan, string sDT, string diaChi)
         {
-            return dal_KHACHHANG.addKH(maKH, tenSan, sDT, diaChi);
+            return dal_KHACHHANG.addKH(tenSan, sDT, diaChi);
         }
 
         public bool removeKH(int maKH)
@@ -33,6 +33,10 @@ namespace BTL_QLSCV.BUS
         public bool editKH(int curMAKH, KHACHHANG kh)
         {
             return dal_KHACHHANG.editKH(curMAKH, kh);
+        }
+        public dynamic findKHBySDT(string sDT)
+        {
+            return dal_KHACHHANG.findKHBySDT(sDT);
         }
     }
 }

@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QLSCLModelStoreContainer" CdmEntityContainer="QLSCLEntities1">
+    <EntitySetMapping Name="CA">
+      <EntityTypeMapping TypeName="QLSCLModel.CA">
+        <MappingFragment StoreEntitySet="CA">
+          <ScalarProperty Name="MaCa" ColumnName="MaCa" />
+          <ScalarProperty Name="ThoiGianBD" ColumnName="ThoiGianBD" />
+          <ScalarProperty Name="ThoiGianKT" ColumnName="ThoiGianKT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CATHUE">
+      <EntityTypeMapping TypeName="QLSCLModel.CATHUE">
+        <MappingFragment StoreEntitySet="CATHUE">
+          <ScalarProperty Name="MaCaThue" ColumnName="MaCaThue" />
+          <ScalarProperty Name="Gia" ColumnName="Gia" />
+          <ScalarProperty Name="MaSan" ColumnName="MaSan" />
+          <ScalarProperty Name="MaCa" ColumnName="MaCa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HOADON">
+      <EntityTypeMapping TypeName="QLSCLModel.HOADON">
+        <MappingFragment StoreEntitySet="HOADON">
+          <ScalarProperty Name="MaHD" ColumnName="MaHD" />
+          <ScalarProperty Name="ThoiGianThanhToan" ColumnName="ThoiGianThanhToan" />
+          <ScalarProperty Name="HoTenNguoiTT" ColumnName="HoTenNguoiTT" />
+          <ScalarProperty Name="NhanVienTT" ColumnName="NhanVienTT" />
+          <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+          <ScalarProperty Name="MaPhieu" ColumnName="MaPhieu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KHACHHANG">
+      <EntityTypeMapping TypeName="QLSCLModel.KHACHHANG">
+        <MappingFragment StoreEntitySet="KHACHHANG">
+          <ScalarProperty Name="MaKH" ColumnName="MaKH" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NGUOIDUNG">
+      <EntityTypeMapping TypeName="QLSCLModel.NGUOIDUNG">
+        <MappingFragment StoreEntitySet="NGUOIDUNG">
+          <ScalarProperty Name="MaNguoiDung" ColumnName="MaNguoiDung" />
+          <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+          <ScalarProperty Name="TenDangNhap" ColumnName="TenDangNhap" />
+          <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+          <ScalarProperty Name="Quyen" ColumnName="Quyen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PHIEUDATSAN">
+      <EntityTypeMapping TypeName="QLSCLModel.PHIEUDATSAN">
+        <MappingFragment StoreEntitySet="PHIEUDATSAN">
+          <ScalarProperty Name="MaPhieu" ColumnName="MaPhieu" />
+          <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
+          <ScalarProperty Name="NgayDat" ColumnName="NgayDat" />
+          <ScalarProperty Name="MaKH" ColumnName="MaKH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SAN">
+      <EntityTypeMapping TypeName="QLSCLModel.SAN">
+        <MappingFragment StoreEntitySet="SAN">
+          <ScalarProperty Name="MaSan" ColumnName="MaSan" />
+          <ScalarProperty Name="TenSan" ColumnName="TenSan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TINHTRANGSAN">
+      <EntityTypeMapping TypeName="QLSCLModel.TINHTRANGSAN">
+        <MappingFragment StoreEntitySet="TINHTRANGSAN">
+          <ScalarProperty Name="MaTinhTrang" ColumnName="MaTinhTrang" />
+          <ScalarProperty Name="Ngay" ColumnName="Ngay" />
+          <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
+          <ScalarProperty Name="MaCaThue" ColumnName="MaCaThue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CHITIETDATSAN">
+      <EntityTypeMapping TypeName="QLSCLModel.CHITIETDATSAN">
+        <MappingFragment StoreEntitySet="CHITIETDATSAN">
+          <ScalarProperty Name="MaPhieu" ColumnName="MaPhieu" />
+          <ScalarProperty Name="MaCaThue" ColumnName="MaCaThue" />
+          <ScalarProperty Name="TienCoc" ColumnName="TienCoc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CHITIETHOADON">
+      <EntityTypeMapping TypeName="QLSCLModel.CHITIETHOADON">
+        <MappingFragment StoreEntitySet="CHITIETHOADON">
+          <ScalarProperty Name="ThoiGianBD" ColumnName="ThoiGianBD" />
+          <ScalarProperty Name="ThoiGianKT" ColumnName="ThoiGianKT" />
+          <ScalarProperty Name="MaHD" ColumnName="MaHD" />
+          <ScalarProperty Name="MaCaThue" ColumnName="MaCaThue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

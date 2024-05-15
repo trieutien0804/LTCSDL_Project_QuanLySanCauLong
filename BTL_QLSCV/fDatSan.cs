@@ -11,6 +11,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
+using DevComponents.DotNetBar.Controls;
 
 namespace BTL_QLSCV
 {
@@ -44,15 +46,12 @@ namespace BTL_QLSCV
 
         private void dsSanDat_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
-            {
-                
-                //DataGridViewRow row = dsSanDat.SelectedRows[0];
-
-               
+            //if (e.RowIndex >= 0)
+            //{
+            //    //DataGridViewRow row = dsSanDat.SelectedRows[0];
                 txtNgayNhan.Text = dtpNgayNhan.Value.ToString("dd-MM-yyyy");
                 txtCa.Text = comboTree1.Text;
-            }
+            //}
         }
 
         private void btDatSan_Click(object sender, EventArgs e)
@@ -61,8 +60,27 @@ namespace BTL_QLSCV
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {            
+            
+            if (txtTimKH.Text != "")
+            {
+                string sdt = txtTimKH.Text;
+                dgvKH.DataSource = bus_KH.findKHBySDT(sdt);
+            }
+            else
+            {
+                MessageBox.Show("Hãy nhập số điện thoại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void dgvKH_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            dgvKH.DataSource = bus_KH.findKHBySDT(string sdt);
+                DataGridViewRow row = dgvKH.SelectedRows[0];
+                txtMaKH.Text = row.Cells[0].Value.ToString();
+                txtHoTen.Text = row.Cells[1].Value.ToString();
+                txtSDT.Text = row.Cells[2].Value.ToString();
+                txtDiaChi.Text = row.Cells[3].Value.ToString();
+            
         }
     }
 }

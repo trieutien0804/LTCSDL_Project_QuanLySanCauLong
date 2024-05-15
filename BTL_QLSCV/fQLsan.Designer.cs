@@ -38,7 +38,7 @@ namespace BTL_QLSCV
             this.txtMaSan = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dsSan = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dsCaThue = new System.Windows.Forms.DataGridView();
             this.gbChucNang = new System.Windows.Forms.GroupBox();
             this.btXoaSan = new System.Windows.Forms.Button();
             this.btSuaSan = new System.Windows.Forms.Button();
@@ -46,13 +46,15 @@ namespace BTL_QLSCV
             this.gbTimCa = new System.Windows.Forms.GroupBox();
             this.btCNCa = new System.Windows.Forms.Button();
             this.gbCaTheoSan = new System.Windows.Forms.GroupBox();
+            this.comboTree1 = new DevComponents.DotNetBar.Controls.ComboTree();
+            this.cbTenSan = new System.Windows.Forms.ComboBox();
             this.btHuy = new System.Windows.Forms.Button();
             this.btXoaCa = new System.Windows.Forms.Button();
             this.tbSuaCa = new System.Windows.Forms.Button();
-            this.btThemCa = new System.Windows.Forms.Button();
+            this.btThemCaThue = new System.Windows.Forms.Button();
             this.txtGia = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtMaCa = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.dsCaTheoSan = new System.Windows.Forms.Label();
@@ -60,7 +62,7 @@ namespace BTL_QLSCV
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.gbSan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dsSan)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsCaThue)).BeginInit();
             this.gbChucNang.SuspendLayout();
             this.gbTimCa.SuspendLayout();
             this.gbCaTheoSan.SuspendLayout();
@@ -149,13 +151,13 @@ namespace BTL_QLSCV
             this.dsSan.TabIndex = 2;
             this.dsSan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dsSan_CellContentClick);
             // 
-            // dataGridView2
+            // dsCaThue
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(558, 232);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(444, 265);
-            this.dataGridView2.TabIndex = 3;
+            this.dsCaThue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dsCaThue.Location = new System.Drawing.Point(558, 232);
+            this.dsCaThue.Name = "dsCaThue";
+            this.dsCaThue.Size = new System.Drawing.Size(444, 265);
+            this.dsCaThue.TabIndex = 3;
             // 
             // gbChucNang
             // 
@@ -217,7 +219,7 @@ namespace BTL_QLSCV
             // 
             // btCNCa
             // 
-            this.btCNCa.Location = new System.Drawing.Point(363, 21);
+            this.btCNCa.Location = new System.Drawing.Point(362, 21);
             this.btCNCa.Name = "btCNCa";
             this.btCNCa.Size = new System.Drawing.Size(117, 27);
             this.btCNCa.TabIndex = 11;
@@ -227,25 +229,51 @@ namespace BTL_QLSCV
             // 
             // gbCaTheoSan
             // 
+            this.gbCaTheoSan.Controls.Add(this.comboTree1);
+            this.gbCaTheoSan.Controls.Add(this.cbTenSan);
             this.gbCaTheoSan.Controls.Add(this.btHuy);
             this.gbCaTheoSan.Controls.Add(this.btXoaCa);
             this.gbCaTheoSan.Controls.Add(this.tbSuaCa);
-            this.gbCaTheoSan.Controls.Add(this.btThemCa);
+            this.gbCaTheoSan.Controls.Add(this.btThemCaThue);
             this.gbCaTheoSan.Controls.Add(this.txtGia);
             this.gbCaTheoSan.Controls.Add(this.label4);
-            this.gbCaTheoSan.Controls.Add(this.txtMaCa);
+            this.gbCaTheoSan.Controls.Add(this.label5);
             this.gbCaTheoSan.Controls.Add(this.label3);
             this.gbCaTheoSan.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbCaTheoSan.Location = new System.Drawing.Point(12, 347);
             this.gbCaTheoSan.Name = "gbCaTheoSan";
-            this.gbCaTheoSan.Size = new System.Drawing.Size(517, 152);
+            this.gbCaTheoSan.Size = new System.Drawing.Size(517, 241);
             this.gbCaTheoSan.TabIndex = 2;
             this.gbCaTheoSan.TabStop = false;
-            this.gbCaTheoSan.Text = "Thông tin ca theo loại sân";
+            this.gbCaTheoSan.Text = "Thông tin ca thuê";
+            // 
+            // comboTree1
+            // 
+            this.comboTree1.BackColor = System.Drawing.SystemColors.Window;
+            // 
+            // 
+            // 
+            this.comboTree1.BackgroundStyle.Class = "TextBoxBorder";
+            this.comboTree1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.comboTree1.ButtonDropDown.Visible = true;
+            this.comboTree1.Location = new System.Drawing.Point(35, 120);
+            this.comboTree1.Name = "comboTree1";
+            this.comboTree1.Size = new System.Drawing.Size(213, 25);
+            this.comboTree1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.comboTree1.TabIndex = 12;
+            // 
+            // cbTenSan
+            // 
+            this.cbTenSan.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTenSan.FormattingEnabled = true;
+            this.cbTenSan.Location = new System.Drawing.Point(36, 65);
+            this.cbTenSan.Name = "cbTenSan";
+            this.cbTenSan.Size = new System.Drawing.Size(212, 25);
+            this.cbTenSan.TabIndex = 11;
             // 
             // btHuy
             // 
-            this.btHuy.Location = new System.Drawing.Point(362, 117);
+            this.btHuy.Location = new System.Drawing.Point(317, 172);
             this.btHuy.Name = "btHuy";
             this.btHuy.Size = new System.Drawing.Size(117, 27);
             this.btHuy.TabIndex = 10;
@@ -254,7 +282,7 @@ namespace BTL_QLSCV
             // 
             // btXoaCa
             // 
-            this.btXoaCa.Location = new System.Drawing.Point(362, 84);
+            this.btXoaCa.Location = new System.Drawing.Point(317, 130);
             this.btXoaCa.Name = "btXoaCa";
             this.btXoaCa.Size = new System.Drawing.Size(117, 27);
             this.btXoaCa.TabIndex = 9;
@@ -263,59 +291,59 @@ namespace BTL_QLSCV
             // 
             // tbSuaCa
             // 
-            this.tbSuaCa.Location = new System.Drawing.Point(362, 51);
+            this.tbSuaCa.Location = new System.Drawing.Point(317, 90);
             this.tbSuaCa.Name = "tbSuaCa";
             this.tbSuaCa.Size = new System.Drawing.Size(117, 27);
             this.tbSuaCa.TabIndex = 8;
             this.tbSuaCa.Text = "Sửa ca";
             this.tbSuaCa.UseVisualStyleBackColor = true;
             // 
-            // btThemCa
+            // btThemCaThue
             // 
-            this.btThemCa.Location = new System.Drawing.Point(362, 18);
-            this.btThemCa.Name = "btThemCa";
-            this.btThemCa.Size = new System.Drawing.Size(117, 27);
-            this.btThemCa.TabIndex = 5;
-            this.btThemCa.Text = "Thêm ca";
-            this.btThemCa.UseVisualStyleBackColor = true;
+            this.btThemCaThue.Location = new System.Drawing.Point(317, 45);
+            this.btThemCaThue.Name = "btThemCaThue";
+            this.btThemCaThue.Size = new System.Drawing.Size(117, 27);
+            this.btThemCaThue.TabIndex = 5;
+            this.btThemCaThue.Text = "Thêm ca thuê";
+            this.btThemCaThue.UseVisualStyleBackColor = true;
+            this.btThemCaThue.Click += new System.EventHandler(this.btThemCaThue_Click);
             // 
             // txtGia
             // 
             this.txtGia.BackColor = System.Drawing.Color.White;
             this.txtGia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtGia.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGia.Location = new System.Drawing.Point(192, 45);
+            this.txtGia.Location = new System.Drawing.Point(35, 174);
             this.txtGia.Name = "txtGia";
-            this.txtGia.Size = new System.Drawing.Size(120, 25);
+            this.txtGia.Size = new System.Drawing.Size(213, 25);
             this.txtGia.TabIndex = 5;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(189, 29);
+            this.label4.Location = new System.Drawing.Point(32, 158);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(27, 13);
             this.label4.TabIndex = 4;
             this.label4.Text = "Giá:";
             // 
-            // txtMaCa
+            // label5
             // 
-            this.txtMaCa.BackColor = System.Drawing.Color.White;
-            this.txtMaCa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMaCa.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaCa.Location = new System.Drawing.Point(38, 45);
-            this.txtMaCa.Name = "txtMaCa";
-            this.txtMaCa.Size = new System.Drawing.Size(120, 25);
-            this.txtMaCa.TabIndex = 3;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(35, 104);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(23, 13);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Ca:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(35, 25);
+            this.label3.Location = new System.Drawing.Point(35, 45);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 13);
+            this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Mã ca:";
+            this.label3.Text = "Tên sân:";
             // 
             // label6
             // 
@@ -354,14 +382,14 @@ namespace BTL_QLSCV
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1025, 523);
+            this.ClientSize = new System.Drawing.Size(1209, 613);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dsCaTheoSan);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.gbCaTheoSan);
             this.Controls.Add(this.gbTimCa);
             this.Controls.Add(this.gbChucNang);
-            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.dsCaThue);
             this.Controls.Add(this.dsSan);
             this.Controls.Add(this.gbSan);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -372,7 +400,7 @@ namespace BTL_QLSCV
             this.gbSan.ResumeLayout(false);
             this.gbSan.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dsSan)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsCaThue)).EndInit();
             this.gbChucNang.ResumeLayout(false);
             this.gbChucNang.PerformLayout();
             this.gbTimCa.ResumeLayout(false);
@@ -391,19 +419,18 @@ namespace BTL_QLSCV
         private System.Windows.Forms.GroupBox gbCaTheoSan;
         private System.Windows.Forms.GroupBox gbTimCa;
         private System.Windows.Forms.GroupBox gbChucNang;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dsCaThue;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtTenSan;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtMaSan;
         private System.Windows.Forms.TextBox txtGia;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtMaCa;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btHuy;
         private System.Windows.Forms.Button btXoaCa;
         private System.Windows.Forms.Button tbSuaCa;
-        private System.Windows.Forms.Button btThemCa;
+        private System.Windows.Forms.Button btThemCaThue;
         private System.Windows.Forms.Label dsCaTheoSan;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btXoaSan;
@@ -413,5 +440,8 @@ namespace BTL_QLSCV
         private System.Windows.Forms.Button btTimSan;
         private System.Windows.Forms.Button btCNCa;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label5;
+        private DevComponents.DotNetBar.Controls.ComboTree comboTree1;
+        private System.Windows.Forms.ComboBox cbTenSan;
     }
 }

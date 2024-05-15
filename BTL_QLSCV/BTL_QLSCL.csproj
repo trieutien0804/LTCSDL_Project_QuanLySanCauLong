@@ -57,22 +57,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS\BUS_CA.cs" />
+    <Compile Include="BUS\BUS_CATHUE.cs" />
+    <Compile Include="BUS\BUS_CHITIETDATSAN.cs" />
+    <Compile Include="BUS\BUS_PHIEUDATSAN.cs" />
     <Compile Include="BUS\BUS_KHACHHANG.cs" />
     <Compile Include="BUS\BUS_NGUOIDUNG.cs" />
     <Compile Include="BUS\BUS_SAN.cs" />
     <Compile Include="CA.cs">
-      <DependentUpon>ModelQLSCL.tt</DependentUpon>
+      <DependentUpon>QLSCL.tt</DependentUpon>
     </Compile>
     <Compile Include="CATHUE.cs">
-      <DependentUpon>ModelQLSCL.tt</DependentUpon>
+      <DependentUpon>QLSCL.tt</DependentUpon>
     </Compile>
     <Compile Include="CHITIETDATSAN.cs">
-      <DependentUpon>ModelQLSCL.tt</DependentUpon>
+      <DependentUpon>QLSCL.tt</DependentUpon>
     </Compile>
     <Compile Include="CHITIETHOADON.cs">
-      <DependentUpon>ModelQLSCL.tt</DependentUpon>
+      <DependentUpon>QLSCL.tt</DependentUpon>
     </Compile>
     <Compile Include="DAL\DAL_CA.cs" />
+    <Compile Include="DAL\DAL_CATHUE.cs" />
+    <Compile Include="DAL\DAL_CHITIETDATSAN.cs" />
+    <Compile Include="DAL\DAL_PHIEUDATSAN.cs" />
     <Compile Include="DAL\DAL_KHACHHANG.cs" />
     <Compile Include="DAL\DAL_NGUOIDUNG.cs" />
     <Compile Include="DAL\DAL_SAN.cs" />
@@ -143,39 +149,36 @@
       <DependentUpon>fThongKe.cs</DependentUpon>
     </Compile>
     <Compile Include="HOADON.cs">
-      <DependentUpon>ModelQLSCL.tt</DependentUpon>
+      <DependentUpon>QLSCL.tt</DependentUpon>
     </Compile>
     <Compile Include="KHACHHANG.cs">
-      <DependentUpon>ModelQLSCL.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ModelQLSCL.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelQLSCL.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ModelQLSCL.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelQLSCL.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ModelQLSCL.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelQLSCL.edmx</DependentUpon>
+      <DependentUpon>QLSCL.tt</DependentUpon>
     </Compile>
     <Compile Include="NGUOIDUNG.cs">
-      <DependentUpon>ModelQLSCL.tt</DependentUpon>
+      <DependentUpon>QLSCL.tt</DependentUpon>
     </Compile>
     <Compile Include="PHIEUDATSAN.cs">
-      <DependentUpon>ModelQLSCL.tt</DependentUpon>
+      <DependentUpon>QLSCL.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SAN.cs">
-      <DependentUpon>ModelQLSCL.tt</DependentUpon>
+    <Compile Include="QLSCL.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLSCL.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="sysdiagram.cs">
-      <DependentUpon>ModelQLSCL.tt</DependentUpon>
+    <Compile Include="QLSCL.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLSCL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QLSCL.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLSCL.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="SAN.cs">
+      <DependentUpon>QLSCL.tt</DependentUpon>
     </Compile>
     <Compile Include="test.cs">
       <SubType>Form</SubType>
@@ -184,7 +187,7 @@
       <DependentUpon>test.cs</DependentUpon>
     </Compile>
     <Compile Include="TINHTRANGSAN.cs">
-      <DependentUpon>ModelQLSCL.tt</DependentUpon>
+      <DependentUpon>QLSCL.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="fAdmin.resx">
       <DependentUpon>fAdmin.cs</DependentUpon>
@@ -231,13 +234,6 @@
     <EmbeddedResource Include="test.resx">
       <DependentUpon>test.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="ModelQLSCL.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelQLSCL.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="ModelQLSCL.edmx.diagram">
-      <DependentUpon>ModelQLSCL.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -248,25 +244,31 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EntityDeploy Include="QLSCL.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QLSCL.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="QLSCL.edmx.diagram">
+      <DependentUpon>QLSCL.edmx</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ModelQLSCL.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ModelQLSCL.Context.cs</LastGenOutput>
-      <DependentUpon>ModelQLSCL.edmx</DependentUpon>
-    </Content>
-    <Content Include="ModelQLSCL.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelQLSCL.edmx</DependentUpon>
-      <LastGenOutput>ModelQLSCL.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="QLSCL.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLSCL.edmx</DependentUpon>
+      <LastGenOutput>QLSCL.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="QLSCL.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLSCL.edmx</DependentUpon>
+      <LastGenOutput>QLSCL.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

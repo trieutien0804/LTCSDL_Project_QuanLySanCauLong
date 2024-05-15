@@ -17,19 +17,19 @@ namespace BTL_QLSCV
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public PHIEUDATSAN()
         {
-            this.CHITIETDATSANs = new HashSet<CHITIETDATSAN>();
-            this.HOADONs = new HashSet<HOADON>();
+            this.HOADON = new HashSet<HOADON>();
+            this.CHITIETDATSAN = new HashSet<CHITIETDATSAN>();
         }
     
         public int MaPhieu { get; set; }
-        public Nullable<System.DateTime> NgayLap { get; set; }
-        public Nullable<System.DateTime> NgayDat { get; set; }
+        public string NgayLap { get; set; }
+        public string NgayDat { get; set; }
         public Nullable<int> MaKH { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CHITIETDATSAN> CHITIETDATSANs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HOADON> HOADONs { get; set; }
+        public virtual ICollection<HOADON> HOADON { get; set; }
         public virtual KHACHHANG KHACHHANG { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CHITIETDATSAN> CHITIETDATSAN { get; set; }
     }
 }

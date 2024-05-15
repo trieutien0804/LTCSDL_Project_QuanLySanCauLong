@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLSCLModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CA">
+    <Key>
+      <PropertyRef Name="MaCa" />
+    </Key>
+    <Property Name="MaCa" Type="Int32" Nullable="false" />
+    <Property Name="ThoiGianBD" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="ThoiGianKT" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CATHUE" Relationship="Self.FK_CATHUE_CA" FromRole="CA" ToRole="CATHUE" />
+  </EntityType>
+  <EntityType Name="CATHUE">
+    <Key>
+      <PropertyRef Name="MaCaThue" />
+    </Key>
+    <Property Name="MaCaThue" Type="Int32" Nullable="false" />
+    <Property Name="Gia" Type="Int32" />
+    <Property Name="MaSan" Type="Int32" />
+    <Property Name="MaCa" Type="Int32" />
+    <NavigationProperty Name="CA" Relationship="Self.FK_CATHUE_CA" FromRole="CATHUE" ToRole="CA" />
+    <NavigationProperty Name="SAN" Relationship="Self.FK_CATHUE_SAN" FromRole="CATHUE" ToRole="SAN" />
+    <NavigationProperty Name="CHITIETDATSAN" Relationship="Self.FK_CHITIETDATSAN_CATHUE" FromRole="CATHUE" ToRole="CHITIETDATSAN" />
+    <NavigationProperty Name="CHITIETHOADON" Relationship="Self.FK_CHITIETHOADON_CATHUE" FromRole="CATHUE" ToRole="CHITIETHOADON" />
+    <NavigationProperty Name="TINHTRANGSAN" Relationship="Self.FK_TINHTRANGSAN_CATHUE" FromRole="CATHUE" ToRole="TINHTRANGSAN" />
+  </EntityType>
+  <EntityType Name="HOADON">
+    <Key>
+      <PropertyRef Name="MaHD" />
+    </Key>
+    <Property Name="MaHD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ThoiGianThanhToan" Type="DateTime" Precision="3" />
+    <Property Name="HoTenNguoiTT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NhanVienTT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TongTien" Type="Int32" />
+    <Property Name="MaPhieu" Type="Int32" />
+    <NavigationProperty Name="CHITIETHOADON" Relationship="Self.FK_CHITIETHOADON_HOADON" FromRole="HOADON" ToRole="CHITIETHOADON" />
+    <NavigationProperty Name="PHIEUDATSAN" Relationship="Self.FK_HOADON_PHIEUDATSAN" FromRole="HOADON" ToRole="PHIEUDATSAN" />
+  </EntityType>
+  <EntityType Name="KHACHHANG">
+    <Key>
+      <PropertyRef Name="MaKH" />
+    </Key>
+    <Property Name="MaKH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SDT" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="DiaChi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="PHIEUDATSAN" Relationship="Self.FK_PHIEUDATSAN_KHACHHANG" FromRole="KHACHHANG" ToRole="PHIEUDATSAN" />
+  </EntityType>
+  <EntityType Name="NGUOIDUNG">
+    <Key>
+      <PropertyRef Name="MaNguoiDung" />
+    </Key>
+    <Property Name="MaNguoiDung" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TenDangNhap" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MatKhau" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Quyen" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PHIEUDATSAN">
+    <Key>
+      <PropertyRef Name="MaPhieu" />
+    </Key>
+    <Property Name="MaPhieu" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NgayLap" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="NgayDat" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="MaKH" Type="Int32" />
+    <NavigationProperty Name="HOADON" Relationship="Self.FK_HOADON_PHIEUDATSAN" FromRole="PHIEUDATSAN" ToRole="HOADON" />
+    <NavigationProperty Name="KHACHHANG" Relationship="Self.FK_PHIEUDATSAN_KHACHHANG" FromRole="PHIEUDATSAN" ToRole="KHACHHANG" />
+    <NavigationProperty Name="CHITIETDATSAN" Relationship="Self.FK_CHITIETDATSAN_PHIEUDATSAN" FromRole="PHIEUDATSAN" ToRole="CHITIETDATSAN" />
+  </EntityType>
+  <EntityType Name="SAN">
+    <Key>
+      <PropertyRef Name="MaSan" />
+    </Key>
+    <Property Name="MaSan" Type="Int32" Nullable="false" />
+    <Property Name="TenSan" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="CATHUE" Relationship="Self.FK_CATHUE_SAN" FromRole="SAN" ToRole="CATHUE" />
+  </EntityType>
+  <EntityType Name="TINHTRANGSAN">
+    <Key>
+      <PropertyRef Name="MaTinhTrang" />
+    </Key>
+    <Property Name="MaTinhTrang" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ngay" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TinhTrang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MaCaThue" Type="Int32" />
+    <NavigationProperty Name="CATHUE" Relationship="Self.FK_TINHTRANGSAN_CATHUE" FromRole="TINHTRANGSAN" ToRole="CATHUE" />
+  </EntityType>
+  <EntityType Name="CHITIETDATSAN">
+    <Key>
+      <PropertyRef Name="MaPhieu" />
+      <PropertyRef Name="MaCaThue" />
+    </Key>
+    <Property Name="MaPhieu" Type="Int32" Nullable="false" />
+    <Property Name="MaCaThue" Type="Int32" Nullable="false" />
+    <Property Name="TienCoc" Type="Int32" />
+    <NavigationProperty Name="CATHUE" Relationship="Self.FK_CHITIETDATSAN_CATHUE" FromRole="CHITIETDATSAN" ToRole="CATHUE" />
+    <NavigationProperty Name="PHIEUDATSAN" Relationship="Self.FK_CHITIETDATSAN_PHIEUDATSAN" FromRole="CHITIETDATSAN" ToRole="PHIEUDATSAN" />
+  </EntityType>
+  <EntityType Name="CHITIETHOADON">
+    <Key>
+      <PropertyRef Name="MaHD" />
+      <PropertyRef Name="MaCaThue" />
+    </Key>
+    <Property Name="ThoiGianBD" Type="DateTime" Precision="3" />
+    <Property Name="ThoiGianKT" Type="DateTime" Precision="3" />
+    <Property Name="MaHD" Type="Int32" Nullable="false" />
+    <Property Name="MaCaThue" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CATHUE" Relationship="Self.FK_CHITIETHOADON_CATHUE" FromRole="CHITIETHOADON" ToRole="CATHUE" />
+    <NavigationProperty Name="HOADON" Relationship="Self.FK_CHITIETHOADON_HOADON" FromRole="CHITIETHOADON" ToRole="HOADON" />
+  </EntityType>
+  <Association Name="FK_CATHUE_CA">
+    <End Role="CA" Type="Self.CA" Multiplicity="0..1" />
+    <End Role="CATHUE" Type="Self.CATHUE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CA">
+        <PropertyRef Name="MaCa" />
+      </Principal>
+      <Dependent Role="CATHUE">
+        <PropertyRef Name="MaCa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CATHUE_SAN">
+    <End Role="SAN" Type="Self.SAN" Multiplicity="0..1" />
+    <End Role="CATHUE" Type="Self.CATHUE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SAN">
+        <PropertyRef Name="MaSan" />
+      </Principal>
+      <Dependent Role="CATHUE">
+        <PropertyRef Name="MaSan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CHITIETDATSAN_CATHUE">
+    <End Role="CATHUE" Type="Self.CATHUE" Multiplicity="1" />
+    <End Role="CHITIETDATSAN" Type="Self.CHITIETDATSAN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CATHUE">
+        <PropertyRef Name="MaCaThue" />
+      </Principal>
+      <Dependent Role="CHITIETDATSAN">
+        <PropertyRef Name="MaCaThue" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CHITIETHOADON_CATHUE">
+    <End Role="CATHUE" Type="Self.CATHUE" Multiplicity="1" />
+    <End Role="CHITIETHOADON" Type="Self.CHITIETHOADON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CATHUE">
+        <PropertyRef Name="MaCaThue" />
+      </Principal>
+      <Dependent Role="CHITIETHOADON">
+        <PropertyRef Name="MaCaThue" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TINHTRANGSAN_CATHUE">
+    <End Role="CATHUE" Type="Self.CATHUE" Multiplicity="0..1" />
+    <End Role="TINHTRANGSAN" Type="Self.TINHTRANGSAN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CATHUE">
+        <PropertyRef Name="MaCaThue" />
+      </Principal>
+      <Dependent Role="TINHTRANGSAN">
+        <PropertyRef Name="MaCaThue" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CHITIETHOADON_HOADON">
+    <End Role="HOADON" Type="Self.HOADON" Multiplicity="1" />
+    <End Role="CHITIETHOADON" Type="Self.CHITIETHOADON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HOADON">
+        <PropertyRef Name="MaHD" />
+      </Principal>
+      <Dependent Role="CHITIETHOADON">
+        <PropertyRef Name="MaHD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HOADON_PHIEUDATSAN">
+    <End Role="PHIEUDATSAN" Type="Self.PHIEUDATSAN" Multiplicity="0..1" />
+    <End Role="HOADON" Type="Self.HOADON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PHIEUDATSAN">
+        <PropertyRef Name="MaPhieu" />
+      </Principal>
+      <Dependent Role="HOADON">
+        <PropertyRef Name="MaPhieu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PHIEUDATSAN_KHACHHANG">
+    <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="0..1" />
+    <End Role="PHIEUDATSAN" Type="Self.PHIEUDATSAN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KHACHHANG">
+        <PropertyRef Name="MaKH" />
+      </Principal>
+      <Dependent Role="PHIEUDATSAN">
+        <PropertyRef Name="MaKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CHITIETDATSAN_PHIEUDATSAN">
+    <End Role="PHIEUDATSAN" Type="Self.PHIEUDATSAN" Multiplicity="1" />
+    <End Role="CHITIETDATSAN" Type="Self.CHITIETDATSAN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PHIEUDATSAN">
+        <PropertyRef Name="MaPhieu" />
+      </Principal>
+      <Dependent Role="CHITIETDATSAN">
+        <PropertyRef Name="MaPhieu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QLSCLEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CA" EntityType="Self.CA" />
+    <EntitySet Name="CATHUE" EntityType="Self.CATHUE" />
+    <EntitySet Name="HOADON" EntityType="Self.HOADON" />
+    <EntitySet Name="KHACHHANG" EntityType="Self.KHACHHANG" />
+    <EntitySet Name="NGUOIDUNG" EntityType="Self.NGUOIDUNG" />
+    <EntitySet Name="PHIEUDATSAN" EntityType="Self.PHIEUDATSAN" />
+    <EntitySet Name="SAN" EntityType="Self.SAN" />
+    <EntitySet Name="TINHTRANGSAN" EntityType="Self.TINHTRANGSAN" />
+    <EntitySet Name="CHITIETDATSAN" EntityType="Self.CHITIETDATSAN" />
+    <EntitySet Name="CHITIETHOADON" EntityType="Self.CHITIETHOADON" />
+    <AssociationSet Name="FK_CATHUE_CA" Association="Self.FK_CATHUE_CA">
+      <End Role="CA" EntitySet="CA" />
+      <End Role="CATHUE" EntitySet="CATHUE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CATHUE_SAN" Association="Self.FK_CATHUE_SAN">
+      <End Role="SAN" EntitySet="SAN" />
+      <End Role="CATHUE" EntitySet="CATHUE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CHITIETDATSAN_CATHUE" Association="Self.FK_CHITIETDATSAN_CATHUE">
+      <End Role="CATHUE" EntitySet="CATHUE" />
+      <End Role="CHITIETDATSAN" EntitySet="CHITIETDATSAN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CHITIETHOADON_CATHUE" Association="Self.FK_CHITIETHOADON_CATHUE">
+      <End Role="CATHUE" EntitySet="CATHUE" />
+      <End Role="CHITIETHOADON" EntitySet="CHITIETHOADON" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TINHTRANGSAN_CATHUE" Association="Self.FK_TINHTRANGSAN_CATHUE">
+      <End Role="CATHUE" EntitySet="CATHUE" />
+      <End Role="TINHTRANGSAN" EntitySet="TINHTRANGSAN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CHITIETHOADON_HOADON" Association="Self.FK_CHITIETHOADON_HOADON">
+      <End Role="HOADON" EntitySet="HOADON" />
+      <End Role="CHITIETHOADON" EntitySet="CHITIETHOADON" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HOADON_PHIEUDATSAN" Association="Self.FK_HOADON_PHIEUDATSAN">
+      <End Role="PHIEUDATSAN" EntitySet="PHIEUDATSAN" />
+      <End Role="HOADON" EntitySet="HOADON" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PHIEUDATSAN_KHACHHANG" Association="Self.FK_PHIEUDATSAN_KHACHHANG">
+      <End Role="KHACHHANG" EntitySet="KHACHHANG" />
+      <End Role="PHIEUDATSAN" EntitySet="PHIEUDATSAN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CHITIETDATSAN_PHIEUDATSAN" Association="Self.FK_CHITIETDATSAN_PHIEUDATSAN">
+      <End Role="PHIEUDATSAN" EntitySet="PHIEUDATSAN" />
+      <End Role="CHITIETDATSAN" EntitySet="CHITIETDATSAN" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

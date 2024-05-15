@@ -17,13 +17,13 @@ namespace BTL_QLSCV
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public SAN()
         {
-            this.CATHUEs = new HashSet<CATHUE>();
+            this.CATHUE = new HashSet<CATHUE>();
         }
     
         public int MaSan { get; set; }
         public string TenSan { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CATHUE> CATHUEs { get; set; }
+        public virtual ICollection<CATHUE> CATHUE { get; set; }
     }
 }

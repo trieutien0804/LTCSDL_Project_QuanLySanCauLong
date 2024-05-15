@@ -27,9 +27,9 @@ namespace BTL_QLSCV.BUS
             return dal_SAN.getSanDat(maCA, ngayDat);
         }
 
-        public bool addSAN(int maSan, string tenSan)
+        public bool addSAN(string tenSan)
         {
-            return dal_SAN.addSAN(maSan, tenSan);
+            return dal_SAN.addSAN(tenSan);
         }
 
         public bool removeSAN(int maSan)
@@ -40,6 +40,14 @@ namespace BTL_QLSCV.BUS
         public bool editSAN(int curMASAN, SAN san)
         {
             return dal_SAN.editSAN(curMASAN, san);
+        }
+        public List<string> getTenSan()
+        {
+            return dal_SAN.getTenSan();
+        }
+        public int findMaSanByTenSan(string tenSan)
+        {
+            return dal_SAN.findMaSanByTenSan(tenSan);
         }
     }
 }

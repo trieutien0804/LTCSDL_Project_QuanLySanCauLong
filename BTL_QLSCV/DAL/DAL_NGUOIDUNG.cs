@@ -9,16 +9,16 @@ namespace BTL_QLSCV.DAL
 {
     class DAL_NGUOIDUNG
     {
-        QLSCLEntities db;
+        QLSCLEntities1 db;
 
         public DAL_NGUOIDUNG()
         {
-            db = new QLSCLEntities();
+            db = new QLSCLEntities1();
         }
 
         public bool Login(string username, string password)
         {
-            var user = db.NGUOIDUNGs.Where(u => u.TenDangNhap == username).FirstOrDefault();
+            var user = db.NGUOIDUNG.Where(u => u.TenDangNhap == username).FirstOrDefault();
 
             if (user != null && user.MatKhau == password)
             {
@@ -29,7 +29,7 @@ namespace BTL_QLSCV.DAL
 
         public dynamic getNGUOIDUNG() {
 
-            var dsNGUOIDUNG = db.NGUOIDUNGs.Select(u => u.TenDangNhap == "admin").ToList();
+            var dsNGUOIDUNG = db.NGUOIDUNG.Select(u => u.TenDangNhap == "admin").ToList();
 
             return dsNGUOIDUNG;
         }

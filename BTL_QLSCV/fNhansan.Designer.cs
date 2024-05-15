@@ -69,7 +69,7 @@
             this.groupBox1.Size = new System.Drawing.Size(517, 91);
             this.groupBox1.TabIndex = 27;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Danh sách sân trống";
+            this.groupBox1.Text = " ";
             // 
             // cbSanTrong
             // 
@@ -321,7 +321,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "fNhansan";
-            this.Text = "fNhansan";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.fNhansan_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

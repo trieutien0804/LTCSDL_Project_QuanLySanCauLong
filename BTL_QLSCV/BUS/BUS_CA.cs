@@ -15,9 +15,9 @@ namespace BTL_QLSCV.BUS
         {
             dal_CA = new DAL_CA();
         }
-        public bool addCA(int maCa, string tGBD, string tGKT)
+        public bool addCA(string tGBD, string tGKT)
         {
-            return dal_CA.addCA(maCa, tGBD, tGKT);
+            return dal_CA.addCA(tGBD, tGKT);
         }
         public bool editCA(int curMACA, CA ca)
         {
