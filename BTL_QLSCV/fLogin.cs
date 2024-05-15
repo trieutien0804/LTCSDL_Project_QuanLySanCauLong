@@ -18,6 +18,7 @@ namespace BTL_QLSCV
         fAdmin fAdmin;
         fHome fHome;
         fQLSan fQLsan;
+        test ftest;
         public fLogin()
         {
             InitializeComponent();
@@ -33,6 +34,7 @@ namespace BTL_QLSCV
                 if (BUS_NGUOIDUNG.Login(username, password))
                 {
                     fAdmin = new fAdmin();
+                    ftest = new test();
                     fAdmin.Show();
                     this.Hide();
                 }

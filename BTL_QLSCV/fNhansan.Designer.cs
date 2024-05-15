@@ -84,7 +84,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(32, 27);
+            this.label9.Location = new System.Drawing.Point(32, 24);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(29, 13);
             this.label9.TabIndex = 4;
@@ -94,7 +94,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(569, 39);
+            this.label6.Location = new System.Drawing.Point(559, 39);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(182, 13);
             this.label6.TabIndex = 26;
@@ -239,7 +239,7 @@
             // dsChuaNhan
             // 
             this.dsChuaNhan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dsChuaNhan.Location = new System.Drawing.Point(572, 55);
+            this.dsChuaNhan.Location = new System.Drawing.Point(562, 55);
             this.dsChuaNhan.Name = "dsChuaNhan";
             this.dsChuaNhan.Size = new System.Drawing.Size(444, 206);
             this.dsChuaNhan.TabIndex = 25;
@@ -290,7 +290,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(568, 268);
+            this.label4.Location = new System.Drawing.Point(558, 268);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(170, 13);
             this.label4.TabIndex = 29;
@@ -299,7 +299,7 @@
             // dsDaNhan
             // 
             this.dsDaNhan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dsDaNhan.Location = new System.Drawing.Point(572, 284);
+            this.dsDaNhan.Location = new System.Drawing.Point(562, 284);
             this.dsDaNhan.Name = "dsDaNhan";
             this.dsDaNhan.Size = new System.Drawing.Size(444, 220);
             this.dsDaNhan.TabIndex = 28;

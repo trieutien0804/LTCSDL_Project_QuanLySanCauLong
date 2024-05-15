@@ -4,16 +4,16 @@
     <Key>
       <PropertyRef Name="MaCa" />
     </Key>
-    <Property Name="MaCa" Type="int" Nullable="false" />
-    <Property Name="ThoiGianBD" Type="datetime" />
-    <Property Name="ThoiGianKT" Type="datetime" />
+    <Property Name="MaCa" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ThoiGianBD" Type="varchar" MaxLength="10" />
+    <Property Name="ThoiGianKT" Type="varchar" MaxLength="10" />
   </EntityType>
   <EntityType Name="CATHUE">
     <Key>
       <PropertyRef Name="MaCaThue" />
     </Key>
-    <Property Name="MaCaThue" Type="int" Nullable="false" />
-    <Property Name="Gia" Type="nchar" MaxLength="10" />
+    <Property Name="MaCaThue" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Gia" Type="int" />
     <Property Name="MaSan" Type="int" />
     <Property Name="MaCa" Type="int" />
   </EntityType>
@@ -24,36 +24,34 @@
     </Key>
     <Property Name="MaPhieu" Type="int" Nullable="false" />
     <Property Name="MaCaThue" Type="int" Nullable="false" />
+    <Property Name="TienCoc" Type="int" />
+  </EntityType>
+  <EntityType Name="CHITIETHOADON">
+    <Key>
+      <PropertyRef Name="MaHD" />
+      <PropertyRef Name="MaCaThue" />
+    </Key>
     <Property Name="ThoiGianBD" Type="datetime" />
     <Property Name="ThoiGianKT" Type="datetime" />
-    <Property Name="SoPhut" Type="nchar" MaxLength="10" />
-    <Property Name="GhiChu" Type="nvarchar" MaxLength="100" />
+    <Property Name="MaHD" Type="int" Nullable="false" />
+    <Property Name="MaCaThue" Type="int" Nullable="false" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6013: The table/view 'QLSCL.dbo.CHITIETHOADON' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="CHITIETHOADON">
-          <Property Name="ThoiGianBD" Type="datetime" />
-          <Property Name="ThoiGianKT" Type="datetime" />
-          <Property Name="SoPhut" Type="nchar" MaxLength="10" />
-          <Property Name="MaHD" Type="int" />
-          <Property Name="MaCaThue" Type="int" />
-        </EntityType>-->
   <EntityType Name="HOADON">
     <Key>
       <PropertyRef Name="MaHD" />
     </Key>
-    <Property Name="MaHD" Type="int" Nullable="false" />
-    <Property Name="ThoiGianThanhToan" Type="nvarchar" MaxLength="50" />
+    <Property Name="MaHD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ThoiGianThanhToan" Type="datetime" />
     <Property Name="HoTenNguoiTT" Type="nvarchar" MaxLength="50" />
     <Property Name="NhanVienTT" Type="nvarchar" MaxLength="50" />
-    <Property Name="TongTien" Type="nchar" MaxLength="20" />
+    <Property Name="TongTien" Type="int" />
     <Property Name="MaPhieu" Type="int" />
   </EntityType>
   <EntityType Name="KHACHHANG">
     <Key>
       <PropertyRef Name="MaKH" />
     </Key>
-    <Property Name="MaKH" Type="int" Nullable="false" />
+    <Property Name="MaKH" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="HoTen" Type="nvarchar" MaxLength="50" />
     <Property Name="SDT" Type="nchar" MaxLength="10" />
     <Property Name="DiaChi" Type="nvarchar" MaxLength="50" />
@@ -62,7 +60,7 @@ warning 6013: The table/view 'QLSCL.dbo.CHITIETHOADON' does not have a primary k
     <Key>
       <PropertyRef Name="MaNguoiDung" />
     </Key>
-    <Property Name="MaNguoiDung" Type="int" Nullable="false" />
+    <Property Name="MaNguoiDung" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="HoTen" Type="nvarchar" MaxLength="50" />
     <Property Name="TenDangNhap" Type="nvarchar" MaxLength="50" />
     <Property Name="MatKhau" Type="nvarchar" MaxLength="50" />
@@ -72,19 +70,17 @@ warning 6013: The table/view 'QLSCL.dbo.CHITIETHOADON' does not have a primary k
     <Key>
       <PropertyRef Name="MaPhieu" />
     </Key>
-    <Property Name="MaPhieu" Type="int" Nullable="false" />
+    <Property Name="MaPhieu" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="NgayLap" Type="datetime" />
-    <Property Name="NgayDat" Type="nchar" MaxLength="10" />
+    <Property Name="NgayDat" Type="date" />
     <Property Name="MaKH" Type="int" />
   </EntityType>
   <EntityType Name="SAN">
     <Key>
       <PropertyRef Name="MaSan" />
     </Key>
-    <Property Name="MaSan" Type="int" Nullable="false" />
-    <Property Name="Vitri" Type="nchar" MaxLength="10" />
-    <Property Name="DienTich" Type="nchar" MaxLength="10" />
-    <Property Name="GhiChu" Type="nvarchar" MaxLength="100" />
+    <Property Name="MaSan" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenSan" Type="nchar" MaxLength="10" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
@@ -100,8 +96,8 @@ warning 6013: The table/view 'QLSCL.dbo.CHITIETHOADON' does not have a primary k
     <Key>
       <PropertyRef Name="MaTinhTrang" />
     </Key>
-    <Property Name="MaTinhTrang" Type="int" Nullable="false" />
-    <Property Name="Ngay" Type="datetime" />
+    <Property Name="MaTinhTrang" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ngay" Type="nvarchar" MaxLength="50" />
     <Property Name="TinhTrang" Type="nvarchar" MaxLength="50" />
     <Property Name="MaCaThue" Type="int" />
   </EntityType>
@@ -129,18 +125,6 @@ warning 6013: The table/view 'QLSCL.dbo.CHITIETHOADON' does not have a primary k
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_CATHUE_TINHTRANGSAN">
-    <End Role="TINHTRANGSAN" Type="Self.TINHTRANGSAN" Multiplicity="1" />
-    <End Role="CATHUE" Type="Self.CATHUE" Multiplicity="0..1" />
-    <ReferentialConstraint>
-      <Principal Role="TINHTRANGSAN">
-        <PropertyRef Name="MaTinhTrang" />
-      </Principal>
-      <Dependent Role="CATHUE">
-        <PropertyRef Name="MaCaThue" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_CHITIETDATSAN_CATHUE">
     <End Role="CATHUE" Type="Self.CATHUE" Multiplicity="1" />
     <End Role="CHITIETDATSAN" Type="Self.CHITIETDATSAN" Multiplicity="*" />
@@ -165,12 +149,30 @@ warning 6013: The table/view 'QLSCL.dbo.CHITIETHOADON' does not have a primary k
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <!--Errors Found During Generation:
-error 6004: The table 'QLSCL.dbo.CHITIETHOADON' is referenced by a relationship, but cannot be found.
-        <Association Name="FK_CHITIETHOADON_CATHUE" />-->
-  <!--Errors Found During Generation:
-error 6004: The table 'QLSCL.dbo.CHITIETHOADON' is referenced by a relationship, but cannot be found.
-        <Association Name="FK_CHITIETHOADON_HOADON" />-->
+  <Association Name="FK_CHITIETHOADON_CATHUE">
+    <End Role="CATHUE" Type="Self.CATHUE" Multiplicity="1" />
+    <End Role="CHITIETHOADON" Type="Self.CHITIETHOADON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CATHUE">
+        <PropertyRef Name="MaCaThue" />
+      </Principal>
+      <Dependent Role="CHITIETHOADON">
+        <PropertyRef Name="MaCaThue" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CHITIETHOADON_HOADON">
+    <End Role="HOADON" Type="Self.HOADON" Multiplicity="1" />
+    <End Role="CHITIETHOADON" Type="Self.CHITIETHOADON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HOADON">
+        <PropertyRef Name="MaHD" />
+      </Principal>
+      <Dependent Role="CHITIETHOADON">
+        <PropertyRef Name="MaHD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_HOADON_PHIEUDATSAN">
     <End Role="PHIEUDATSAN" Type="Self.PHIEUDATSAN" Multiplicity="0..1" />
     <End Role="HOADON" Type="Self.HOADON" Multiplicity="*" />
@@ -195,10 +197,23 @@ error 6004: The table 'QLSCL.dbo.CHITIETHOADON' is referenced by a relationship,
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_TINHTRANGSAN_CATHUE">
+    <End Role="CATHUE" Type="Self.CATHUE" Multiplicity="0..1" />
+    <End Role="TINHTRANGSAN" Type="Self.TINHTRANGSAN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CATHUE">
+        <PropertyRef Name="MaCaThue" />
+      </Principal>
+      <Dependent Role="TINHTRANGSAN">
+        <PropertyRef Name="MaCaThue" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="QLSCLModelStoreContainer">
     <EntitySet Name="CA" EntityType="Self.CA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CATHUE" EntityType="Self.CATHUE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CHITIETDATSAN" EntityType="Self.CHITIETDATSAN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CHITIETHOADON" EntityType="Self.CHITIETHOADON" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="HOADON" EntityType="Self.HOADON" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="KHACHHANG" EntityType="Self.KHACHHANG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="NGUOIDUNG" EntityType="Self.NGUOIDUNG" Schema="dbo" store:Type="Tables" />
@@ -214,10 +229,6 @@ error 6004: The table 'QLSCL.dbo.CHITIETHOADON' is referenced by a relationship,
       <End Role="SAN" EntitySet="SAN" />
       <End Role="CATHUE" EntitySet="CATHUE" />
     </AssociationSet>
-    <AssociationSet Name="FK_CATHUE_TINHTRANGSAN" Association="Self.FK_CATHUE_TINHTRANGSAN">
-      <End Role="TINHTRANGSAN" EntitySet="TINHTRANGSAN" />
-      <End Role="CATHUE" EntitySet="CATHUE" />
-    </AssociationSet>
     <AssociationSet Name="FK_CHITIETDATSAN_CATHUE" Association="Self.FK_CHITIETDATSAN_CATHUE">
       <End Role="CATHUE" EntitySet="CATHUE" />
       <End Role="CHITIETDATSAN" EntitySet="CHITIETDATSAN" />
@@ -226,6 +237,14 @@ error 6004: The table 'QLSCL.dbo.CHITIETHOADON' is referenced by a relationship,
       <End Role="PHIEUDATSAN" EntitySet="PHIEUDATSAN" />
       <End Role="CHITIETDATSAN" EntitySet="CHITIETDATSAN" />
     </AssociationSet>
+    <AssociationSet Name="FK_CHITIETHOADON_CATHUE" Association="Self.FK_CHITIETHOADON_CATHUE">
+      <End Role="CATHUE" EntitySet="CATHUE" />
+      <End Role="CHITIETHOADON" EntitySet="CHITIETHOADON" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CHITIETHOADON_HOADON" Association="Self.FK_CHITIETHOADON_HOADON">
+      <End Role="HOADON" EntitySet="HOADON" />
+      <End Role="CHITIETHOADON" EntitySet="CHITIETHOADON" />
+    </AssociationSet>
     <AssociationSet Name="FK_HOADON_PHIEUDATSAN" Association="Self.FK_HOADON_PHIEUDATSAN">
       <End Role="PHIEUDATSAN" EntitySet="PHIEUDATSAN" />
       <End Role="HOADON" EntitySet="HOADON" />
@@ -233,6 +252,10 @@ error 6004: The table 'QLSCL.dbo.CHITIETHOADON' is referenced by a relationship,
     <AssociationSet Name="FK_PHIEUDATSAN_KHACHHANG" Association="Self.FK_PHIEUDATSAN_KHACHHANG">
       <End Role="KHACHHANG" EntitySet="KHACHHANG" />
       <End Role="PHIEUDATSAN" EntitySet="PHIEUDATSAN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TINHTRANGSAN_CATHUE" Association="Self.FK_TINHTRANGSAN_CATHUE">
+      <End Role="CATHUE" EntitySet="CATHUE" />
+      <End Role="TINHTRANGSAN" EntitySet="TINHTRANGSAN" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

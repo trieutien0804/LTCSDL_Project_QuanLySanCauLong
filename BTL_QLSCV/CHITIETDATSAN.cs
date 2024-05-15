@@ -16,10 +16,7 @@ namespace BTL_QLSCV
     {
         public int MaPhieu { get; set; }
         public int MaCaThue { get; set; }
-        public Nullable<System.DateTime> ThoiGianBD { get; set; }
-        public Nullable<System.DateTime> ThoiGianKT { get; set; }
-        public string SoPhut { get; set; }
-        public string GhiChu { get; set; }
+        public Nullable<int> TienCoc { get; set; }
     
         public virtual CATHUE CATHUE { get; set; }
         public virtual PHIEUDATSAN PHIEUDATSAN { get; set; }

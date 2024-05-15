@@ -14,13 +14,21 @@ namespace BTL_QLSCV
     
     public partial class HOADON
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public HOADON()
+        {
+            this.CHITIETHOADONs = new HashSet<CHITIETHOADON>();
+        }
+    
         public int MaHD { get; set; }
-        public string ThoiGianThanhToan { get; set; }
+        public Nullable<System.DateTime> ThoiGianThanhToan { get; set; }
         public string HoTenNguoiTT { get; set; }
         public string NhanVienTT { get; set; }
-        public string TongTien { get; set; }
+        public Nullable<int> TongTien { get; set; }
         public Nullable<int> MaPhieu { get; set; }
     
         public virtual PHIEUDATSAN PHIEUDATSAN { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CHITIETHOADON> CHITIETHOADONs { get; set; }
     }
 }

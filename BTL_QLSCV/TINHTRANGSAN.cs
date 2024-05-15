@@ -15,10 +15,11 @@ namespace BTL_QLSCV
     public partial class TINHTRANGSAN
     {
         public int MaTinhTrang { get; set; }
-        public Nullable<System.DateTime> Ngay { get; set; }
+        public string Ngay { get; set; }
         public string TinhTrang { get; set; }
         public Nullable<int> MaCaThue { get; set; }
     
         public virtual CATHUE CATHUE { get; set; }
+        public virtual CATHUE CATHUE1 { get; set; }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using BTL_QLSCV.DAL;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +20,11 @@ namespace BTL_QLSCV.BUS
         public dynamic getSAN()
         {
             return dal_SAN.getSAN();
+        }
+
+        public dynamic getSanDat(int maCA, string ngayDat)
+        {
+            return dal_SAN.getSanDat(maCA, ngayDat);
         }
 
         public bool addSAN(int maSan, string tenSan)

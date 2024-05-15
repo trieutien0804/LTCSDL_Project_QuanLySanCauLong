@@ -82,7 +82,7 @@
             // panel5
             // 
             this.panel5.Controls.Add(this.btLogout);
-            this.panel5.Location = new System.Drawing.Point(0, 251);
+            this.panel5.Location = new System.Drawing.Point(0, 403);
             this.panel5.Margin = new System.Windows.Forms.Padding(0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(220, 51);
@@ -123,7 +123,7 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.btThongKe);
-            this.panel4.Location = new System.Drawing.Point(0, 200);
+            this.panel4.Location = new System.Drawing.Point(0, 352);
             this.panel4.Margin = new System.Windows.Forms.Padding(0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(220, 51);
@@ -207,7 +207,7 @@
             this.flp_quanly.Location = new System.Drawing.Point(0, 149);
             this.flp_quanly.Margin = new System.Windows.Forms.Padding(0);
             this.flp_quanly.Name = "flp_quanly";
-            this.flp_quanly.Size = new System.Drawing.Size(218, 51);
+            this.flp_quanly.Size = new System.Drawing.Size(218, 203);
             this.flp_quanly.TabIndex = 7;
             // 
             // panel7
@@ -282,7 +282,7 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 47);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(214, 537);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(214, 631);
             this.flowLayoutPanel1.TabIndex = 3;
             // 
             // panel8
@@ -367,7 +367,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1250, 47);
+            this.panel1.Size = new System.Drawing.Size(1444, 47);
             this.panel1.TabIndex = 2;
             // 
             // flowLayoutPanel2
@@ -386,8 +386,9 @@
             // pMain
             // 
             this.pMain.Location = new System.Drawing.Point(223, 53);
+            this.pMain.Margin = new System.Windows.Forms.Padding(0);
             this.pMain.Name = "pMain";
-            this.pMain.Size = new System.Drawing.Size(1019, 518);
+            this.pMain.Size = new System.Drawing.Size(1209, 613);
             this.pMain.TabIndex = 3;
             this.pMain.Paint += new System.Windows.Forms.PaintEventHandler(this.pMain_Paint);
             // 
@@ -396,7 +397,7 @@
             this.panel11.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel11.Location = new System.Drawing.Point(214, 47);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(5, 541);
+            this.panel11.Size = new System.Drawing.Size(5, 678);
             this.panel11.TabIndex = 0;
             // 
             // fAdmin
@@ -405,12 +406,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1250, 584);
+            this.ClientSize = new System.Drawing.Size(1444, 678);
             this.Controls.Add(this.panel11);
             this.Controls.Add(this.pMain);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "fAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

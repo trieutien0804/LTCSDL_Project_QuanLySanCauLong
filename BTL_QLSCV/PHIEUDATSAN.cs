@@ -23,7 +23,7 @@ namespace BTL_QLSCV
     
         public int MaPhieu { get; set; }
         public Nullable<System.DateTime> NgayLap { get; set; }
-        public string NgayDat { get; set; }
+        public Nullable<System.DateTime> NgayDat { get; set; }
         public Nullable<int> MaKH { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

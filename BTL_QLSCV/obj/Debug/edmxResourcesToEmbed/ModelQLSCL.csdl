@@ -5,8 +5,8 @@
       <PropertyRef Name="MaCa" />
     </Key>
     <Property Name="MaCa" Type="Int32" Nullable="false" />
-    <Property Name="ThoiGianBD" Type="DateTime" Precision="3" />
-    <Property Name="ThoiGianKT" Type="DateTime" Precision="3" />
+    <Property Name="ThoiGianBD" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="ThoiGianKT" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
     <NavigationProperty Name="CATHUEs" Relationship="Self.FK_CATHUE_CA" FromRole="CA" ToRole="CATHUE" />
   </EntityType>
   <EntityType Name="CATHUE">
@@ -14,13 +14,15 @@
       <PropertyRef Name="MaCaThue" />
     </Key>
     <Property Name="MaCaThue" Type="Int32" Nullable="false" />
-    <Property Name="Gia" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Gia" Type="Int32" />
     <Property Name="MaSan" Type="Int32" />
     <Property Name="MaCa" Type="Int32" />
     <NavigationProperty Name="CA" Relationship="Self.FK_CATHUE_CA" FromRole="CATHUE" ToRole="CA" />
     <NavigationProperty Name="SAN" Relationship="Self.FK_CATHUE_SAN" FromRole="CATHUE" ToRole="SAN" />
     <NavigationProperty Name="TINHTRANGSAN" Relationship="Self.FK_CATHUE_TINHTRANGSAN" FromRole="CATHUE" ToRole="TINHTRANGSAN" />
     <NavigationProperty Name="CHITIETDATSANs" Relationship="Self.FK_CHITIETDATSAN_CATHUE" FromRole="CATHUE" ToRole="CHITIETDATSAN" />
+    <NavigationProperty Name="TINHTRANGSANs" Relationship="QLSCLModel.FK_TINHTRANGSAN_CATHUE" FromRole="CATHUE" ToRole="TINHTRANGSAN" />
+    <NavigationProperty Name="CHITIETHOADONs" Relationship="QLSCLModel.FK_CHITIETHOADON_CATHUE" FromRole="CATHUE" ToRole="CHITIETHOADON" />
   </EntityType>
   <EntityType Name="CHITIETDATSAN">
     <Key>
@@ -29,24 +31,22 @@
     </Key>
     <Property Name="MaPhieu" Type="Int32" Nullable="false" />
     <Property Name="MaCaThue" Type="Int32" Nullable="false" />
-    <Property Name="ThoiGianBD" Type="DateTime" Precision="3" />
-    <Property Name="ThoiGianKT" Type="DateTime" Precision="3" />
-    <Property Name="SoPhut" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-    <Property Name="GhiChu" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="CATHUE" Relationship="Self.FK_CHITIETDATSAN_CATHUE" FromRole="CHITIETDATSAN" ToRole="CATHUE" />
     <NavigationProperty Name="PHIEUDATSAN" Relationship="Self.FK_CHITIETDATSAN_PHIEUDATSAN" FromRole="CHITIETDATSAN" ToRole="PHIEUDATSAN" />
+    <Property Name="TienCoc" Type="Int32" />
   </EntityType>
   <EntityType Name="HOADON">
     <Key>
       <PropertyRef Name="MaHD" />
     </Key>
     <Property Name="MaHD" Type="Int32" Nullable="false" />
-    <Property Name="ThoiGianThanhToan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ThoiGianThanhToan" Type="DateTime" Precision="3" />
     <Property Name="HoTenNguoiTT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="NhanVienTT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="TongTien" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="TongTien" Type="Int32" />
     <Property Name="MaPhieu" Type="Int32" />
     <NavigationProperty Name="PHIEUDATSAN" Relationship="Self.FK_HOADON_PHIEUDATSAN" FromRole="HOADON" ToRole="PHIEUDATSAN" />
+    <NavigationProperty Name="CHITIETHOADONs" Relationship="QLSCLModel.FK_CHITIETHOADON_HOADON" FromRole="HOADON" ToRole="CHITIETHOADON" />
   </EntityType>
   <EntityType Name="KHACHHANG">
     <Key>
@@ -74,7 +74,7 @@
     </Key>
     <Property Name="MaPhieu" Type="Int32" Nullable="false" />
     <Property Name="NgayLap" Type="DateTime" Precision="3" />
-    <Property Name="NgayDat" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="NgayDat" Type="DateTime" Precision="0" />
     <Property Name="MaKH" Type="Int32" />
     <NavigationProperty Name="CHITIETDATSANs" Relationship="Self.FK_CHITIETDATSAN_PHIEUDATSAN" FromRole="PHIEUDATSAN" ToRole="CHITIETDATSAN" />
     <NavigationProperty Name="HOADONs" Relationship="Self.FK_HOADON_PHIEUDATSAN" FromRole="PHIEUDATSAN" ToRole="HOADON" />
@@ -85,10 +85,8 @@
       <PropertyRef Name="MaSan" />
     </Key>
     <Property Name="MaSan" Type="Int32" Nullable="false" />
-    <Property Name="Vitri" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-    <Property Name="DienTich" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-    <Property Name="GhiChu" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="CATHUEs" Relationship="Self.FK_CATHUE_SAN" FromRole="SAN" ToRole="CATHUE" />
+    <Property Name="TenSan" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
   </EntityType>
   <EntityType Name="sysdiagram">
     <Key>
@@ -105,10 +103,11 @@
       <PropertyRef Name="MaTinhTrang" />
     </Key>
     <Property Name="MaTinhTrang" Type="Int32" Nullable="false" />
-    <Property Name="Ngay" Type="DateTime" Precision="3" />
+    <Property Name="Ngay" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
     <Property Name="TinhTrang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="MaCaThue" Type="Int32" />
     <NavigationProperty Name="CATHUE" Relationship="Self.FK_CATHUE_TINHTRANGSAN" FromRole="TINHTRANGSAN" ToRole="CATHUE" />
+    <NavigationProperty Name="CATHUE1" Relationship="QLSCLModel.FK_TINHTRANGSAN_CATHUE" FromRole="TINHTRANGSAN" ToRole="CATHUE" />
   </EntityType>
   <Association Name="FK_CATHUE_CA">
     <End Role="CA" Type="Self.CA" Multiplicity="0..1" />
@@ -233,5 +232,66 @@
       <End Role="KHACHHANG" EntitySet="KHACHHANGs" />
       <End Role="PHIEUDATSAN" EntitySet="PHIEUDATSANs" />
     </AssociationSet>
+    <AssociationSet Name="FK_TINHTRANGSAN_CATHUE" Association="QLSCLModel.FK_TINHTRANGSAN_CATHUE">
+      <End Role="CATHUE" EntitySet="CATHUEs" />
+      <End Role="TINHTRANGSAN" EntitySet="TINHTRANGSANs" />
+    </AssociationSet>
+    <EntitySet Name="CHITIETHOADONs" EntityType="QLSCLModel.CHITIETHOADON" />
+    <AssociationSet Name="FK_CHITIETHOADON_CATHUE" Association="QLSCLModel.FK_CHITIETHOADON_CATHUE">
+      <End Role="CATHUE" EntitySet="CATHUEs" />
+      <End Role="CHITIETHOADON" EntitySet="CHITIETHOADONs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CHITIETHOADON_HOADON" Association="QLSCLModel.FK_CHITIETHOADON_HOADON">
+      <End Role="HOADON" EntitySet="HOADONs" />
+      <End Role="CHITIETHOADON" EntitySet="CHITIETHOADONs" />
+    </AssociationSet>
   </EntityContainer>
+  <Association Name="FK_TINHTRANGSAN_CATHUE">
+    <End Type="QLSCLModel.CATHUE" Role="CATHUE" Multiplicity="0..1" />
+    <End Type="QLSCLModel.TINHTRANGSAN" Role="TINHTRANGSAN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CATHUE">
+        <PropertyRef Name="MaCaThue" />
+      </Principal>
+      <Dependent Role="TINHTRANGSAN">
+        <PropertyRef Name="MaCaThue" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="CHITIETHOADON">
+    <Key>
+      <PropertyRef Name="MaHD" />
+      <PropertyRef Name="MaCaThue" />
+    </Key>
+    <Property Name="ThoiGianBD" Type="DateTime" Precision="3" />
+    <Property Name="ThoiGianKT" Type="DateTime" Precision="3" />
+    <Property Name="MaHD" Type="Int32" Nullable="false" />
+    <Property Name="MaCaThue" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CATHUE" Relationship="QLSCLModel.FK_CHITIETHOADON_CATHUE" FromRole="CHITIETHOADON" ToRole="CATHUE" />
+    <NavigationProperty Name="HOADON" Relationship="QLSCLModel.FK_CHITIETHOADON_HOADON" FromRole="CHITIETHOADON" ToRole="HOADON" />
+  </EntityType>
+  <Association Name="FK_CHITIETHOADON_CATHUE">
+    <End Type="QLSCLModel.CATHUE" Role="CATHUE" Multiplicity="1" />
+    <End Type="QLSCLModel.CHITIETHOADON" Role="CHITIETHOADON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CATHUE">
+        <PropertyRef Name="MaCaThue" />
+      </Principal>
+      <Dependent Role="CHITIETHOADON">
+        <PropertyRef Name="MaCaThue" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CHITIETHOADON_HOADON">
+    <End Type="QLSCLModel.HOADON" Role="HOADON" Multiplicity="1" />
+    <End Type="QLSCLModel.CHITIETHOADON" Role="CHITIETHOADON" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HOADON">
+        <PropertyRef Name="MaHD" />
+      </Principal>
+      <Dependent Role="CHITIETHOADON">
+        <PropertyRef Name="MaHD" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

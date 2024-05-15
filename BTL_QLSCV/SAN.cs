@@ -21,9 +21,7 @@ namespace BTL_QLSCV
         }
     
         public int MaSan { get; set; }
-        public string Vitri { get; set; }
-        public string DienTich { get; set; }
-        public string GhiChu { get; set; }
+        public string TenSan { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CATHUE> CATHUEs { get; set; }

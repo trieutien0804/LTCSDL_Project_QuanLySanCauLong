@@ -68,7 +68,7 @@
             this.cbNam.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbNam.FormattingEnabled = true;
             this.cbNam.Location = new System.Drawing.Point(259, 33);
-            this.cbNam.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbNam.Margin = new System.Windows.Forms.Padding(2);
             this.cbNam.Name = "cbNam";
             this.cbNam.Size = new System.Drawing.Size(138, 25);
             this.cbNam.TabIndex = 10;
@@ -78,7 +78,7 @@
             this.cbThang.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbThang.FormattingEnabled = true;
             this.cbThang.Location = new System.Drawing.Point(69, 33);
-            this.cbThang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbThang.Margin = new System.Windows.Forms.Padding(2);
             this.cbThang.Name = "cbThang";
             this.cbThang.Size = new System.Drawing.Size(138, 25);
             this.cbThang.TabIndex = 10;
@@ -136,7 +136,7 @@
             this.Controls.Add(this.gbChucNang);
             this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "fThongKe";
             this.Text = "fThongKe";
             this.Load += new System.EventHandler(this.fThongKe_Load);

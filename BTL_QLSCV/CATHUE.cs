@@ -18,10 +18,12 @@ namespace BTL_QLSCV
         public CATHUE()
         {
             this.CHITIETDATSANs = new HashSet<CHITIETDATSAN>();
+            this.TINHTRANGSANs = new HashSet<TINHTRANGSAN>();
+            this.CHITIETHOADONs = new HashSet<CHITIETHOADON>();
         }
     
         public int MaCaThue { get; set; }
-        public string Gia { get; set; }
+        public Nullable<int> Gia { get; set; }
         public Nullable<int> MaSan { get; set; }
         public Nullable<int> MaCa { get; set; }
     
@@ -30,5 +32,9 @@ namespace BTL_QLSCV
         public virtual TINHTRANGSAN TINHTRANGSAN { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CHITIETDATSAN> CHITIETDATSANs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TINHTRANGSAN> TINHTRANGSANs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CHITIETHOADON> CHITIETHOADONs { get; set; }
     }
 }

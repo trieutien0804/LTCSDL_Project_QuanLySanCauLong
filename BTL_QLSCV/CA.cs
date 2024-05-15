@@ -21,8 +21,8 @@ namespace BTL_QLSCV
         }
     
         public int MaCa { get; set; }
-        public Nullable<System.DateTime> ThoiGianBD { get; set; }
-        public Nullable<System.DateTime> ThoiGianKT { get; set; }
+        public string ThoiGianBD { get; set; }
+        public string ThoiGianKT { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CATHUE> CATHUEs { get; set; }

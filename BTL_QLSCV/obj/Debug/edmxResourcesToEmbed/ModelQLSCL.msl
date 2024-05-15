@@ -23,12 +23,9 @@
     <EntitySetMapping Name="CHITIETDATSANs">
       <EntityTypeMapping TypeName="QLSCLModel.CHITIETDATSAN">
         <MappingFragment StoreEntitySet="CHITIETDATSAN">
+          <ScalarProperty Name="TienCoc" ColumnName="TienCoc" />
           <ScalarProperty Name="MaPhieu" ColumnName="MaPhieu" />
           <ScalarProperty Name="MaCaThue" ColumnName="MaCaThue" />
-          <ScalarProperty Name="ThoiGianBD" ColumnName="ThoiGianBD" />
-          <ScalarProperty Name="ThoiGianKT" ColumnName="ThoiGianKT" />
-          <ScalarProperty Name="SoPhut" ColumnName="SoPhut" />
-          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -78,10 +75,8 @@
     <EntitySetMapping Name="SANs">
       <EntityTypeMapping TypeName="QLSCLModel.SAN">
         <MappingFragment StoreEntitySet="SAN">
+          <ScalarProperty Name="TenSan" ColumnName="TenSan" />
           <ScalarProperty Name="MaSan" ColumnName="MaSan" />
-          <ScalarProperty Name="Vitri" ColumnName="Vitri" />
-          <ScalarProperty Name="DienTich" ColumnName="DienTich" />
-          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -103,6 +98,16 @@
           <ScalarProperty Name="Ngay" ColumnName="Ngay" />
           <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
           <ScalarProperty Name="MaCaThue" ColumnName="MaCaThue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CHITIETHOADONs">
+      <EntityTypeMapping TypeName="QLSCLModel.CHITIETHOADON">
+        <MappingFragment StoreEntitySet="CHITIETHOADON">
+          <ScalarProperty Name="MaCaThue" ColumnName="MaCaThue" />
+          <ScalarProperty Name="MaHD" ColumnName="MaHD" />
+          <ScalarProperty Name="ThoiGianKT" ColumnName="ThoiGianKT" />
+          <ScalarProperty Name="ThoiGianBD" ColumnName="ThoiGianBD" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

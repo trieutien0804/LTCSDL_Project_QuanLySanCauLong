@@ -35,5 +35,6 @@ namespace BTL_QLSCV
         public virtual DbSet<SAN> SANs { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TINHTRANGSAN> TINHTRANGSANs { get; set; }
+        public virtual DbSet<CHITIETHOADON> CHITIETHOADONs { get; set; }
     }
 }

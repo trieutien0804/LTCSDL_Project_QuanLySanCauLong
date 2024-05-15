@@ -14,6 +14,7 @@ namespace BTL_QLSCV
     public partial class fQLSan : Form
     {
         BUS_SAN bus_SAN = new BUS_SAN();
+        fCNCa fCNCa;
         public fQLSan()
         {
             InitializeComponent();
@@ -54,7 +55,7 @@ namespace BTL_QLSCV
                 DataGridViewRow row = dsSan.SelectedRows[0];
                 int curMaSan = Convert.ToInt32(row.Cells[0].Value.ToString());
                 SAN san = new SAN();
-                san.Vitri = txtTenSan.Text;
+                san.TenSan = txtTenSan.Text;
                 if (bus_SAN.editSAN(curMaSan, san))
                 {
                     dsSan.DataSource = bus_SAN.getSAN();
@@ -86,12 +87,22 @@ namespace BTL_QLSCV
                 {
                     MessageBox.Show("Xóa không thành công");
                 }
-
             }
             else
             {
                 MessageBox.Show("Xóa không thành công");
             }
+        }
+
+        private void btCNCa_Click(object sender, EventArgs e)
+        {
+            fCNCa = new fCNCa();
+            fCNCa.Show();
+        }
+
+        private void dsSan_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

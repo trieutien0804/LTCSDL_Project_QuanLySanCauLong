@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=14.1.0.18, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -55,6 +56,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\BUS_CA.cs" />
+    <Compile Include="BUS\BUS_KHACHHANG.cs" />
     <Compile Include="BUS\BUS_NGUOIDUNG.cs" />
     <Compile Include="BUS\BUS_SAN.cs" />
     <Compile Include="CA.cs">
@@ -66,6 +69,11 @@
     <Compile Include="CHITIETDATSAN.cs">
       <DependentUpon>ModelQLSCL.tt</DependentUpon>
     </Compile>
+    <Compile Include="CHITIETHOADON.cs">
+      <DependentUpon>ModelQLSCL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DAL_CA.cs" />
+    <Compile Include="DAL\DAL_KHACHHANG.cs" />
     <Compile Include="DAL\DAL_NGUOIDUNG.cs" />
     <Compile Include="DAL\DAL_SAN.cs" />
     <Compile Include="fAdmin.cs">
@@ -73,6 +81,12 @@
     </Compile>
     <Compile Include="fAdmin.Designer.cs">
       <DependentUpon>fAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fCNCa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fCNCa.Designer.cs">
+      <DependentUpon>fCNCa.cs</DependentUpon>
     </Compile>
     <Compile Include="fDatSan.cs">
       <SubType>Form</SubType>
@@ -163,11 +177,20 @@
     <Compile Include="sysdiagram.cs">
       <DependentUpon>ModelQLSCL.tt</DependentUpon>
     </Compile>
+    <Compile Include="test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
+    </Compile>
     <Compile Include="TINHTRANGSAN.cs">
       <DependentUpon>ModelQLSCL.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="fAdmin.resx">
       <DependentUpon>fAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fCNCa.resx">
+      <DependentUpon>fCNCa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fDatSan.resx">
       <DependentUpon>fDatSan.cs</DependentUpon>
@@ -205,6 +228,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="test.resx">
+      <DependentUpon>test.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="ModelQLSCL.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ModelQLSCL.Designer.cs</LastGenOutput>

@@ -105,7 +105,7 @@
             this.gbTTKH.Controls.Add(this.txtMaHD);
             this.gbTTKH.Controls.Add(this.label1);
             this.gbTTKH.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbTTKH.Location = new System.Drawing.Point(21, 115);
+            this.gbTTKH.Location = new System.Drawing.Point(24, 131);
             this.gbTTKH.Name = "gbTTKH";
             this.gbTTKH.Size = new System.Drawing.Size(517, 272);
             this.gbTTKH.TabIndex = 23;
@@ -116,7 +116,7 @@
             // 
             this.dtpDatSan.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDatSan.Location = new System.Drawing.Point(34, 93);
-            this.dtpDatSan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpDatSan.Margin = new System.Windows.Forms.Padding(2);
             this.dtpDatSan.Name = "dtpDatSan";
             this.dtpDatSan.Size = new System.Drawing.Size(216, 25);
             this.dtpDatSan.TabIndex = 22;
@@ -295,7 +295,7 @@
             this.gbChucNang.Controls.Add(this.btIHD);
             this.gbChucNang.Controls.Add(this.btThanhToan);
             this.gbChucNang.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbChucNang.Location = new System.Drawing.Point(21, 399);
+            this.gbChucNang.Location = new System.Drawing.Point(24, 415);
             this.gbChucNang.Name = "gbChucNang";
             this.gbChucNang.Size = new System.Drawing.Size(517, 84);
             this.gbChucNang.TabIndex = 24;
@@ -326,7 +326,7 @@
             this.gbTimKH.Controls.Add(this.txtTimHD);
             this.gbTimKH.Controls.Add(this.btTimHD);
             this.gbTimKH.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbTimKH.Location = new System.Drawing.Point(21, 23);
+            this.gbTimKH.Location = new System.Drawing.Point(24, 39);
             this.gbTimKH.Name = "gbTimKH";
             this.gbTimKH.Size = new System.Drawing.Size(517, 85);
             this.gbTimKH.TabIndex = 22;
@@ -377,7 +377,7 @@
             this.Controls.Add(this.gbTimKH);
             this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "fQLHoaDon";
             this.Text = "fQLHoaDon";
             this.Load += new System.EventHandler(this.fQLHoaDon_Load);

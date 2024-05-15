@@ -58,7 +58,7 @@
             // 
             // btHuy
             // 
-            this.btHuy.Location = new System.Drawing.Point(267, 92);
+            this.btHuy.Location = new System.Drawing.Point(267, 75);
             this.btHuy.Name = "btHuy";
             this.btHuy.Size = new System.Drawing.Size(117, 27);
             this.btHuy.TabIndex = 10;
@@ -67,12 +67,13 @@
             // 
             // btXoaKH
             // 
-            this.btXoaKH.Location = new System.Drawing.Point(133, 92);
+            this.btXoaKH.Location = new System.Drawing.Point(133, 75);
             this.btXoaKH.Name = "btXoaKH";
             this.btXoaKH.Size = new System.Drawing.Size(117, 27);
             this.btXoaKH.TabIndex = 9;
             this.btXoaKH.Text = "Xoá";
             this.btXoaKH.UseVisualStyleBackColor = true;
+            this.btXoaKH.Click += new System.EventHandler(this.btXoaKH_Click);
             // 
             // btSuaKH
             // 
@@ -82,6 +83,7 @@
             this.btSuaKH.TabIndex = 8;
             this.btSuaKH.Text = "Sửa";
             this.btSuaKH.UseVisualStyleBackColor = true;
+            this.btSuaKH.Click += new System.EventHandler(this.btSuaKH_Click);
             // 
             // btThemKH
             // 
@@ -91,6 +93,7 @@
             this.btThemKH.TabIndex = 5;
             this.btThemKH.Text = "Thêm";
             this.btThemKH.UseVisualStyleBackColor = true;
+            this.btThemKH.Click += new System.EventHandler(this.btThemKH_Click);
             // 
             // gbChucNang
             // 
