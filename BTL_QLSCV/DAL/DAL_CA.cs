@@ -8,11 +8,11 @@ namespace BTL_QLSCV.DAL
 {
     class DAL_CA
     {
-        QLSCLEntities1 db;
+        QLSCLEntities3 db;
 
         public DAL_CA()
         {
-            db = new QLSCLEntities1();
+            db = new QLSCLEntities3();
         }
 
         public dynamic getCA()
@@ -41,7 +41,7 @@ namespace BTL_QLSCV.DAL
                 ThoiGianKT = tGKT 
             };
             db.CA.Add(ca);
-            db.SaveChanges();
+               db.SaveChanges();
             return true;
         }
         public bool removeCA(int maCa)
@@ -59,5 +59,6 @@ namespace BTL_QLSCV.DAL
             db.SaveChanges();
             return true;
         }
+        
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BTL_QLSCV.BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,8 @@ namespace BTL_QLSCV
 {
     public partial class fNhansan : Form
     {
+        BUS_PHIEUDATSAN bus_PHIEUDATSAN = new BUS_PHIEUDATSAN();
+        BUS_CHITIETDATSAN bus_CHITIETDATSAN = new BUS_CHITIETDATSAN();
         public fNhansan()
         {
             InitializeComponent();
@@ -24,6 +27,7 @@ namespace BTL_QLSCV
 
         private void fNhansan_Load(object sender, EventArgs e)
         {
+            dsChuaNhan.DataSource = bus_PHIEUDATSAN.getPhieuTrongNgay();
             this.ControlBox = false;
         }
     }

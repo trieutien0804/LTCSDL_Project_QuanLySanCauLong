@@ -6,6 +6,7 @@ using System.Data.SqlTypes;
 using System.Globalization;
 using System.Linq;
 using System.Runtime.Remoting.Contexts;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,11 +15,11 @@ namespace BTL_QLSCV.DAL
 {
     class DAL_SAN
     {
-        QLSCLEntities1 db;
+        QLSCLEntities3 db;
 
         public DAL_SAN()
         {
-            db = new QLSCLEntities1();
+            db = new QLSCLEntities3();
         }
 
         public dynamic getSAN() 
@@ -36,16 +37,23 @@ namespace BTL_QLSCV.DAL
         {
             var dsSAN = db.SAN.Select(s => new { s.MaSan, s.TenSan }).ToList();
 
-            var dsSanDat = from s in db.SAN.ToList()
-                           join c in db.CATHUE.ToList() on s.MaSan equals c.MaSan
-                           join ca in db.CA.ToList() on c.MaCa equals ca.MaCa
-                           join ttc in db.TINHTRANGSAN.ToList() on c.MaCaThue equals ttc.MaCaThue
-                           where c.MaCa == maCA && ca.MaCa == maCA && ttc.Ngay == ngayDat
-                           select s.MaSan;
+            //var dsSanDat = from s in db.SANs.ToList()
+            //               join c in db.CATHUEs.ToList() on s.MaSan equals c.MaSan
+            //               join ca in db.CAs.ToList() on c.MaCa equals ca.MaCa
+            //               join ttc in db.TINHTRANGSANs.ToList() on c.MaCaThue equals ttc.MaCaThue
+            //               where c.MaCa == maCA && ca.MaCa == maCA && ttc.Ngay == ngayDat
+            //               select s.MaSan;
 
-            var dsSanChuaDat = dsSAN.Where(s => !dsSanDat.Contains(s.MaSan)).ToList();
-
+            var results = from c in db.CA.ToList()
+                           join ct in db.CATHUE.ToList() on c.MaCa equals ct.MaCa
+                           join s in db.SAN.ToList() on ct.MaSan equals s.MaSan
+                           join ttc in db.TINHTRANGSAN.ToList() on ct.MaCaThue equals ttc.MaCaThue
+                           where ct.MaCa == maCA && ( ttc.TinhTrang != "DT" || ttc.TinhTrang != "HD") && ttc.Ngay == ngayDat
+                           select (s.MaSan);
+            var dsSanChuaDat = dsSAN.Where(s => !results.Contains(s.MaSan)).ToList();
+            //List<int> dsSanChuaDat = results.ToList();
             return dsSanChuaDat;
+
         }
         public int findMaSanByTenSan(string tenSan)
         {
@@ -79,7 +87,7 @@ namespace BTL_QLSCV.DAL
             db.SaveChanges();
             return true;
         }
-    }   
+        
 
     
 }

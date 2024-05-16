@@ -119,7 +119,7 @@
             // 
             this.lbCa.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lbCa.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCa.Location = new System.Drawing.Point(287, 154);
+            this.lbCa.Location = new System.Drawing.Point(287, 147);
             this.lbCa.Name = "lbCa";
             this.lbCa.Size = new System.Drawing.Size(200, 18);
             this.lbCa.TabIndex = 22;
@@ -129,7 +129,7 @@
             // 
             this.lbThanhTien.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lbThanhTien.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbThanhTien.Location = new System.Drawing.Point(359, 328);
+            this.lbThanhTien.Location = new System.Drawing.Point(359, 313);
             this.lbThanhTien.Name = "lbThanhTien";
             this.lbThanhTien.Size = new System.Drawing.Size(117, 18);
             this.lbThanhTien.TabIndex = 22;
@@ -138,7 +138,7 @@
             // 
             this.lbTienCoc.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lbTienCoc.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTienCoc.Location = new System.Drawing.Point(359, 271);
+            this.lbTienCoc.Location = new System.Drawing.Point(359, 256);
             this.lbTienCoc.Name = "lbTienCoc";
             this.lbTienCoc.Size = new System.Drawing.Size(117, 18);
             this.lbTienCoc.TabIndex = 22;
@@ -147,7 +147,7 @@
             // 
             this.lbTongTien.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lbTongTien.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTongTien.Location = new System.Drawing.Point(359, 216);
+            this.lbTongTien.Location = new System.Drawing.Point(359, 201);
             this.lbTongTien.Name = "lbTongTien";
             this.lbTongTien.Size = new System.Drawing.Size(117, 18);
             this.lbTongTien.TabIndex = 22;
@@ -192,7 +192,7 @@
             // 
             this.lbSan.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lbSan.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSan.Location = new System.Drawing.Point(74, 153);
+            this.lbSan.Location = new System.Drawing.Point(74, 146);
             this.lbSan.Name = "lbSan";
             this.lbSan.Size = new System.Drawing.Size(117, 18);
             this.lbSan.TabIndex = 22;
@@ -210,7 +210,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(254, 329);
+            this.label10.Location = new System.Drawing.Point(254, 314);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(79, 17);
             this.label10.TabIndex = 20;
@@ -220,7 +220,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(254, 272);
+            this.label7.Location = new System.Drawing.Point(254, 257);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(63, 17);
             this.label7.TabIndex = 18;
@@ -240,7 +240,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(254, 216);
+            this.label4.Location = new System.Drawing.Point(254, 201);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 17);
             this.label4.TabIndex = 14;
@@ -260,7 +260,7 @@
             // 
             this.labeldiachi.AutoSize = true;
             this.labeldiachi.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labeldiachi.Location = new System.Drawing.Point(254, 154);
+            this.labeldiachi.Location = new System.Drawing.Point(254, 147);
             this.labeldiachi.Name = "labeldiachi";
             this.labeldiachi.Size = new System.Drawing.Size(27, 17);
             this.labeldiachi.TabIndex = 10;
@@ -280,7 +280,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(34, 154);
+            this.label2.Location = new System.Drawing.Point(34, 147);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 17);
             this.label2.TabIndex = 6;

@@ -9,13 +9,14 @@ namespace BTL_QLSCV.DAL
 {
     class DAL_CATHUE
     {
-        QLSCLEntities1 db;
+        QLSCLEntities3 db;
         public DAL_CATHUE()
         {
-            db = new QLSCLEntities1();
+            db = new QLSCLEntities3();
         }
         public dynamic getCaThue()
         {
+
             var dsCaThue = db.CATHUE.Select(s => new { s.MaCaThue, s.Gia, s.MaSan, s.MaCa }).ToList();
             var dsSAN = db.SAN.Select(s => new { s.MaSan, s.TenSan }).ToList();
             var dsCA = db.CA.Select(s => new { s.MaCa, s.ThoiGianBD, s.ThoiGianKT }).ToList();
@@ -32,6 +33,7 @@ namespace BTL_QLSCV.DAL
                              };
 
             return joinedData.ToList();
+
         }
 
         public bool addCaThue(int gia, int maSan, int maCa)
@@ -70,6 +72,16 @@ namespace BTL_QLSCV.DAL
                            select s.MaSan;
             bool isDsCaDaDatEmpty = dsCaDaDat.Count() == 0;
             return isDsCaDaDatEmpty;
+        }
+
+        public int getMaCaThueByCaVaSan(int maCa, int maSan)
+        {
+            var dsCaDaDat = from s in db.CATHUE.ToList()
+                            where s.MaSan == maSan && s.MaCa == maCa
+                            select s.MaCaThue;
+            List<int> a = dsCaDaDat.ToList();
+            int b = a.FirstOrDefault();
+            return b;
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="QLSCLModelStoreContainer" CdmEntityContainer="QLSCLEntities1">
+  <EntityContainerMapping StorageEntityContainer="QLSCLModelStoreContainer" CdmEntityContainer="QLSCLEntities3">
     <EntitySetMapping Name="CA">
       <EntityTypeMapping TypeName="QLSCLModel.CA">
         <MappingFragment StoreEntitySet="CA">
@@ -17,6 +17,16 @@
           <ScalarProperty Name="Gia" ColumnName="Gia" />
           <ScalarProperty Name="MaSan" ColumnName="MaSan" />
           <ScalarProperty Name="MaCa" ColumnName="MaCa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CHITIETDATSAN">
+      <EntityTypeMapping TypeName="QLSCLModel.CHITIETDATSAN">
+        <MappingFragment StoreEntitySet="CHITIETDATSAN">
+          <ScalarProperty Name="MaChiTietDatSan" ColumnName="MaChiTietDatSan" />
+          <ScalarProperty Name="MaPhieu" ColumnName="MaPhieu" />
+          <ScalarProperty Name="MaCaThue" ColumnName="MaCaThue" />
+          <ScalarProperty Name="TienCoc" ColumnName="TienCoc" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -78,15 +88,6 @@
           <ScalarProperty Name="Ngay" ColumnName="Ngay" />
           <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
           <ScalarProperty Name="MaCaThue" ColumnName="MaCaThue" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="CHITIETDATSAN">
-      <EntityTypeMapping TypeName="QLSCLModel.CHITIETDATSAN">
-        <MappingFragment StoreEntitySet="CHITIETDATSAN">
-          <ScalarProperty Name="MaPhieu" ColumnName="MaPhieu" />
-          <ScalarProperty Name="MaCaThue" ColumnName="MaCaThue" />
-          <ScalarProperty Name="TienCoc" ColumnName="TienCoc" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

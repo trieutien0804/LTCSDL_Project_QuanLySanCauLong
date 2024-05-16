@@ -220,6 +220,7 @@
             this.dsKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dsKhachHang.Location = new System.Drawing.Point(560, 58);
             this.dsKhachHang.Name = "dsKhachHang";
+            this.dsKhachHang.RowHeadersWidth = 62;
             this.dsKhachHang.Size = new System.Drawing.Size(444, 453);
             this.dsKhachHang.TabIndex = 10;
             // 

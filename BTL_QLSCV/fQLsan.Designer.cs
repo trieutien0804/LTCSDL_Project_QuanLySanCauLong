@@ -57,6 +57,7 @@ namespace BTL_QLSCV
             this.label6 = new System.Windows.Forms.Label();
             this.dsCaTheoSan = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.gbSan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dsSan)).BeginInit();
@@ -64,6 +65,7 @@ namespace BTL_QLSCV
             this.gbChucNang.SuspendLayout();
             this.gbTimCa.SuspendLayout();
             this.gbCaTheoSan.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // fileSystemWatcher1
@@ -145,19 +147,21 @@ namespace BTL_QLSCV
             // 
             // dsSan
             // 
+            this.dsSan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dsSan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dsSan.Location = new System.Drawing.Point(558, 37);
+            this.dsSan.Location = new System.Drawing.Point(550, 37);
             this.dsSan.Name = "dsSan";
-            this.dsSan.Size = new System.Drawing.Size(617, 166);
+            this.dsSan.Size = new System.Drawing.Size(235, 304);
             this.dsSan.TabIndex = 2;
             this.dsSan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dsSan_CellContentClick);
             // 
             // dsCaThue
             // 
+            this.dsCaThue.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dsCaThue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dsCaThue.Location = new System.Drawing.Point(558, 232);
+            this.dsCaThue.Location = new System.Drawing.Point(807, 37);
             this.dsCaThue.Name = "dsCaThue";
-            this.dsCaThue.Size = new System.Drawing.Size(617, 265);
+            this.dsCaThue.Size = new System.Drawing.Size(364, 551);
             this.dsCaThue.TabIndex = 3;
             this.dsCaThue.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dsCaThue_CellContentClick);
             // 
@@ -177,9 +181,10 @@ namespace BTL_QLSCV
             // 
             // btXoaSan
             // 
-            this.btXoaSan.Location = new System.Drawing.Point(152, 54);
+            this.btXoaSan.Location = new System.Drawing.Point(203, 41);
+            this.btXoaSan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btXoaSan.Name = "btXoaSan";
-            this.btXoaSan.Size = new System.Drawing.Size(98, 27);
+            this.btXoaSan.Size = new System.Drawing.Size(98, 35);
             this.btXoaSan.TabIndex = 14;
             this.btXoaSan.Text = "Xoá sân";
             this.btXoaSan.UseVisualStyleBackColor = true;
@@ -187,9 +192,10 @@ namespace BTL_QLSCV
             // 
             // btSuaSan
             // 
-            this.btSuaSan.Location = new System.Drawing.Point(266, 21);
+            this.btSuaSan.Location = new System.Drawing.Point(314, 41);
+            this.btSuaSan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btSuaSan.Name = "btSuaSan";
-            this.btSuaSan.Size = new System.Drawing.Size(98, 27);
+            this.btSuaSan.Size = new System.Drawing.Size(98, 35);
             this.btSuaSan.TabIndex = 13;
             this.btSuaSan.Text = "Cập nhật sân";
             this.btSuaSan.UseVisualStyleBackColor = true;
@@ -197,9 +203,10 @@ namespace BTL_QLSCV
             // 
             // btThemSan
             // 
-            this.btThemSan.Location = new System.Drawing.Point(152, 21);
+            this.btThemSan.Location = new System.Drawing.Point(89, 41);
+            this.btThemSan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btThemSan.Name = "btThemSan";
-            this.btThemSan.Size = new System.Drawing.Size(98, 27);
+            this.btThemSan.Size = new System.Drawing.Size(98, 35);
             this.btThemSan.TabIndex = 12;
             this.btThemSan.Text = "Thêm sân";
             this.btThemSan.UseVisualStyleBackColor = true;
@@ -217,12 +224,14 @@ namespace BTL_QLSCV
             this.gbTimCa.TabIndex = 2;
             this.gbTimCa.TabStop = false;
             this.gbTimCa.Text = "Tìm kiếm ca";
+            this.gbTimCa.Enter += new System.EventHandler(this.gbTimCa_Enter);
             // 
             // btCNCa
             // 
-            this.btCNCa.Location = new System.Drawing.Point(314, 144);
+            this.btCNCa.Location = new System.Drawing.Point(56, 29);
+            this.btCNCa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btCNCa.Name = "btCNCa";
-            this.btCNCa.Size = new System.Drawing.Size(117, 27);
+            this.btCNCa.Size = new System.Drawing.Size(117, 36);
             this.btCNCa.TabIndex = 11;
             this.btCNCa.Text = "Cập nhật ca";
             this.btCNCa.UseVisualStyleBackColor = true;
@@ -230,7 +239,6 @@ namespace BTL_QLSCV
             // 
             // gbCaTheoSan
             // 
-            this.gbCaTheoSan.Controls.Add(this.btCNCa);
             this.gbCaTheoSan.Controls.Add(this.comboTree1);
             this.gbCaTheoSan.Controls.Add(this.cbTenSan);
             this.gbCaTheoSan.Controls.Add(this.btXoaCaThue);
@@ -273,9 +281,10 @@ namespace BTL_QLSCV
             // 
             // btXoaCaThue
             // 
-            this.btXoaCaThue.Location = new System.Drawing.Point(314, 104);
+            this.btXoaCaThue.Location = new System.Drawing.Point(323, 132);
+            this.btXoaCaThue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btXoaCaThue.Name = "btXoaCaThue";
-            this.btXoaCaThue.Size = new System.Drawing.Size(117, 27);
+            this.btXoaCaThue.Size = new System.Drawing.Size(117, 33);
             this.btXoaCaThue.TabIndex = 9;
             this.btXoaCaThue.Text = "Xoá ca thuê";
             this.btXoaCaThue.UseVisualStyleBackColor = true;
@@ -283,9 +292,10 @@ namespace BTL_QLSCV
             // 
             // btThemCaThue
             // 
-            this.btThemCaThue.Location = new System.Drawing.Point(314, 64);
+            this.btThemCaThue.Location = new System.Drawing.Point(323, 81);
+            this.btThemCaThue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btThemCaThue.Name = "btThemCaThue";
-            this.btThemCaThue.Size = new System.Drawing.Size(117, 27);
+            this.btThemCaThue.Size = new System.Drawing.Size(117, 36);
             this.btThemCaThue.TabIndex = 5;
             this.btThemCaThue.Text = "Thêm ca thuê";
             this.btThemCaThue.UseVisualStyleBackColor = true;
@@ -332,7 +342,7 @@ namespace BTL_QLSCV
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(555, 21);
+            this.label6.Location = new System.Drawing.Point(547, 21);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(85, 13);
             this.label6.TabIndex = 4;
@@ -342,7 +352,7 @@ namespace BTL_QLSCV
             // 
             this.dsCaTheoSan.AutoSize = true;
             this.dsCaTheoSan.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dsCaTheoSan.Location = new System.Drawing.Point(555, 216);
+            this.dsCaTheoSan.Location = new System.Drawing.Point(804, 21);
             this.dsCaTheoSan.Name = "dsCaTheoSan";
             this.dsCaTheoSan.Size = new System.Drawing.Size(148, 13);
             this.dsCaTheoSan.TabIndex = 5;
@@ -359,6 +369,17 @@ namespace BTL_QLSCV
             this.label7.TabIndex = 14;
             this.label7.Text = "Quản lý sân";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btCNCa);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(550, 354);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(235, 88);
+            this.groupBox1.TabIndex = 13;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Chức năng";
+            // 
             // fQLSan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -366,6 +387,7 @@ namespace BTL_QLSCV
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1209, 613);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dsCaTheoSan);
             this.Controls.Add(this.label6);
@@ -389,6 +411,7 @@ namespace BTL_QLSCV
             this.gbTimCa.ResumeLayout(false);
             this.gbCaTheoSan.ResumeLayout(false);
             this.gbCaTheoSan.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -424,5 +447,6 @@ namespace BTL_QLSCV
         private System.Windows.Forms.Label label5;
         private DevComponents.DotNetBar.Controls.ComboTree comboTree1;
         private System.Windows.Forms.ComboBox cbTenSan;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

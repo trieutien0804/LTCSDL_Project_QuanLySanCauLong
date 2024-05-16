@@ -13,6 +13,8 @@ using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 using DevComponents.DotNetBar.Controls;
+using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
+using System.Runtime.Remoting.Contexts;
 
 namespace BTL_QLSCV
 {
@@ -20,7 +22,11 @@ namespace BTL_QLSCV
     {
         BUS_SAN bus_SAN = new BUS_SAN();
         BUS_CA bus_CA = new BUS_CA();
+        BUS_CATHUE bus_CATHUE = new BUS_CATHUE();
         BUS_KHACHHANG bus_KH = new BUS_KHACHHANG();
+        BUS_PHIEUDATSAN bus_PHIEUDATSAN = new BUS_PHIEUDATSAN();
+        BUS_CHITIETDATSAN bus_CHITIETDATSAN = new BUS_CHITIETDATSAN();
+        BUS_TINHTRANGSAN bus_TINHTRANGSAN = new BUS_TINHTRANGSAN();
         public fDatSan()
         {   
             InitializeComponent();
@@ -28,18 +34,22 @@ namespace BTL_QLSCV
 
         private void fDatSan_Load(object sender, EventArgs e)
         {
+            dsKH.DataSource = bus_KH.getKH();
+            
+            dsSan.DataSource = bus_SAN.getSAN();
             comboTree1.DataSource = bus_CA.getCA();
+            txtMaPhieu.Text = bus_PHIEUDATSAN.nextMaPHIEUDATSAN().ToString();
         }
 
         private void btTimSanTrong_Click(object sender, EventArgs e)
         {
             DateTime selectedDate = dtpNgayNhan.Value;
-            string ngay = selectedDate.ToString("yyyy-dd-MM", CultureInfo.InvariantCulture);
+            string ngay = selectedDate.ToString("dd-MM-yyyy", CultureInfo.InvariantCulture);
             string pattern = @"MaCa\s*=\s*(\d+)";
             Match match = Regex.Match(comboTree1.SelectedValue.ToString(), pattern);
             if (match.Success)
             {
-                dsSanDat.DataSource = bus_SAN.getSanDat(Convert.ToInt32(match.Groups[1].Value), ngay);
+                dsSan.DataSource = bus_SAN.getSanDat(Convert.ToInt32(match.Groups[1].Value), ngay);
             }
             this.ControlBox = false;
         }
@@ -56,7 +66,38 @@ namespace BTL_QLSCV
 
         private void btDatSan_Click(object sender, EventArgs e)
         {
+            if (txtNgayNhan.Text != "" &&
+                txtNVdatsan.Text != "" &&
+                txtCa.Text != "" &&
+                txtTienCoc.Text != "" &&
+                txtMaKH.Text != "")
+            {
+                string ngayLap = DateTime.Now.ToString("dd-MM-yyyy");
+                string ngayDat = txtNgayNhan.Text;
+                int maPhieu = Convert.ToInt32(txtMaPhieu.Text);
+                //khong duọc test
+                int maPhieuDatSan = bus_PHIEUDATSAN.addPHIEUDATSAN(maPhieu, ngayLap, ngayDat, Convert.ToInt32(txtMaKH.Text));
+                if (maPhieuDatSan != -1)
+                {
+                    //lay ma san
+                    DataGridViewRow row = dsSan.SelectedRows[0];
+                    int maSan = Convert.ToInt32(row.Cells[0].Value.ToString());
+                    int maCa = Convert.ToInt32(txtCa.Text.Split(',')[0].Trim());
 
+                    //lay ma ca thue 
+                    int maCaThue = bus_CATHUE.getMaCaThueByCaVaSan(maCa, maSan);
+                    bus_CHITIETDATSAN.addCHITIETDATSAN(maPhieuDatSan, maCaThue, Convert.ToInt32(txtTienCoc.Text));
+                    txtMaPhieu.Text = bus_PHIEUDATSAN.nextMaPHIEUDATSAN().ToString();
+
+                    //add tinh trang san
+
+                    if(bus_TINHTRANGSAN.addTINHTRANGSAN(ngayDat, "DT", maCaThue))
+                    {
+                        MessageBox.Show("Đặt sân thành công");
+                    }
+                }
+                
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -65,7 +106,7 @@ namespace BTL_QLSCV
             if (txtTimKH.Text != "")
             {
                 string sdt = txtTimKH.Text;
-                dgvKH.DataSource = bus_KH.findKHBySDT(sdt);
+                dsKH.DataSource = bus_KH.findKHBySDT(sdt);
             }
             else
             {
@@ -75,7 +116,7 @@ namespace BTL_QLSCV
 
         private void dgvKH_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-                DataGridViewRow row = dgvKH.SelectedRows[0];
+                DataGridViewRow row = dsKH.SelectedRows[0];
                 txtMaKH.Text = row.Cells[0].Value.ToString();
                 txtHoTen.Text = row.Cells[1].Value.ToString();
                 txtSDT.Text = row.Cells[2].Value.ToString();

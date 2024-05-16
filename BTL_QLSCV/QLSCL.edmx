@@ -4,14 +4,14 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="QLSCLModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="QLSCLModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="CA">
           <Key>
             <PropertyRef Name="MaCa" />
           </Key>
-          <Property Name="MaCa" Type="int" Nullable="false" />
-          <Property Name="ThoiGianBD" Type="varchar" MaxLength="10" />
-          <Property Name="ThoiGianKT" Type="varchar" MaxLength="10" />
+          <Property Name="MaCa" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ThoiGianBD" Type="varchar" MaxLength="11" />
+          <Property Name="ThoiGianKT" Type="varchar" MaxLength="11" />
         </EntityType>
         <EntityType Name="CATHUE">
           <Key>
@@ -22,13 +22,11 @@
           <Property Name="MaSan" Type="int" />
           <Property Name="MaCa" Type="int" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'QLSCL.dbo.CHITIETDATSAN' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="CHITIETDATSAN">
           <Key>
-            <PropertyRef Name="MaPhieu" />
-            <PropertyRef Name="MaCaThue" />
+            <PropertyRef Name="MaChiTietDatSan" />
           </Key>
+          <Property Name="MaChiTietDatSan" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="MaPhieu" Type="int" Nullable="false" />
           <Property Name="MaCaThue" Type="int" Nullable="false" />
           <Property Name="TienCoc" Type="int" />
@@ -88,7 +86,7 @@ warning 6002: The table/view 'QLSCL.dbo.CHITIETHOADON' does not have a primary k
           <Key>
             <PropertyRef Name="MaSan" />
           </Key>
-          <Property Name="MaSan" Type="int" Nullable="false" />
+          <Property Name="MaSan" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TenSan" Type="nchar" MaxLength="10" />
         </EntityType>
         <EntityType Name="TINHTRANGSAN">
@@ -211,19 +209,13 @@ warning 6002: The table/view 'QLSCL.dbo.CHITIETHOADON' does not have a primary k
         <EntityContainer Name="QLSCLModelStoreContainer">
           <EntitySet Name="CA" EntityType="Self.CA" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CATHUE" EntityType="Self.CATHUE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CHITIETDATSAN" EntityType="Self.CHITIETDATSAN" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HOADON" EntityType="Self.HOADON" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="KHACHHANG" EntityType="Self.KHACHHANG" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="NGUOIDUNG" EntityType="Self.NGUOIDUNG" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PHIEUDATSAN" EntityType="Self.PHIEUDATSAN" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SAN" EntityType="Self.SAN" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TINHTRANGSAN" EntityType="Self.TINHTRANGSAN" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="CHITIETDATSAN" EntityType="Self.CHITIETDATSAN" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [CHITIETDATSAN].[MaPhieu] AS [MaPhieu], 
-    [CHITIETDATSAN].[MaCaThue] AS [MaCaThue], 
-    [CHITIETDATSAN].[TienCoc] AS [TienCoc]
-    FROM [dbo].[CHITIETDATSAN] AS [CHITIETDATSAN]</DefiningQuery>
-          </EntitySet>
           <EntitySet Name="CHITIETHOADON" EntityType="Self.CHITIETHOADON" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [CHITIETHOADON].[ThoiGianBD] AS [ThoiGianBD], 
@@ -269,7 +261,8 @@ warning 6002: The table/view 'QLSCL.dbo.CHITIETHOADON' does not have a primary k
             <End Role="TINHTRANGSAN" EntitySet="TINHTRANGSAN" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="QLSCLModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -277,16 +270,16 @@ warning 6002: The table/view 'QLSCL.dbo.CHITIETHOADON' does not have a primary k
           <Key>
             <PropertyRef Name="MaCa" />
           </Key>
-          <Property Name="MaCa" Type="Int32" Nullable="false" />
-          <Property Name="ThoiGianBD" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="ThoiGianKT" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="MaCa" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ThoiGianBD" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="ThoiGianKT" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="CATHUE" Relationship="Self.FK_CATHUE_CA" FromRole="CA" ToRole="CATHUE" />
         </EntityType>
         <EntityType Name="CATHUE">
           <Key>
             <PropertyRef Name="MaCaThue" />
           </Key>
-          <Property Name="MaCaThue" Type="Int32" Nullable="false" />
+          <Property Name="MaCaThue" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Gia" Type="Int32" />
           <Property Name="MaSan" Type="Int32" />
           <Property Name="MaCa" Type="Int32" />
@@ -295,6 +288,17 @@ warning 6002: The table/view 'QLSCL.dbo.CHITIETHOADON' does not have a primary k
           <NavigationProperty Name="CHITIETDATSAN" Relationship="Self.FK_CHITIETDATSAN_CATHUE" FromRole="CATHUE" ToRole="CHITIETDATSAN" />
           <NavigationProperty Name="CHITIETHOADON" Relationship="Self.FK_CHITIETHOADON_CATHUE" FromRole="CATHUE" ToRole="CHITIETHOADON" />
           <NavigationProperty Name="TINHTRANGSAN" Relationship="Self.FK_TINHTRANGSAN_CATHUE" FromRole="CATHUE" ToRole="TINHTRANGSAN" />
+        </EntityType>
+        <EntityType Name="CHITIETDATSAN">
+          <Key>
+            <PropertyRef Name="MaChiTietDatSan" />
+          </Key>
+          <Property Name="MaChiTietDatSan" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MaPhieu" Type="Int32" Nullable="false" />
+          <Property Name="MaCaThue" Type="Int32" Nullable="false" />
+          <Property Name="TienCoc" Type="Int32" />
+          <NavigationProperty Name="CATHUE" Relationship="Self.FK_CHITIETDATSAN_CATHUE" FromRole="CHITIETDATSAN" ToRole="CATHUE" />
+          <NavigationProperty Name="PHIEUDATSAN" Relationship="Self.FK_CHITIETDATSAN_PHIEUDATSAN" FromRole="CHITIETDATSAN" ToRole="PHIEUDATSAN" />
         </EntityType>
         <EntityType Name="HOADON">
           <Key>
@@ -334,18 +338,18 @@ warning 6002: The table/view 'QLSCL.dbo.CHITIETHOADON' does not have a primary k
             <PropertyRef Name="MaPhieu" />
           </Key>
           <Property Name="MaPhieu" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="NgayLap" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
-          <Property Name="NgayDat" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="NgayLap" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="NgayDat" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
           <Property Name="MaKH" Type="Int32" />
+          <NavigationProperty Name="CHITIETDATSAN" Relationship="Self.FK_CHITIETDATSAN_PHIEUDATSAN" FromRole="PHIEUDATSAN" ToRole="CHITIETDATSAN" />
           <NavigationProperty Name="HOADON" Relationship="Self.FK_HOADON_PHIEUDATSAN" FromRole="PHIEUDATSAN" ToRole="HOADON" />
           <NavigationProperty Name="KHACHHANG" Relationship="Self.FK_PHIEUDATSAN_KHACHHANG" FromRole="PHIEUDATSAN" ToRole="KHACHHANG" />
-          <NavigationProperty Name="CHITIETDATSAN" Relationship="Self.FK_CHITIETDATSAN_PHIEUDATSAN" FromRole="PHIEUDATSAN" ToRole="CHITIETDATSAN" />
         </EntityType>
         <EntityType Name="SAN">
           <Key>
             <PropertyRef Name="MaSan" />
           </Key>
-          <Property Name="MaSan" Type="Int32" Nullable="false" />
+          <Property Name="MaSan" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TenSan" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <NavigationProperty Name="CATHUE" Relationship="Self.FK_CATHUE_SAN" FromRole="SAN" ToRole="CATHUE" />
         </EntityType>
@@ -358,17 +362,6 @@ warning 6002: The table/view 'QLSCL.dbo.CHITIETHOADON' does not have a primary k
           <Property Name="TinhTrang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="MaCaThue" Type="Int32" />
           <NavigationProperty Name="CATHUE" Relationship="Self.FK_TINHTRANGSAN_CATHUE" FromRole="TINHTRANGSAN" ToRole="CATHUE" />
-        </EntityType>
-        <EntityType Name="CHITIETDATSAN">
-          <Key>
-            <PropertyRef Name="MaPhieu" />
-            <PropertyRef Name="MaCaThue" />
-          </Key>
-          <Property Name="MaPhieu" Type="Int32" Nullable="false" />
-          <Property Name="MaCaThue" Type="Int32" Nullable="false" />
-          <Property Name="TienCoc" Type="Int32" />
-          <NavigationProperty Name="CATHUE" Relationship="Self.FK_CHITIETDATSAN_CATHUE" FromRole="CHITIETDATSAN" ToRole="CATHUE" />
-          <NavigationProperty Name="PHIEUDATSAN" Relationship="Self.FK_CHITIETDATSAN_PHIEUDATSAN" FromRole="CHITIETDATSAN" ToRole="PHIEUDATSAN" />
         </EntityType>
         <EntityType Name="CHITIETHOADON">
           <Key>
@@ -442,6 +435,18 @@ warning 6002: The table/view 'QLSCL.dbo.CHITIETHOADON' does not have a primary k
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_CHITIETDATSAN_PHIEUDATSAN">
+          <End Role="PHIEUDATSAN" Type="Self.PHIEUDATSAN" Multiplicity="1" />
+          <End Role="CHITIETDATSAN" Type="Self.CHITIETDATSAN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PHIEUDATSAN">
+              <PropertyRef Name="MaPhieu" />
+            </Principal>
+            <Dependent Role="CHITIETDATSAN">
+              <PropertyRef Name="MaPhieu" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_CHITIETHOADON_HOADON">
           <End Role="HOADON" Type="Self.HOADON" Multiplicity="1" />
           <End Role="CHITIETHOADON" Type="Self.CHITIETHOADON" Multiplicity="*" />
@@ -478,28 +483,16 @@ warning 6002: The table/view 'QLSCL.dbo.CHITIETHOADON' does not have a primary k
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_CHITIETDATSAN_PHIEUDATSAN">
-          <End Role="PHIEUDATSAN" Type="Self.PHIEUDATSAN" Multiplicity="1" />
-          <End Role="CHITIETDATSAN" Type="Self.CHITIETDATSAN" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PHIEUDATSAN">
-              <PropertyRef Name="MaPhieu" />
-            </Principal>
-            <Dependent Role="CHITIETDATSAN">
-              <PropertyRef Name="MaPhieu" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityContainer Name="QLSCLEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="QLSCLEntities3" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="CA" EntityType="Self.CA" />
           <EntitySet Name="CATHUE" EntityType="Self.CATHUE" />
+          <EntitySet Name="CHITIETDATSAN" EntityType="Self.CHITIETDATSAN" />
           <EntitySet Name="HOADON" EntityType="Self.HOADON" />
           <EntitySet Name="KHACHHANG" EntityType="Self.KHACHHANG" />
           <EntitySet Name="NGUOIDUNG" EntityType="Self.NGUOIDUNG" />
           <EntitySet Name="PHIEUDATSAN" EntityType="Self.PHIEUDATSAN" />
           <EntitySet Name="SAN" EntityType="Self.SAN" />
           <EntitySet Name="TINHTRANGSAN" EntityType="Self.TINHTRANGSAN" />
-          <EntitySet Name="CHITIETDATSAN" EntityType="Self.CHITIETDATSAN" />
           <EntitySet Name="CHITIETHOADON" EntityType="Self.CHITIETHOADON" />
           <AssociationSet Name="FK_CATHUE_CA" Association="Self.FK_CATHUE_CA">
             <End Role="CA" EntitySet="CA" />
@@ -521,6 +514,10 @@ warning 6002: The table/view 'QLSCL.dbo.CHITIETHOADON' does not have a primary k
             <End Role="CATHUE" EntitySet="CATHUE" />
             <End Role="TINHTRANGSAN" EntitySet="TINHTRANGSAN" />
           </AssociationSet>
+          <AssociationSet Name="FK_CHITIETDATSAN_PHIEUDATSAN" Association="Self.FK_CHITIETDATSAN_PHIEUDATSAN">
+            <End Role="PHIEUDATSAN" EntitySet="PHIEUDATSAN" />
+            <End Role="CHITIETDATSAN" EntitySet="CHITIETDATSAN" />
+          </AssociationSet>
           <AssociationSet Name="FK_CHITIETHOADON_HOADON" Association="Self.FK_CHITIETHOADON_HOADON">
             <End Role="HOADON" EntitySet="HOADON" />
             <End Role="CHITIETHOADON" EntitySet="CHITIETHOADON" />
@@ -533,17 +530,13 @@ warning 6002: The table/view 'QLSCL.dbo.CHITIETHOADON' does not have a primary k
             <End Role="KHACHHANG" EntitySet="KHACHHANG" />
             <End Role="PHIEUDATSAN" EntitySet="PHIEUDATSAN" />
           </AssociationSet>
-          <AssociationSet Name="FK_CHITIETDATSAN_PHIEUDATSAN" Association="Self.FK_CHITIETDATSAN_PHIEUDATSAN">
-            <End Role="PHIEUDATSAN" EntitySet="PHIEUDATSAN" />
-            <End Role="CHITIETDATSAN" EntitySet="CHITIETDATSAN" />
-          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="QLSCLModelStoreContainer" CdmEntityContainer="QLSCLEntities1">
+        <EntityContainerMapping StorageEntityContainer="QLSCLModelStoreContainer" CdmEntityContainer="QLSCLEntities3">
           <EntitySetMapping Name="CA">
             <EntityTypeMapping TypeName="QLSCLModel.CA">
               <MappingFragment StoreEntitySet="CA">
@@ -560,6 +553,16 @@ warning 6002: The table/view 'QLSCL.dbo.CHITIETHOADON' does not have a primary k
                 <ScalarProperty Name="Gia" ColumnName="Gia" />
                 <ScalarProperty Name="MaSan" ColumnName="MaSan" />
                 <ScalarProperty Name="MaCa" ColumnName="MaCa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CHITIETDATSAN">
+            <EntityTypeMapping TypeName="QLSCLModel.CHITIETDATSAN">
+              <MappingFragment StoreEntitySet="CHITIETDATSAN">
+                <ScalarProperty Name="MaChiTietDatSan" ColumnName="MaChiTietDatSan" />
+                <ScalarProperty Name="MaPhieu" ColumnName="MaPhieu" />
+                <ScalarProperty Name="MaCaThue" ColumnName="MaCaThue" />
+                <ScalarProperty Name="TienCoc" ColumnName="TienCoc" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -621,15 +624,6 @@ warning 6002: The table/view 'QLSCL.dbo.CHITIETHOADON' does not have a primary k
                 <ScalarProperty Name="Ngay" ColumnName="Ngay" />
                 <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
                 <ScalarProperty Name="MaCaThue" ColumnName="MaCaThue" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="CHITIETDATSAN">
-            <EntityTypeMapping TypeName="QLSCLModel.CHITIETDATSAN">
-              <MappingFragment StoreEntitySet="CHITIETDATSAN">
-                <ScalarProperty Name="MaPhieu" ColumnName="MaPhieu" />
-                <ScalarProperty Name="MaCaThue" ColumnName="MaCaThue" />
-                <ScalarProperty Name="TienCoc" ColumnName="TienCoc" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

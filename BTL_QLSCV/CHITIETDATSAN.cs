@@ -14,6 +14,7 @@ namespace BTL_QLSCV
     
     public partial class CHITIETDATSAN
     {
+        public int MaChiTietDatSan { get; set; }
         public int MaPhieu { get; set; }
         public int MaCaThue { get; set; }
         public Nullable<int> TienCoc { get; set; }

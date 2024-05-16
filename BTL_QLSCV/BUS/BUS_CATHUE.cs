@@ -42,5 +42,10 @@ namespace BTL_QLSCV.BUS
         {
             return dal_CATHUE.ktCaThue(maSan, maCa);
         }
+
+        public int getMaCaThueByCaVaSan(int maCa, int maSan)
+        {
+            return dal_CATHUE.getMaCaThueByCaVaSan(maCa, maSan);
+        }
     }
 }

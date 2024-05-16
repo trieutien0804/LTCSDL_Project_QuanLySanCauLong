@@ -4,9 +4,9 @@
     <Key>
       <PropertyRef Name="MaCa" />
     </Key>
-    <Property Name="MaCa" Type="int" Nullable="false" />
-    <Property Name="ThoiGianBD" Type="varchar" MaxLength="10" />
-    <Property Name="ThoiGianKT" Type="varchar" MaxLength="10" />
+    <Property Name="MaCa" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ThoiGianBD" Type="varchar" MaxLength="11" />
+    <Property Name="ThoiGianKT" Type="varchar" MaxLength="11" />
   </EntityType>
   <EntityType Name="CATHUE">
     <Key>
@@ -17,13 +17,11 @@
     <Property Name="MaSan" Type="int" />
     <Property Name="MaCa" Type="int" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'QLSCL.dbo.CHITIETDATSAN' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="CHITIETDATSAN">
     <Key>
-      <PropertyRef Name="MaPhieu" />
-      <PropertyRef Name="MaCaThue" />
+      <PropertyRef Name="MaChiTietDatSan" />
     </Key>
+    <Property Name="MaChiTietDatSan" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="MaPhieu" Type="int" Nullable="false" />
     <Property Name="MaCaThue" Type="int" Nullable="false" />
     <Property Name="TienCoc" Type="int" />
@@ -83,7 +81,7 @@ warning 6002: The table/view 'QLSCL.dbo.CHITIETHOADON' does not have a primary k
     <Key>
       <PropertyRef Name="MaSan" />
     </Key>
-    <Property Name="MaSan" Type="int" Nullable="false" />
+    <Property Name="MaSan" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TenSan" Type="nchar" MaxLength="10" />
   </EntityType>
   <EntityType Name="TINHTRANGSAN">
@@ -206,19 +204,13 @@ warning 6002: The table/view 'QLSCL.dbo.CHITIETHOADON' does not have a primary k
   <EntityContainer Name="QLSCLModelStoreContainer">
     <EntitySet Name="CA" EntityType="Self.CA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CATHUE" EntityType="Self.CATHUE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CHITIETDATSAN" EntityType="Self.CHITIETDATSAN" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="HOADON" EntityType="Self.HOADON" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="KHACHHANG" EntityType="Self.KHACHHANG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="NGUOIDUNG" EntityType="Self.NGUOIDUNG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PHIEUDATSAN" EntityType="Self.PHIEUDATSAN" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SAN" EntityType="Self.SAN" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TINHTRANGSAN" EntityType="Self.TINHTRANGSAN" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="CHITIETDATSAN" EntityType="Self.CHITIETDATSAN" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [CHITIETDATSAN].[MaPhieu] AS [MaPhieu], 
-    [CHITIETDATSAN].[MaCaThue] AS [MaCaThue], 
-    [CHITIETDATSAN].[TienCoc] AS [TienCoc]
-    FROM [dbo].[CHITIETDATSAN] AS [CHITIETDATSAN]</DefiningQuery>
-    </EntitySet>
     <EntitySet Name="CHITIETHOADON" EntityType="Self.CHITIETHOADON" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
     [CHITIETHOADON].[ThoiGianBD] AS [ThoiGianBD], 

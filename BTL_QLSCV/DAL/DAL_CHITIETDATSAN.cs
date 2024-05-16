@@ -8,13 +8,24 @@ namespace BTL_QLSCV.DAL
 {
     class DAL_CHITIETDATSAN
     {
-        QLSCLEntities1 db;
+        QLSCLEntities3 db;
 
         public DAL_CHITIETDATSAN()
         {
-            db = new QLSCLEntities1();
+            db = new QLSCLEntities3();
         }
+        public dynamic getCHITIETDATSAN()
+        {
 
+            var dsCHITIETDATSAN = db.CHITIETDATSAN.Select(s => new {
+                s.MaPhieu,
+                s.MaCaThue,
+                s.TienCoc,
+             
+            }).ToList();
+
+            return dsCHITIETDATSAN;
+        }
         public bool addCHITIETDATSAN(int maPhieu, int maCaThue, int tienCoc)
         {
             var chiTietDatSan = new CHITIETDATSAN()

@@ -76,7 +76,7 @@
             this.cbSanTrong.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSanTrong.FormattingEnabled = true;
             this.cbSanTrong.Location = new System.Drawing.Point(34, 40);
-            this.cbSanTrong.Margin = new System.Windows.Forms.Padding(2);
+            this.cbSanTrong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbSanTrong.Name = "cbSanTrong";
             this.cbSanTrong.Size = new System.Drawing.Size(216, 25);
             this.cbSanTrong.TabIndex = 6;
@@ -242,6 +242,7 @@
             this.dsChuaNhan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dsChuaNhan.Location = new System.Drawing.Point(562, 55);
             this.dsChuaNhan.Name = "dsChuaNhan";
+            this.dsChuaNhan.RowHeadersWidth = 62;
             this.dsChuaNhan.Size = new System.Drawing.Size(444, 206);
             this.dsChuaNhan.TabIndex = 25;
             // 
@@ -302,6 +303,7 @@
             this.dsDaNhan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dsDaNhan.Location = new System.Drawing.Point(562, 284);
             this.dsDaNhan.Name = "dsDaNhan";
+            this.dsDaNhan.RowHeadersWidth = 62;
             this.dsDaNhan.Size = new System.Drawing.Size(444, 220);
             this.dsDaNhan.TabIndex = 28;
             // 
@@ -320,7 +322,7 @@
             this.Controls.Add(this.gbChucNang);
             this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "fNhansan";
             this.Text = " ";
             this.Load += new System.EventHandler(this.fNhansan_Load);

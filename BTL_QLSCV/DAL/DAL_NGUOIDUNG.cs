@@ -10,11 +10,11 @@ namespace BTL_QLSCV.DAL
 {
     class DAL_NGUOIDUNG
     {
-        QLSCLEntities1 db;
+        QLSCLEntities3 db;
 
         public DAL_NGUOIDUNG()
         {
-            db = new QLSCLEntities1();
+            db = new QLSCLEntities3();
         }
 
         public bool Login(string username, string password)
@@ -38,7 +38,7 @@ namespace BTL_QLSCV.DAL
         public dynamic getUserRole()
         {
             var user = db.NGUOIDUNG.Where(u => u.Quyen == "admin").ToList();
-            return user
+            return user;
         }
         public dynamic getND()
         {

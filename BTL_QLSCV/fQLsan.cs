@@ -189,5 +189,10 @@ namespace BTL_QLSCV
                 MessageBox.Show("Xóa không thành công");
             }
         }
+
+        private void gbTimCa_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
