@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "D:\\MIS\\HK8\\LTCSDL\\LTCSDL_Project_QuanLySanCauLong\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{06AF873C-66B0-49F6-834F-4B0524A3D4D5}|BTL_QLSCV\\BTL_QLSCL.csproj|D:\\MIS\\HK8\\LTCSDL\\LTCSDL_Project_QuanLySanCauLong\\btl_qlscv\\fnhansan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{06AF873C-66B0-49F6-834F-4B0524A3D4D5}|BTL_QLSCV\\BTL_QLSCL.csproj|solutionrelative:btl_qlscv\\fnhansan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{06AF873C-66B0-49F6-834F-4B0524A3D4D5}|BTL_QLSCV\\BTL_QLSCL.csproj|d:\\mis\\hk8\\ltcsdl\\ltcsdl_project_quanlysancaulong\\btl_qlscv\\fdatsan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{06AF873C-66B0-49F6-834F-4B0524A3D4D5}|BTL_QLSCV\\BTL_QLSCL.csproj|solutionrelative:btl_qlscv\\fdatsan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{06AF873C-66B0-49F6-834F-4B0524A3D4D5}|BTL_QLSCV\\BTL_QLSCL.csproj|D:\\MIS\\HK8\\LTCSDL\\LTCSDL_Project_QuanLySanCauLong\\btl_qlscv\\dal\\dal_cathue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06AF873C-66B0-49F6-834F-4B0524A3D4D5}|BTL_QLSCV\\BTL_QLSCL.csproj|solutionrelative:btl_qlscv\\dal\\dal_cathue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{06AF873C-66B0-49F6-834F-4B0524A3D4D5}|BTL_QLSCV\\BTL_QLSCL.csproj|d:\\mis\\hk8\\ltcsdl\\ltcsdl_project_quanlysancaulong\\btl_qlscv\\fdatsan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{06AF873C-66B0-49F6-834F-4B0524A3D4D5}|BTL_QLSCV\\BTL_QLSCL.csproj|solutionrelative:btl_qlscv\\fdatsan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06AF873C-66B0-49F6-834F-4B0524A3D4D5}|BTL_QLSCV\\BTL_QLSCL.csproj|D:\\MIS\\HK8\\LTCSDL\\LTCSDL_Project_QuanLySanCauLong\\btl_qlscv\\dal\\dal_cathue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06AF873C-66B0-49F6-834F-4B0524A3D4D5}|BTL_QLSCV\\BTL_QLSCL.csproj|solutionrelative:btl_qlscv\\dal\\dal_cathue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{06AF873C-66B0-49F6-834F-4B0524A3D4D5}|BTL_QLSCV\\BTL_QLSCL.csproj|D:\\MIS\\HK8\\LTCSDL\\LTCSDL_Project_QuanLySanCauLong\\btl_qlscv\\dal\\dal_phieudatsan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -33,10 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{06AF873C-66B0-49F6-834F-4B0524A3D4D5}|BTL_QLSCV\\BTL_QLSCL.csproj|D:\\MIS\\HK8\\LTCSDL\\LTCSDL_Project_QuanLySanCauLong\\btl_qlscv\\fqlkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{06AF873C-66B0-49F6-834F-4B0524A3D4D5}|BTL_QLSCV\\BTL_QLSCL.csproj|solutionrelative:btl_qlscv\\fqlkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06AF873C-66B0-49F6-834F-4B0524A3D4D5}|BTL_QLSCV\\BTL_QLSCL.csproj|D:\\MIS\\HK8\\LTCSDL\\LTCSDL_Project_QuanLySanCauLong\\btl_qlscv\\fnhansan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{06AF873C-66B0-49F6-834F-4B0524A3D4D5}|BTL_QLSCV\\BTL_QLSCL.csproj|solutionrelative:btl_qlscv\\fnhansan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{06AF873C-66B0-49F6-834F-4B0524A3D4D5}|BTL_QLSCV\\BTL_QLSCL.csproj|D:\\MIS\\HK8\\LTCSDL\\LTCSDL_Project_QuanLySanCauLong\\btl_qlscv\\bus\\bus_phieudatsan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -177,32 +177,9 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 71,
+          "DockedWidth": 76,
           "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "fNhansan.cs",
-              "DocumentMoniker": "D:\\MIS\\HK8\\LTCSDL\\LTCSDL_Project_QuanLySanCauLong\\BTL_QLSCV\\fNhansan.cs",
-              "RelativeDocumentMoniker": "BTL_QLSCV\\fNhansan.cs",
-              "ToolTip": "D:\\MIS\\HK8\\LTCSDL\\LTCSDL_Project_QuanLySanCauLong\\BTL_QLSCV\\fNhansan.cs",
-              "RelativeToolTip": "BTL_QLSCV\\fNhansan.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAACIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T05:32:46.209Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "fQLKhachHang.cs [Design]",
-              "DocumentMoniker": "D:\\MIS\\HK8\\LTCSDL\\LTCSDL_Project_QuanLySanCauLong\\BTL_QLSCV\\fQLKhachHang.cs",
-              "RelativeDocumentMoniker": "BTL_QLSCV\\fQLKhachHang.cs",
-              "ToolTip": "D:\\MIS\\HK8\\LTCSDL\\LTCSDL_Project_QuanLySanCauLong\\BTL_QLSCV\\fQLKhachHang.cs [Design]",
-              "RelativeToolTip": "BTL_QLSCV\\fQLKhachHang.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T16:01:16.312Z"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -211,14 +188,14 @@
               "RelativeDocumentMoniker": "BTL_QLSCV\\fDatSan.cs",
               "ToolTip": "D:\\MIS\\HK8\\LTCSDL\\LTCSDL_Project_QuanLySanCauLong\\BTL_QLSCV\\fDatSan.cs",
               "RelativeToolTip": "BTL_QLSCV\\fDatSan.cs",
-              "ViewState": "AQIAADYAAAAAAAAAAAAqwGMAAAANAAAA",
+              "ViewState": "AQIAADsAAAAAAAAAAAAIwCUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-16T05:24:29.986Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "DAL_PHIEUDATSAN.cs",
               "DocumentMoniker": "D:\\MIS\\HK8\\LTCSDL\\LTCSDL_Project_QuanLySanCauLong\\BTL_QLSCV\\DAL\\DAL_PHIEUDATSAN.cs",
               "RelativeDocumentMoniker": "BTL_QLSCV\\DAL\\DAL_PHIEUDATSAN.cs",
@@ -230,14 +207,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
               "Title": "fNhansan.cs [Design]",
               "DocumentMoniker": "D:\\MIS\\HK8\\LTCSDL\\LTCSDL_Project_QuanLySanCauLong\\BTL_QLSCV\\fNhansan.cs",
               "RelativeDocumentMoniker": "BTL_QLSCV\\fNhansan.cs",
               "ToolTip": "D:\\MIS\\HK8\\LTCSDL\\LTCSDL_Project_QuanLySanCauLong\\BTL_QLSCV\\fNhansan.cs [Design]",
               "RelativeToolTip": "BTL_QLSCV\\fNhansan.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T16:00:59.103Z"
+              "WhenOpened": "2024-05-15T16:00:59.103Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "fQLKhachHang.cs [Design]",
+              "DocumentMoniker": "D:\\MIS\\HK8\\LTCSDL\\LTCSDL_Project_QuanLySanCauLong\\BTL_QLSCV\\fQLKhachHang.cs",
+              "RelativeDocumentMoniker": "BTL_QLSCV\\fQLKhachHang.cs",
+              "ToolTip": "D:\\MIS\\HK8\\LTCSDL\\LTCSDL_Project_QuanLySanCauLong\\BTL_QLSCV\\fQLKhachHang.cs [Design]",
+              "RelativeToolTip": "BTL_QLSCV\\fQLKhachHang.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T16:01:16.312Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "fNhansan.cs",
+              "DocumentMoniker": "D:\\MIS\\HK8\\LTCSDL\\LTCSDL_Project_QuanLySanCauLong\\BTL_QLSCV\\fNhansan.cs",
+              "RelativeDocumentMoniker": "BTL_QLSCV\\fNhansan.cs",
+              "ToolTip": "D:\\MIS\\HK8\\LTCSDL\\LTCSDL_Project_QuanLySanCauLong\\BTL_QLSCV\\fNhansan.cs",
+              "RelativeToolTip": "BTL_QLSCV\\fNhansan.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T05:32:46.209Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -359,24 +361,12 @@
           ]
         },
         {
-          "DockedWidth": 81,
-          "SelectedChildIndex": 3,
+          "DockedWidth": 76,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "DAL_SAN.cs",
-              "DocumentMoniker": "D:\\MIS\\HK8\\LTCSDL\\LTCSDL_Project_QuanLySanCauLong\\BTL_QLSCV\\DAL\\DAL_SAN.cs",
-              "RelativeDocumentMoniker": "BTL_QLSCV\\DAL\\DAL_SAN.cs",
-              "ToolTip": "D:\\MIS\\HK8\\LTCSDL\\LTCSDL_Project_QuanLySanCauLong\\BTL_QLSCV\\DAL\\DAL_SAN.cs",
-              "RelativeToolTip": "BTL_QLSCV\\DAL\\DAL_SAN.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAowFkAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T13:58:38.715Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "DAL_CHITIETDATSAN.cs",
               "DocumentMoniker": "D:\\MIS\\HK8\\LTCSDL\\LTCSDL_Project_QuanLySanCauLong\\BTL_QLSCV\\DAL\\DAL_CHITIETDATSAN.cs",
               "RelativeDocumentMoniker": "BTL_QLSCV\\DAL\\DAL_CHITIETDATSAN.cs",
@@ -388,7 +378,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "DAL_CATHUE.cs",
               "DocumentMoniker": "D:\\MIS\\HK8\\LTCSDL\\LTCSDL_Project_QuanLySanCauLong\\BTL_QLSCV\\DAL\\DAL_CATHUE.cs",
               "RelativeDocumentMoniker": "BTL_QLSCV\\DAL\\DAL_CATHUE.cs",
@@ -396,12 +386,11 @@
               "RelativeToolTip": "BTL_QLSCV\\DAL\\DAL_CATHUE.cs",
               "ViewState": "AQIAAAkAAAAAAAAAAAAqwCEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T12:04:34.066Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-15T12:04:34.066Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "fDatSan.cs [Design]",
               "DocumentMoniker": "D:\\MIS\\HK8\\LTCSDL\\LTCSDL_Project_QuanLySanCauLong\\BTL_QLSCV\\fDatSan.cs",
               "RelativeDocumentMoniker": "BTL_QLSCV\\fDatSan.cs",
@@ -410,6 +399,18 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-16T04:30:27.143Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DAL_SAN.cs",
+              "DocumentMoniker": "D:\\MIS\\HK8\\LTCSDL\\LTCSDL_Project_QuanLySanCauLong\\BTL_QLSCV\\DAL\\DAL_SAN.cs",
+              "RelativeDocumentMoniker": "BTL_QLSCV\\DAL\\DAL_SAN.cs",
+              "ToolTip": "D:\\MIS\\HK8\\LTCSDL\\LTCSDL_Project_QuanLySanCauLong\\BTL_QLSCV\\DAL\\DAL_SAN.cs",
+              "RelativeToolTip": "BTL_QLSCV\\DAL\\DAL_SAN.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAowFkAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T13:58:38.715Z"
             },
             {
               "$type": "Document",
@@ -537,8 +538,7 @@
               "RelativeToolTip": "BTL_QLSCV\\fDatSan.Designer.cs",
               "ViewState": "AQIAAMACAAAAAAAAAAAjwNECAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T05:06:55.587Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-16T05:06:55.587Z"
             },
             {
               "$type": "Document",
@@ -550,7 +550,8 @@
               "RelativeToolTip": "BTL_QLSCV\\fNhansan.Designer.cs",
               "ViewState": "AQIAACgBAAAAAAAAAAAjwDoBAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T05:08:01.214Z"
+              "WhenOpened": "2024-05-16T05:08:01.214Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

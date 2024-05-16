@@ -35,7 +35,7 @@ namespace BTL_QLSCV
         private void fDatSan_Load(object sender, EventArgs e)
         {
             dsKH.DataSource = bus_KH.getKH();
-            
+
             dsSan.DataSource = bus_SAN.getSAN();
             comboTree1.DataSource = bus_CA.getCA();
             txtMaPhieu.Text = bus_PHIEUDATSAN.nextMaPHIEUDATSAN().ToString();
@@ -96,7 +96,6 @@ namespace BTL_QLSCV
                         MessageBox.Show("Đặt sân thành công");
                     }
                 }
-                
             }
         }
 
