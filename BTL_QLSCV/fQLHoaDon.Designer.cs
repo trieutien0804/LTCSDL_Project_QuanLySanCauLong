@@ -31,7 +31,6 @@
             this.btTimHD = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.gbTTKH = new System.Windows.Forms.GroupBox();
-            this.dtpDatSan = new System.Windows.Forms.DateTimePicker();
             this.txtThanhTien = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtTienCoc = new System.Windows.Forms.TextBox();
@@ -47,6 +46,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtSan = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtNgayLap = new System.Windows.Forms.TextBox();
             this.txtMaHD = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dsHoaDon = new System.Windows.Forms.DataGridView();
@@ -88,7 +88,6 @@
             // 
             // gbTTKH
             // 
-            this.gbTTKH.Controls.Add(this.dtpDatSan);
             this.gbTTKH.Controls.Add(this.txtThanhTien);
             this.gbTTKH.Controls.Add(this.label10);
             this.gbTTKH.Controls.Add(this.txtTienCoc);
@@ -104,6 +103,7 @@
             this.gbTTKH.Controls.Add(this.label8);
             this.gbTTKH.Controls.Add(this.txtSan);
             this.gbTTKH.Controls.Add(this.label2);
+            this.gbTTKH.Controls.Add(this.txtNgayLap);
             this.gbTTKH.Controls.Add(this.txtMaHD);
             this.gbTTKH.Controls.Add(this.label1);
             this.gbTTKH.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -115,14 +115,6 @@
             this.gbTTKH.TabIndex = 23;
             this.gbTTKH.TabStop = false;
             this.gbTTKH.Text = "Thông tin hoá đơn";
-            // 
-            // dtpDatSan
-            // 
-            this.dtpDatSan.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDatSan.Location = new System.Drawing.Point(51, 143);
-            this.dtpDatSan.Name = "dtpDatSan";
-            this.dtpDatSan.Size = new System.Drawing.Size(322, 33);
-            this.dtpDatSan.TabIndex = 22;
             // 
             // txtThanhTien
             // 
@@ -281,6 +273,17 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Sân:";
             // 
+            // txtNgayLap
+            // 
+            this.txtNgayLap.BackColor = System.Drawing.Color.White;
+            this.txtNgayLap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNgayLap.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNgayLap.Location = new System.Drawing.Point(52, 143);
+            this.txtNgayLap.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNgayLap.Name = "txtNgayLap";
+            this.txtNgayLap.Size = new System.Drawing.Size(322, 33);
+            this.txtNgayLap.TabIndex = 5;
+            // 
             // txtMaHD
             // 
             this.txtMaHD.BackColor = System.Drawing.Color.White;
@@ -311,6 +314,7 @@
             this.dsHoaDon.RowHeadersWidth = 62;
             this.dsHoaDon.Size = new System.Drawing.Size(666, 729);
             this.dsHoaDon.TabIndex = 25;
+            this.dsHoaDon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dsHoaDon_CellClick);
             // 
             // gbChucNang
             // 
@@ -345,6 +349,7 @@
             this.btThanhToan.TabIndex = 9;
             this.btThanhToan.Text = "Thanh toán";
             this.btThanhToan.UseVisualStyleBackColor = true;
+            this.btThanhToan.Click += new System.EventHandler(this.btThanhToan_Click);
             // 
             // gbTimKH
             // 
@@ -452,6 +457,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtHoten;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dtpDatSan;
+        private System.Windows.Forms.TextBox txtNgayLap;
     }
 }

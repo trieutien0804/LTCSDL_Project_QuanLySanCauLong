@@ -52,5 +52,11 @@ namespace BTL_QLSCV.DAL
             int b = a.FirstOrDefault();
             return b;
         }
+        public int nextMaCATHUE()
+        {
+            var maxId = db.CATHUEs.Max(x => (int?)x.MaCaThue) ?? 0;
+            var nextId = maxId + 1;
+            return nextId;
+        }
     }
 }

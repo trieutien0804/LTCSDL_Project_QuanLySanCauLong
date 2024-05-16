@@ -23,10 +23,9 @@
     <EntitySetMapping Name="HOADONs">
       <EntityTypeMapping TypeName="QLSCLModel.HOADON">
         <MappingFragment StoreEntitySet="HOADON">
+          <ScalarProperty Name="ThoiGianTaoHoaDon" ColumnName="ThoiGianTaoHoaDon" />
           <ScalarProperty Name="MaHD" ColumnName="MaHD" />
-          <ScalarProperty Name="ThoiGianThanhToan" ColumnName="ThoiGianThanhToan" />
           <ScalarProperty Name="HoTenNguoiTT" ColumnName="HoTenNguoiTT" />
-          <ScalarProperty Name="NhanVienTT" ColumnName="NhanVienTT" />
           <ScalarProperty Name="TongTien" ColumnName="TongTien" />
           <ScalarProperty Name="MaPhieu" ColumnName="MaPhieu" />
         </MappingFragment>
@@ -94,8 +93,8 @@
     <EntitySetMapping Name="CHITIETHOADONs">
       <EntityTypeMapping TypeName="QLSCLModel.CHITIETHOADON">
         <MappingFragment StoreEntitySet="CHITIETHOADON">
-          <ScalarProperty Name="ThoiGianBD" ColumnName="ThoiGianBD" />
-          <ScalarProperty Name="ThoiGianKT" ColumnName="ThoiGianKT" />
+          <ScalarProperty Name="MaChiTietHoaDon" ColumnName="MaChiTietHoaDon" />
+          <ScalarProperty Name="ThoiGianThanhToan" ColumnName="ThoiGianThanhToan" />
           <ScalarProperty Name="MaHD" ColumnName="MaHD" />
           <ScalarProperty Name="MaCaThue" ColumnName="MaCaThue" />
         </MappingFragment>

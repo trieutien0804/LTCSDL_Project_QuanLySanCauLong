@@ -35,5 +35,13 @@ namespace BTL_QLSCV.DAL
             db.SaveChanges();
             return true;
         }
+
+        public bool toSanTrong(int maTinhTrang)
+        {
+            TINHTRANGSAN tts = db.TINHTRANGSANs.Find(maTinhTrang);
+            tts.TinhTrang = "T";
+            db.SaveChanges();
+            return true;
+        }
     }
 }

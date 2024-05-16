@@ -59,6 +59,9 @@
     <Compile Include="BUS\BUS_CA.cs" />
     <Compile Include="BUS\BUS_CATHUE.cs" />
     <Compile Include="BUS\BUS_CHITIETDATSAN.cs" />
+    <Compile Include="BUS\BUS_CHITIETHOADON.cs" />
+    <Compile Include="BUS\BUS_HOADON.cs" />
+    <Compile Include="BUS\BUS_HOADONCHUATHANHTOAN.cs" />
     <Compile Include="BUS\BUS_PHIEUDATSAN.cs" />
     <Compile Include="BUS\BUS_KHACHHANG.cs" />
     <Compile Include="BUS\BUS_NGUOIDUNG.cs" />
@@ -80,6 +83,9 @@
     <Compile Include="DAL\DAL_CA.cs" />
     <Compile Include="DAL\DAL_CATHUE.cs" />
     <Compile Include="DAL\DAL_CHITIETDATSAN.cs" />
+    <Compile Include="DAL\DAL_CHITIETHOADON.cs" />
+    <Compile Include="DAL\DAL_HOADON.cs" />
+    <Compile Include="DAL\DAL_HOADONCHUATHANHTOAN.cs" />
     <Compile Include="DAL\DAL_PHIEUDATSAN.cs" />
     <Compile Include="DAL\DAL_KHACHHANG.cs" />
     <Compile Include="DAL\DAL_NGUOIDUNG.cs" />

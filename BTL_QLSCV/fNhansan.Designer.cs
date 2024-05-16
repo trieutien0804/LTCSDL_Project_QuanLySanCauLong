@@ -145,9 +145,9 @@
             this.label13.Location = new System.Drawing.Point(399, 192);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(111, 23);
+            this.label13.Size = new System.Drawing.Size(107, 23);
             this.label13.TabIndex = 14;
-            this.label13.Text = "Giời kết thúc:";
+            this.label13.Text = "Giờ kết thúc:";
             // 
             // txtGBD
             // 
@@ -167,9 +167,9 @@
             this.label14.Location = new System.Drawing.Point(48, 192);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(108, 23);
+            this.label14.Size = new System.Drawing.Size(104, 23);
             this.label14.TabIndex = 12;
-            this.label14.Text = "Giời bắt đầu:";
+            this.label14.Text = "Giờ bắt đầu:";
             // 
             // txtTienCoc
             // 
@@ -269,6 +269,7 @@
             this.dsChuaNhan.RowHeadersWidth = 62;
             this.dsChuaNhan.Size = new System.Drawing.Size(666, 317);
             this.dsChuaNhan.TabIndex = 25;
+            this.dsChuaNhan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dsChuaNhan_CellClick);
             // 
             // gbChucNang
             // 

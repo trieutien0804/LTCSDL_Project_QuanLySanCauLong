@@ -21,11 +21,10 @@ namespace BTL_QLSCV
         }
     
         public int MaHD { get; set; }
-        public Nullable<System.DateTime> ThoiGianThanhToan { get; set; }
         public string HoTenNguoiTT { get; set; }
-        public string NhanVienTT { get; set; }
         public Nullable<int> TongTien { get; set; }
         public Nullable<int> MaPhieu { get; set; }
+        public string ThoiGianTaoHoaDon { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CHITIETHOADON> CHITIETHOADONs { get; set; }

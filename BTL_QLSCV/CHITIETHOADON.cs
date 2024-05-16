@@ -14,10 +14,10 @@ namespace BTL_QLSCV
     
     public partial class CHITIETHOADON
     {
-        public Nullable<System.DateTime> ThoiGianBD { get; set; }
-        public Nullable<System.DateTime> ThoiGianKT { get; set; }
         public int MaHD { get; set; }
         public int MaCaThue { get; set; }
+        public string ThoiGianThanhToan { get; set; }
+        public int MaChiTietHoaDon { get; set; }
     
         public virtual CATHUE CATHUE { get; set; }
         public virtual HOADON HOADON { get; set; }

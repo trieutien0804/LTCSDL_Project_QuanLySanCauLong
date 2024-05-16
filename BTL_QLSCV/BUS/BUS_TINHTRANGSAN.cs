@@ -23,5 +23,9 @@ namespace BTL_QLSCV.BUS
         {
             return dal_TINHTRANGSAN.toSanDangHoatDong(maTinhTrang);
         }
+        public bool toSanTrong(int maTinhTrang)
+        {
+            return dal_TINHTRANGSAN.toSanTrong(maTinhTrang);
+        }
     }
 }

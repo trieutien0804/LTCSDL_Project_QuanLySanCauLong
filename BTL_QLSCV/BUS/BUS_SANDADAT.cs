@@ -19,7 +19,7 @@ namespace BTL_QLSCV.BUS
         public dynamic getSanDatTrongNgay()
         {
             string today = DateTime.Now.ToString("dd-MM-yyyy");
-            return dal_SANDADAT.getSanDatTrongNgay(today);
+            return dal_SANDADAT.getSanDatTrongNgay("DT" ,today);
         }
         public dynamic getSanDangHDTrongNgay()
         {
