@@ -14,9 +14,6 @@ C:\Users\tien\source\repos\BTL_QLSCV\BTL_QLSCV\obj\Debug\BTL_QLSCL.csproj.Up2Dat
 C:\Users\tien\source\repos\BTL_QLSCV\BTL_QLSCV\obj\Debug\BTL_QLSCV.exe
 C:\Users\tien\source\repos\BTL_QLSCV\BTL_QLSCV\obj\Debug\BTL_QLSCV.pdb
 C:\Users\tien\source\repos\BTL_QLSCV\BTL_QLSCV\obj\Debug\BTL_QLSCV.fAdmin.resources
-D:\MIS\HK8\LTCSDL\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\bin\Debug\BTL_QLSCV.exe
-D:\MIS\HK8\LTCSDL\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\bin\Debug\EntityFramework.dll
-D:\MIS\HK8\LTCSDL\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\tien\source\repos\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\bin\Debug\BTL_QLSCV.exe.config
 C:\Users\tien\source\repos\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\bin\Debug\BTL_QLSCV.exe
 C:\Users\tien\source\repos\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\bin\Debug\BTL_QLSCV.pdb
@@ -34,9 +31,6 @@ C:\Users\tien\source\repos\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\obj\Debug\B
 C:\Users\tien\source\repos\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\obj\Debug\BTL_QLSCL.csproj.Up2Date
 C:\Users\tien\source\repos\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\obj\Debug\BTL_QLSCV.exe
 C:\Users\tien\source\repos\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\obj\Debug\BTL_QLSCV.pdb
-D:\MIS\HK8\LTCSDL\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\bin\Debug\BTL_QLSCV.exe.config
-D:\MIS\HK8\LTCSDL\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\bin\Debug\EntityFramework.xml
-D:\MIS\HK8\LTCSDL\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\bin\Debug\EntityFramework.SqlServer.xml
 D:\MIS\HK8\LTCSDL\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\obj\Debug\BTL_QLSCL.csproj.AssemblyReference.cache
 D:\MIS\HK8\LTCSDL\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\obj\Debug\BTL_QLSCV.fAdmin.resources
 D:\MIS\HK8\LTCSDL\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\obj\Debug\BTL_QLSCV.fCNCa.resources
@@ -48,11 +42,14 @@ D:\MIS\HK8\LTCSDL\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\obj\Debug\BTL_QLSCV.
 D:\MIS\HK8\LTCSDL\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\obj\Debug\BTL_QLSCV.fQLKhachHang.resources
 D:\MIS\HK8\LTCSDL\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\obj\Debug\BTL_QLSCV.fQLSan.resources
 D:\MIS\HK8\LTCSDL\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\obj\Debug\BTL_QLSCV.fTaiKhoan.resources
+D:\MIS\HK8\LTCSDL\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\obj\Debug\BTL_QLSCV.fQLNguoDung.resources
 D:\MIS\HK8\LTCSDL\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\obj\Debug\BTL_QLSCV.fThongKe.resources
 D:\MIS\HK8\LTCSDL\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\obj\Debug\BTL_QLSCV.Properties.Resources.resources
 D:\MIS\HK8\LTCSDL\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\obj\Debug\BTL_QLSCV.test.resources
 D:\MIS\HK8\LTCSDL\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\obj\Debug\BTL_QLSCL.csproj.GenerateResource.cache
 D:\MIS\HK8\LTCSDL\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\obj\Debug\BTL_QLSCL.csproj.CoreCompileInputs.cache
+<<<<<<< HEAD
+=======
 D:\MIS\HK8\LTCSDL\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\obj\Debug\BTL_QLSCL.csproj.Up2Date
 D:\MIS\HK8\LTCSDL\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\obj\Debug\BTL_QLSCV.exe
 D:\MIS\HK8\LTCSDL\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\obj\Debug\BTL_QLSCV.pdb
@@ -85,3 +82,10 @@ E:\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\obj\Debug\BTL_QLSCL.csproj.CoreComp
 E:\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\obj\Debug\BTL_QLSCL.csproj.Up2Date
 E:\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\obj\Debug\BTL_QLSCV.exe
 E:\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\obj\Debug\BTL_QLSCV.pdb
+>>>>>>> be36c911a17cf3054cc91008a3d2fc67ccda7004
+D:\MIS\HK8\LTCSDL\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\bin\Debug\BTL_QLSCV.exe.config
+D:\MIS\HK8\LTCSDL\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\bin\Debug\BTL_QLSCV.exe
+D:\MIS\HK8\LTCSDL\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\bin\Debug\EntityFramework.dll
+D:\MIS\HK8\LTCSDL\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\bin\Debug\EntityFramework.SqlServer.dll
+D:\MIS\HK8\LTCSDL\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\bin\Debug\EntityFramework.xml
+D:\MIS\HK8\LTCSDL\LTCSDL_Project_QuanLySanCauLong\BTL_QLSCV\bin\Debug\EntityFramework.SqlServer.xml

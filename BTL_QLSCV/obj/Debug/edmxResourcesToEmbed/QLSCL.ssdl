@@ -21,10 +21,10 @@
     <Key>
       <PropertyRef Name="MaChiTietDatSan" />
     </Key>
+    <Property Name="MaChiTietDatSan" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="MaPhieu" Type="int" Nullable="false" />
     <Property Name="MaCaThue" Type="int" Nullable="false" />
     <Property Name="TienCoc" Type="int" />
-    <Property Name="MaChiTietDatSan" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
   </EntityType>
   <EntityType Name="CHITIETHOADON">
     <Key>

@@ -26,5 +26,17 @@ namespace BTL_QLSCV.BUS
         {
             return dal_NGUOIDUNG.getNGUOIDUNG();
         }
+        public dynamic getND()
+        {
+            return dal_NGUOIDUNG.getND();
+        }
+        public bool addND(string hoTen, string username, string pass, string role)
+        {
+            return dal_NGUOIDUNG.addND(hoTen, username, pass, role);    
+        }
+        public bool editND(int maND, NGUOIDUNG user)
+        {
+            return dal_NGUOIDUNG.editND(maND, user);
+        }
     }
 }

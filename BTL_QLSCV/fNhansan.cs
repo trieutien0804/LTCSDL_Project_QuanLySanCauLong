@@ -29,8 +29,12 @@ namespace BTL_QLSCV
 
         private void fNhansan_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             dsChuaNhan.DataSource = bus_SANDADAT.getSanDatTrongNgay();
             dsDaNhan.DataSource = bus_SANDADAT.getSanDangHDTrongNgay();
+=======
+            dsChuaNhan.DataSource = bus_PHIEUDATSAN.getPhieuTrongNgay();
+>>>>>>> 07e63c30942d3d598022a4ae99a6ce49c2315831
             this.ControlBox = false;
         }
 

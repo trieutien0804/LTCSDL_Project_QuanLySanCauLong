@@ -25,6 +25,14 @@ namespace BTL_QLSCV.BUS
         {
             return dal_PHIEUDATSAN.nextMaPHIEUDATSAN();
         }
+        public dynamic getPhieuTrongNgay()
+        {
+            return dal_PHIEUDATSAN.getPhieuTrongNgay();
+        }
+        public dynamic getDSDatSan()
+        {
+            return dal_PHIEUDATSAN.getDSDatSan();
+        }
     }
 }
 

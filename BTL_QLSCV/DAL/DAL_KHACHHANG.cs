@@ -8,10 +8,10 @@ namespace BTL_QLSCV.DAL
 {
     internal class DAL_KHACHHANG
     {
-        QLSCLEntities2 db;
+        QLSCLEntities4 db;
         public DAL_KHACHHANG()
         {
-            db = new QLSCLEntities2();
+            db = new QLSCLEntities4();
         }
         public dynamic getKH()
         {

@@ -8,10 +8,10 @@ namespace BTL_QLSCV.DAL
 {
     class DAL_HOADON
     {
-        QLSCLEntities2 db;
+        QLSCLEntities4 db;
         public DAL_HOADON()
         {
-            db = new QLSCLEntities2();
+            db = new QLSCLEntities4();
         }
 
         public int addHOADON(string thoiGianThanhToan, string tenKH, int tongTien, int maPhieu)

@@ -34,6 +34,9 @@ namespace BTL_QLSCV
 
         private void fDatSan_Load(object sender, EventArgs e)
         {
+            dsKH.DataSource = bus_KH.getKH();
+
+            dsSan.DataSource = bus_SAN.getSAN();
             comboTree1.DataSource = bus_CA.getCA();
             txtMaPhieu.Text = bus_PHIEUDATSAN.nextMaPHIEUDATSAN().ToString();
         }
@@ -46,7 +49,7 @@ namespace BTL_QLSCV
             Match match = Regex.Match(comboTree1.SelectedValue.ToString(), pattern);
             if (match.Success)
             {
-                dsSanDat.DataSource = bus_SAN.getSanDat(Convert.ToInt32(match.Groups[1].Value), ngay);
+                dsSan.DataSource = bus_SAN.getSanDat(Convert.ToInt32(match.Groups[1].Value), ngay);
             }
             this.ControlBox = false;
         }
@@ -75,7 +78,7 @@ namespace BTL_QLSCV
                 if (bus_PHIEUDATSAN.addPHIEUDATSAN(maPhieu, ngayLap, ngayDat, Convert.ToInt32(txtMaKH.Text)))
                 {
                     //lay ma san
-                    DataGridViewRow row = dsSanDat.SelectedRows[0];
+                    DataGridViewRow row = dsSan.SelectedRows[0];
                     int maSan = Convert.ToInt32(row.Cells[0].Value.ToString());
                     int maCa = Convert.ToInt32(txtCa.Text.Split(',')[0].Trim());
 
@@ -113,7 +116,7 @@ namespace BTL_QLSCV
             if (txtTimKH.Text != "")
             {
                 string sdt = txtTimKH.Text;
-                dgvKH.DataSource = bus_KH.findKHBySDT(sdt);
+                dsKH.DataSource = bus_KH.findKHBySDT(sdt);
             }
             else
             {
@@ -123,12 +126,26 @@ namespace BTL_QLSCV
 
         private void dgvKH_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-                DataGridViewRow row = dgvKH.SelectedRows[0];
+                DataGridViewRow row = dsKH.SelectedRows[0];
                 txtMaKH.Text = row.Cells[0].Value.ToString();
                 txtHoTen.Text = row.Cells[1].Value.ToString();
                 txtSDT.Text = row.Cells[2].Value.ToString();
                 txtDiaChi.Text = row.Cells[3].Value.ToString();
             
+        }
+
+        private void btHuy_Click(object sender, EventArgs e)
+        {
+            txtMaPhieu.Text = "";
+            txtNVdatsan.Text = "";
+            txtNgayNhan.Text = "";
+            txtCa.Text = "";
+            txtTienCoc.Text = "";
+            txtNote.Text = "";
+            txtMaKH.Text = "";
+            txtHoTen.Text = "";
+            txtSDT.Text = "";
+            txtDiaChi.Text = "";
         }
     }
 }

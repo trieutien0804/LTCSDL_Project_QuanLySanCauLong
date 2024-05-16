@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
 using System.Data.SqlTypes;
 using System.Globalization;
 using System.Linq;
@@ -13,20 +15,20 @@ namespace BTL_QLSCV.DAL
 {
     class DAL_SAN
     {
-        QLSCLEntities2 db;
+        QLSCLEntities4 db;
 
         public DAL_SAN()
         {
-            db = new QLSCLEntities2();
+            db = new QLSCLEntities4();
         }
 
-        public dynamic getSAN() 
+        public dynamic getSAN()
         {
             var dsSAN = db.SANs.Select(s => new { s.MaSan, s.TenSan }).ToList();
             return dsSAN;
         }
         public List<string> getTenSan()
-        {   
+        {
             List<string> dsTenSan = db.SANs.ToList().Select(s => s.TenSan).ToList();
             return dsTenSan;
         }
@@ -36,15 +38,14 @@ namespace BTL_QLSCV.DAL
             var dsSAN = db.SANs.Select(s => new { s.MaSan, s.TenSan }).ToList();
 
             var results = from c in db.CAs.ToList()
-                           join ct in db.CATHUEs.ToList() on c.MaCa equals ct.MaCa
-                           join s in db.SANs.ToList() on ct.MaSan equals s.MaSan
-                           join ttc in db.TINHTRANGSANs.ToList() on ct.MaCaThue equals ttc.MaCaThue
-                           where ct.MaCa == maCA && ( ttc.TinhTrang != "DT" || ttc.TinhTrang != "HD") && ttc.Ngay == ngayDat
-                           select (s.MaSan);
+                          join ct in db.CATHUEs.ToList() on c.MaCa equals ct.MaCa
+                          join s in db.SANs.ToList() on ct.MaSan equals s.MaSan
+                          join ttc in db.TINHTRANGSANs.ToList() on ct.MaCaThue equals ttc.MaCaThue
+                          where ct.MaCa == maCA && (ttc.TinhTrang != "DT" || ttc.TinhTrang != "HD") && ttc.Ngay == ngayDat
+                          select (s.MaSan);
             var dsSanChuaDat = dsSAN.Where(s => !results.Contains(s.MaSan)).ToList();
 
             return dsSanChuaDat;
-
         }
         public int findMaSanByTenSan(string tenSan)
         {
@@ -56,6 +57,7 @@ namespace BTL_QLSCV.DAL
         {
             var san = new SAN()
             {
+                MaSan = 1,
                 TenSan = tenSan
             };
             db.SANs.Add(san);
@@ -77,7 +79,8 @@ namespace BTL_QLSCV.DAL
             db.SaveChanges();
             return true;
         }
-    }   
 
-    
+
+
+    }
 }

@@ -8,11 +8,11 @@ namespace BTL_QLSCV.DAL
 {
     class DAL_TINHTRANGSAN
     {
-        QLSCLEntities2 db;
+        QLSCLEntities4 db;
 
         public DAL_TINHTRANGSAN()
         {
-            db = new QLSCLEntities2();
+            db = new QLSCLEntities4();
         }
 
         public bool addTINHTRANGSAN(string ngay, string tinhTrang, int maCaThue)

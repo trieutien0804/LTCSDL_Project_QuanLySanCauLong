@@ -31,7 +31,6 @@ namespace BTL_QLSCV
             dsHoaDon.DataSource = bus_HOADON.getHOADON();
             this.ControlBox = false;
         }
-
         private void dsHoaDon_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow row = dsHoaDon.SelectedRows[0];

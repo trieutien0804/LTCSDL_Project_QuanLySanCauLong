@@ -19,7 +19,7 @@ namespace BTL_QLSCV
         public Nullable<int> TienCoc { get; set; }
         public int MaChiTietDatSan { get; set; }
     
-        public virtual CATHUE CATHUE { get; set; }
-        public virtual PHIEUDATSAN PHIEUDATSAN { get; set; }
+        public virtual CATHUE CATHUEs { get; set; }
+        public virtual PHIEUDATSAN PHIEUDATSANs { get; set; }
     }
 }

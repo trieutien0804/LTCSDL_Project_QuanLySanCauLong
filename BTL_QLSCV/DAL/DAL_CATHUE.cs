@@ -9,15 +9,31 @@ namespace BTL_QLSCV.DAL
 {
     class DAL_CATHUE
     {
-        QLSCLEntities2 db;
+        QLSCLEntities4 db;
         public DAL_CATHUE()
         {
-            db = new QLSCLEntities2();
+            db = new QLSCLEntities4();
         }
         public dynamic getCaThue()
         {
+
             var dsCaThue = db.CATHUEs.Select(s => new { s.MaCaThue, s.Gia, s.MaSan, s.MaCa }).ToList();
-            return dsCaThue;
+            var dsSAN = db.SANs.Select(s => new { s.MaSan, s.TenSan }).ToList();
+            var dsCA = db.CAs.Select(s => new { s.MaCa, s.ThoiGianBD, s.ThoiGianKT }).ToList();
+            var joinedData = from caThue in dsCaThue
+                             join san in dsSAN on caThue.MaSan equals san.MaSan
+                             join ca in dsCA on caThue.MaCa equals ca.MaCa
+                             select new
+                             {
+                                 caThue.MaCaThue,
+                                 caThue.Gia,
+                                 san.TenSan,
+                                 ca.ThoiGianBD,
+                                 ca.ThoiGianKT
+                             };
+
+            return joinedData.ToList();
+
         }
 
         public bool addCaThue(int gia, int maSan, int maCa)
@@ -32,7 +48,22 @@ namespace BTL_QLSCV.DAL
             db.SaveChanges();
             return true;  
         }
-
+        public bool removeCaThue(int maCaThue)
+        {
+            CATHUE cathue = db.CATHUEs.Where(s => s.MaCaThue == maCaThue).FirstOrDefault();
+            db.CATHUEs.Remove(cathue);
+            db.SaveChanges();
+            return true;
+        }
+        public bool editCaThue(int curCATHUE, CATHUE cathue)
+        {
+            CATHUE c = db.CATHUEs.Find(curCATHUE);
+            c.Gia = cathue.Gia;
+            c.MaSan = cathue.MaSan;
+            c.MaCa = cathue.MaCa;
+            db.SaveChanges();
+            return true;
+        }
         public bool ktCaThue(int maSan, int maCa)
         {
 

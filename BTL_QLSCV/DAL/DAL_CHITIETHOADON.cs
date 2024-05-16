@@ -8,11 +8,11 @@ namespace BTL_QLSCV.DAL
 {
     class DAL_CHITIETHOADON
     {
-        QLSCLEntities2 db;
+        QLSCLEntities4 db;
 
         public DAL_CHITIETHOADON()
         {
-            db = new QLSCLEntities2();
+            db = new QLSCLEntities4();
         }
 
         public bool addCHITIETHOADON(int maHD, int maCaThue) 
@@ -30,7 +30,7 @@ namespace BTL_QLSCV.DAL
         public bool addThoiGianThanhToan(int maChiTietHoaDon, string ngay)
         {
             CHITIETHOADON s = db.CHITIETHOADONs.Find(maChiTietHoaDon);
-            s.ThoiGianThanhToan = "8 - 10 - 2024 7:00:00";
+            s.ThoiGianThanhToan = ngay;
             db.SaveChanges();
             return true;
         }

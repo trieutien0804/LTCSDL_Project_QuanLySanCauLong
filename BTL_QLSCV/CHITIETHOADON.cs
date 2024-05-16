@@ -14,12 +14,12 @@ namespace BTL_QLSCV
     
     public partial class CHITIETHOADON
     {
+        public int MaChiTietHoaDon { get; set; }
         public int MaHD { get; set; }
         public int MaCaThue { get; set; }
         public string ThoiGianThanhToan { get; set; }
-        public int MaChiTietHoaDon { get; set; }
     
-        public virtual CATHUE CATHUE { get; set; }
-        public virtual HOADON HOADON { get; set; }
+        public virtual CATHUE CATHUEs { get; set; }
+        public virtual HOADON HOADONs { get; set; }
     }
 }

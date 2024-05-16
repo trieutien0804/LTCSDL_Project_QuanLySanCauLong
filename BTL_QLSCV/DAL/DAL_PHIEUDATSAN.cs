@@ -9,10 +9,10 @@ namespace BTL_QLSCV.DAL
 {
     class DAL_PHIEUDATSAN
     {
-        QLSCLEntities2 db;
+        QLSCLEntities4 db;
         public DAL_PHIEUDATSAN()
         {
-            db = new QLSCLEntities2();
+            db = new QLSCLEntities4();
         }
         public bool addPHIEUDATSAN(int maPhieu, string ngayLap, string ngayDat, int maKH)
         {
@@ -33,7 +33,36 @@ namespace BTL_QLSCV.DAL
             {
                 return false;
             }
-        }   
+        }
+
+        public dynamic getPHIEUDATSAN()
+        {
+
+            var dsPHIEUDATSAN = db.PHIEUDATSANs.Select(s => new {
+                s.MaPhieu,
+                s.MaKH,
+                s.NgayLap,
+                s.NgayDat
+            }).ToList();
+
+            return dsPHIEUDATSAN;
+        }
+        public dynamic getPhieuTrongNgay()
+        {
+            var today = DateTime.Today;
+
+            var dsPhieuTrongNgay = db.PHIEUDATSANs
+                .ToList()
+                .Where(s => DateTime.ParseExact(s.NgayDat, "dd-MM-yyyy", null).Date == today)
+                .Select(s => new {
+                    s.MaPhieu,
+                    s.NgayDat,
+
+                })
+                .ToList();
+
+            return dsPhieuTrongNgay;
+        }
 
         public int nextMaPHIEUDATSAN()
         {
@@ -41,6 +70,48 @@ namespace BTL_QLSCV.DAL
             var nextId = maxId + 1;
             return nextId;
         }
+        public dynamic getDSDatSan()
+        {
+            var dsPHIEUDATSAN = db.PHIEUDATSANs.Select(s => new {
+                s.MaPhieu,
+                s.MaKH,
+                s.NgayLap,
+                s.NgayDat
+            }).ToList();
 
+            var dsCHITIETDATSAN = db.CHITIETDATSANs.Select(s => new {
+                s.MaPhieu,
+                s.MaCaThue,
+                s.TienCoc
+            }).ToList();
+
+            var dsKHACHHANG = db.KHACHHANGs.Select(s => new {
+                s.MaKH,
+                s.HoTen,
+                s.SDT,
+                s.DiaChi
+            }).ToList();
+
+            var joinedData = (from pds in dsPHIEUDATSAN
+                              join ctds in dsCHITIETDATSAN on pds.MaPhieu equals ctds.MaPhieu
+                              join kh in dsKHACHHANG on pds.MaKH equals kh.MaKH
+                              select new
+                              {
+                                  pds.MaPhieu,
+                                  pds.MaKH,
+                                  pds.NgayLap,
+                                  pds.NgayDat,
+                                  ctds.MaCaThue,
+                                  ctds.TienCoc,
+                                  kh.HoTen,
+                                  kh.SDT,
+                                  kh.DiaChi
+                              }).ToList();
+
+            return joinedData.ToList();
+        }
     }
 }
+
+
+       

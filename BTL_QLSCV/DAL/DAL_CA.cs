@@ -8,11 +8,11 @@ namespace BTL_QLSCV.DAL
 {
     class DAL_CA
     {
-        QLSCLEntities2 db;
+        QLSCLEntities4 db;
 
         public DAL_CA()
         {
-            db = new QLSCLEntities2();
+            db = new QLSCLEntities4();
         }
 
         public dynamic getCA()

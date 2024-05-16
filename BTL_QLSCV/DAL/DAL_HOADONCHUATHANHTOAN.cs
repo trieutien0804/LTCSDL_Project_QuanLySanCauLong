@@ -8,11 +8,11 @@ namespace BTL_QLSCV.DAL
 {
     class DAL_HOADONCHUATHANHTOAN
     {
-        QLSCLEntities2 db;
+        QLSCLEntities4 db;
 
         public DAL_HOADONCHUATHANHTOAN()
         {
-            db = new QLSCLEntities2();
+            db = new QLSCLEntities4();
         }
 
         public bool thanhToanHOADON() { return true; }

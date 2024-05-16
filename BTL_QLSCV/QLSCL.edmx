@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="QLSCLModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="QLSCLModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="CA">
           <Key>
             <PropertyRef Name="MaCa" />
@@ -35,10 +35,10 @@
           <Key>
             <PropertyRef Name="MaChiTietHoaDon" />
           </Key>
-          <Property Name="ThoiGianThanhToan" Type="varchar" MaxLength="50" />
+          <Property Name="MaChiTietHoaDon" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="MaHD" Type="int" Nullable="false" />
           <Property Name="MaCaThue" Type="int" Nullable="false" />
-          <Property Name="MaChiTietHoaDon" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ThoiGianThanhToan" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="HOADON">
           <Key>
@@ -250,7 +250,8 @@
             <End Role="TINHTRANGSAN" EntitySet="TINHTRANGSAN" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="QLSCLModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -258,7 +259,7 @@
           <Key>
             <PropertyRef Name="MaCa" />
           </Key>
-          <Property Name="MaCa" Type="Int32" Nullable="false" />
+          <Property Name="MaCa" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ThoiGianBD" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
           <Property Name="ThoiGianKT" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="CATHUEs" Relationship="Self.FK_CATHUE_CA" FromRole="CA" ToRole="CATHUE" />
@@ -277,17 +278,39 @@
           <NavigationProperty Name="CHITIETHOADONs" Relationship="Self.FK_CHITIETHOADON_CATHUE" FromRole="CATHUE" ToRole="CHITIETHOADON" />
           <NavigationProperty Name="TINHTRANGSANs" Relationship="Self.FK_TINHTRANGSAN_CATHUE" FromRole="CATHUE" ToRole="TINHTRANGSAN" />
         </EntityType>
+        <EntityType Name="CHITIETDATSAN">
+          <Key>
+            <PropertyRef Name="MaChiTietDatSan" />
+          </Key>
+          <Property Name="MaPhieu" Type="Int32" Nullable="false" />
+          <Property Name="MaCaThue" Type="Int32" Nullable="false" />
+          <Property Name="TienCoc" Type="Int32" />
+          <Property Name="MaChiTietDatSan" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="CATHUE" Relationship="Self.FK_CHITIETDATSAN_CATHUE" FromRole="CHITIETDATSAN" ToRole="CATHUE" />
+          <NavigationProperty Name="PHIEUDATSAN" Relationship="Self.FK_CHITIETDATSAN_PHIEUDATSAN" FromRole="CHITIETDATSAN" ToRole="PHIEUDATSAN" />
+        </EntityType>
+        <EntityType Name="CHITIETHOADON">
+          <Key>
+            <PropertyRef Name="MaChiTietHoaDon" />
+          </Key>
+          <Property Name="MaChiTietHoaDon" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MaHD" Type="Int32" Nullable="false" />
+          <Property Name="MaCaThue" Type="Int32" Nullable="false" />
+          <Property Name="ThoiGianThanhToan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="CATHUE" Relationship="Self.FK_CHITIETHOADON_CATHUE" FromRole="CHITIETHOADON" ToRole="CATHUE" />
+          <NavigationProperty Name="HOADON" Relationship="Self.FK_CHITIETHOADON_HOADON" FromRole="CHITIETHOADON" ToRole="HOADON" />
+        </EntityType>
         <EntityType Name="HOADON">
           <Key>
             <PropertyRef Name="MaHD" />
           </Key>
           <Property Name="MaHD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ThoiGianTaoHoaDon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="HoTenNguoiTT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="TongTien" Type="Int32" />
           <Property Name="MaPhieu" Type="Int32" />
           <NavigationProperty Name="CHITIETHOADONs" Relationship="Self.FK_CHITIETHOADON_HOADON" FromRole="HOADON" ToRole="CHITIETHOADON" />
           <NavigationProperty Name="PHIEUDATSAN" Relationship="Self.FK_HOADON_PHIEUDATSAN" FromRole="HOADON" ToRole="PHIEUDATSAN" />
-          <Property Name="ThoiGianTaoHoaDon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="KHACHHANG">
           <Key>
@@ -317,15 +340,15 @@
           <Property Name="NgayLap" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
           <Property Name="NgayDat" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
           <Property Name="MaKH" Type="Int32" />
+          <NavigationProperty Name="CHITIETDATSANs" Relationship="Self.FK_CHITIETDATSAN_PHIEUDATSAN" FromRole="PHIEUDATSAN" ToRole="CHITIETDATSAN" />
           <NavigationProperty Name="HOADONs" Relationship="Self.FK_HOADON_PHIEUDATSAN" FromRole="PHIEUDATSAN" ToRole="HOADON" />
           <NavigationProperty Name="KHACHHANG" Relationship="Self.FK_PHIEUDATSAN_KHACHHANG" FromRole="PHIEUDATSAN" ToRole="KHACHHANG" />
-          <NavigationProperty Name="CHITIETDATSANs" Relationship="Self.FK_CHITIETDATSAN_PHIEUDATSAN" FromRole="PHIEUDATSAN" ToRole="CHITIETDATSAN" />
         </EntityType>
         <EntityType Name="SAN">
           <Key>
             <PropertyRef Name="MaSan" />
           </Key>
-          <Property Name="MaSan" Type="Int32" Nullable="false" />
+          <Property Name="MaSan" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TenSan" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <NavigationProperty Name="CATHUEs" Relationship="Self.FK_CATHUE_SAN" FromRole="SAN" ToRole="CATHUE" />
         </EntityType>
@@ -338,28 +361,6 @@
           <Property Name="TinhTrang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="MaCaThue" Type="Int32" />
           <NavigationProperty Name="CATHUE" Relationship="Self.FK_TINHTRANGSAN_CATHUE" FromRole="TINHTRANGSAN" ToRole="CATHUE" />
-        </EntityType>
-        <EntityType Name="CHITIETDATSAN">
-          <Key>
-            <PropertyRef Name="MaChiTietDatSan" />
-          </Key>
-          <Property Name="MaPhieu" Type="Int32" Nullable="false" />
-          <Property Name="MaCaThue" Type="Int32" Nullable="false" />
-          <Property Name="TienCoc" Type="Int32" />
-          <NavigationProperty Name="CATHUE" Relationship="Self.FK_CHITIETDATSAN_CATHUE" FromRole="CHITIETDATSAN" ToRole="CATHUE" />
-          <NavigationProperty Name="PHIEUDATSAN" Relationship="Self.FK_CHITIETDATSAN_PHIEUDATSAN" FromRole="CHITIETDATSAN" ToRole="PHIEUDATSAN" />
-          <Property Name="MaChiTietDatSan" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-        </EntityType>
-        <EntityType Name="CHITIETHOADON">
-          <Key>
-            <PropertyRef Name="MaChiTietHoaDon" />
-          </Key>
-          <Property Name="MaHD" Type="Int32" Nullable="false" />
-          <Property Name="MaCaThue" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="CATHUE" Relationship="Self.FK_CHITIETHOADON_CATHUE" FromRole="CHITIETHOADON" ToRole="CATHUE" />
-          <NavigationProperty Name="HOADON" Relationship="Self.FK_CHITIETHOADON_HOADON" FromRole="CHITIETHOADON" ToRole="HOADON" />
-          <Property Name="ThoiGianThanhToan" Type="String" />
-          <Property Name="MaChiTietHoaDon" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
         </EntityType>
         <Association Name="FK_CATHUE_CA">
           <End Role="CA" Type="Self.CA" Multiplicity="0..1" />
@@ -421,6 +422,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_CHITIETDATSAN_PHIEUDATSAN">
+          <End Role="PHIEUDATSAN" Type="Self.PHIEUDATSAN" Multiplicity="1" />
+          <End Role="CHITIETDATSAN" Type="Self.CHITIETDATSAN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PHIEUDATSAN">
+              <PropertyRef Name="MaPhieu" />
+            </Principal>
+            <Dependent Role="CHITIETDATSAN">
+              <PropertyRef Name="MaPhieu" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_CHITIETHOADON_HOADON">
           <End Role="HOADON" Type="Self.HOADON" Multiplicity="1" />
           <End Role="CHITIETHOADON" Type="Self.CHITIETHOADON" Multiplicity="*" />
@@ -457,29 +470,17 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_CHITIETDATSAN_PHIEUDATSAN">
-          <End Role="PHIEUDATSAN" Type="Self.PHIEUDATSAN" Multiplicity="1" />
-          <End Role="CHITIETDATSAN" Type="Self.CHITIETDATSAN" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PHIEUDATSAN">
-              <PropertyRef Name="MaPhieu" />
-            </Principal>
-            <Dependent Role="CHITIETDATSAN">
-              <PropertyRef Name="MaPhieu" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityContainer Name="QLSCLEntities2" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="QLSCLEntities4" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="CAs" EntityType="Self.CA" />
           <EntitySet Name="CATHUEs" EntityType="Self.CATHUE" />
+          <EntitySet Name="CHITIETDATSANs" EntityType="Self.CHITIETDATSAN" />
+          <EntitySet Name="CHITIETHOADONs" EntityType="Self.CHITIETHOADON" />
           <EntitySet Name="HOADONs" EntityType="Self.HOADON" />
           <EntitySet Name="KHACHHANGs" EntityType="Self.KHACHHANG" />
           <EntitySet Name="NGUOIDUNGs" EntityType="Self.NGUOIDUNG" />
           <EntitySet Name="PHIEUDATSANs" EntityType="Self.PHIEUDATSAN" />
           <EntitySet Name="SANs" EntityType="Self.SAN" />
           <EntitySet Name="TINHTRANGSANs" EntityType="Self.TINHTRANGSAN" />
-          <EntitySet Name="CHITIETDATSANs" EntityType="Self.CHITIETDATSAN" />
-          <EntitySet Name="CHITIETHOADONs" EntityType="Self.CHITIETHOADON" />
           <AssociationSet Name="FK_CATHUE_CA" Association="Self.FK_CATHUE_CA">
             <End Role="CA" EntitySet="CAs" />
             <End Role="CATHUE" EntitySet="CATHUEs" />
@@ -500,6 +501,10 @@
             <End Role="CATHUE" EntitySet="CATHUEs" />
             <End Role="TINHTRANGSAN" EntitySet="TINHTRANGSANs" />
           </AssociationSet>
+          <AssociationSet Name="FK_CHITIETDATSAN_PHIEUDATSAN" Association="Self.FK_CHITIETDATSAN_PHIEUDATSAN">
+            <End Role="PHIEUDATSAN" EntitySet="PHIEUDATSANs" />
+            <End Role="CHITIETDATSAN" EntitySet="CHITIETDATSANs" />
+          </AssociationSet>
           <AssociationSet Name="FK_CHITIETHOADON_HOADON" Association="Self.FK_CHITIETHOADON_HOADON">
             <End Role="HOADON" EntitySet="HOADONs" />
             <End Role="CHITIETHOADON" EntitySet="CHITIETHOADONs" />
@@ -512,17 +517,13 @@
             <End Role="KHACHHANG" EntitySet="KHACHHANGs" />
             <End Role="PHIEUDATSAN" EntitySet="PHIEUDATSANs" />
           </AssociationSet>
-          <AssociationSet Name="FK_CHITIETDATSAN_PHIEUDATSAN" Association="Self.FK_CHITIETDATSAN_PHIEUDATSAN">
-            <End Role="PHIEUDATSAN" EntitySet="PHIEUDATSANs" />
-            <End Role="CHITIETDATSAN" EntitySet="CHITIETDATSANs" />
-          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="QLSCLModelStoreContainer" CdmEntityContainer="QLSCLEntities2">
+        <EntityContainerMapping StorageEntityContainer="QLSCLModelStoreContainer" CdmEntityContainer="QLSCLEntities4">
           <EntitySetMapping Name="CAs">
             <EntityTypeMapping TypeName="QLSCLModel.CA">
               <MappingFragment StoreEntitySet="CA">
@@ -542,11 +543,31 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="CHITIETDATSANs">
+            <EntityTypeMapping TypeName="QLSCLModel.CHITIETDATSAN">
+              <MappingFragment StoreEntitySet="CHITIETDATSAN">
+                <ScalarProperty Name="MaPhieu" ColumnName="MaPhieu" />
+                <ScalarProperty Name="MaCaThue" ColumnName="MaCaThue" />
+                <ScalarProperty Name="TienCoc" ColumnName="TienCoc" />
+                <ScalarProperty Name="MaChiTietDatSan" ColumnName="MaChiTietDatSan" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CHITIETHOADONs">
+            <EntityTypeMapping TypeName="QLSCLModel.CHITIETHOADON">
+              <MappingFragment StoreEntitySet="CHITIETHOADON">
+                <ScalarProperty Name="MaChiTietHoaDon" ColumnName="MaChiTietHoaDon" />
+                <ScalarProperty Name="MaHD" ColumnName="MaHD" />
+                <ScalarProperty Name="MaCaThue" ColumnName="MaCaThue" />
+                <ScalarProperty Name="ThoiGianThanhToan" ColumnName="ThoiGianThanhToan" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="HOADONs">
             <EntityTypeMapping TypeName="QLSCLModel.HOADON">
               <MappingFragment StoreEntitySet="HOADON">
-                <ScalarProperty Name="ThoiGianTaoHoaDon" ColumnName="ThoiGianTaoHoaDon" />
                 <ScalarProperty Name="MaHD" ColumnName="MaHD" />
+                <ScalarProperty Name="ThoiGianTaoHoaDon" ColumnName="ThoiGianTaoHoaDon" />
                 <ScalarProperty Name="HoTenNguoiTT" ColumnName="HoTenNguoiTT" />
                 <ScalarProperty Name="TongTien" ColumnName="TongTien" />
                 <ScalarProperty Name="MaPhieu" ColumnName="MaPhieu" />
@@ -598,26 +619,6 @@
                 <ScalarProperty Name="MaTinhTrang" ColumnName="MaTinhTrang" />
                 <ScalarProperty Name="Ngay" ColumnName="Ngay" />
                 <ScalarProperty Name="TinhTrang" ColumnName="TinhTrang" />
-                <ScalarProperty Name="MaCaThue" ColumnName="MaCaThue" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="CHITIETDATSANs">
-            <EntityTypeMapping TypeName="QLSCLModel.CHITIETDATSAN">
-              <MappingFragment StoreEntitySet="CHITIETDATSAN">
-                <ScalarProperty Name="MaChiTietDatSan" ColumnName="MaChiTietDatSan" />
-                <ScalarProperty Name="MaPhieu" ColumnName="MaPhieu" />
-                <ScalarProperty Name="MaCaThue" ColumnName="MaCaThue" />
-                <ScalarProperty Name="TienCoc" ColumnName="TienCoc" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="CHITIETHOADONs">
-            <EntityTypeMapping TypeName="QLSCLModel.CHITIETHOADON">
-              <MappingFragment StoreEntitySet="CHITIETHOADON">
-                <ScalarProperty Name="MaChiTietHoaDon" ColumnName="MaChiTietHoaDon" />
-                <ScalarProperty Name="ThoiGianThanhToan" ColumnName="ThoiGianThanhToan" />
-                <ScalarProperty Name="MaHD" ColumnName="MaHD" />
                 <ScalarProperty Name="MaCaThue" ColumnName="MaCaThue" />
               </MappingFragment>
             </EntityTypeMapping>

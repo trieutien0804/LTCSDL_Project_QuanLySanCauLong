@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="QLSCLModelStoreContainer" CdmEntityContainer="QLSCLEntities2">
-    <EntitySetMapping Name="CAs">
+  <EntityContainerMapping StorageEntityContainer="QLSCLModelStoreContainer" CdmEntityContainer="QLSCLEntities3">
+    <EntitySetMapping Name="CA">
       <EntityTypeMapping TypeName="QLSCLModel.CA">
         <MappingFragment StoreEntitySet="CA">
           <ScalarProperty Name="MaCa" ColumnName="MaCa" />
@@ -10,7 +10,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="CATHUEs">
+    <EntitySetMapping Name="CATHUE">
       <EntityTypeMapping TypeName="QLSCLModel.CATHUE">
         <MappingFragment StoreEntitySet="CATHUE">
           <ScalarProperty Name="MaCaThue" ColumnName="MaCaThue" />
@@ -20,7 +20,17 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="HOADONs">
+    <EntitySetMapping Name="CHITIETDATSAN">
+      <EntityTypeMapping TypeName="QLSCLModel.CHITIETDATSAN">
+        <MappingFragment StoreEntitySet="CHITIETDATSAN">
+          <ScalarProperty Name="MaChiTietDatSan" ColumnName="MaChiTietDatSan" />
+          <ScalarProperty Name="MaPhieu" ColumnName="MaPhieu" />
+          <ScalarProperty Name="MaCaThue" ColumnName="MaCaThue" />
+          <ScalarProperty Name="TienCoc" ColumnName="TienCoc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HOADON">
       <EntityTypeMapping TypeName="QLSCLModel.HOADON">
         <MappingFragment StoreEntitySet="HOADON">
           <ScalarProperty Name="ThoiGianTaoHoaDon" ColumnName="ThoiGianTaoHoaDon" />
@@ -31,7 +41,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="KHACHHANGs">
+    <EntitySetMapping Name="KHACHHANG">
       <EntityTypeMapping TypeName="QLSCLModel.KHACHHANG">
         <MappingFragment StoreEntitySet="KHACHHANG">
           <ScalarProperty Name="MaKH" ColumnName="MaKH" />
@@ -41,7 +51,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="NGUOIDUNGs">
+    <EntitySetMapping Name="NGUOIDUNG">
       <EntityTypeMapping TypeName="QLSCLModel.NGUOIDUNG">
         <MappingFragment StoreEntitySet="NGUOIDUNG">
           <ScalarProperty Name="MaNguoiDung" ColumnName="MaNguoiDung" />
@@ -52,7 +62,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="PHIEUDATSANs">
+    <EntitySetMapping Name="PHIEUDATSAN">
       <EntityTypeMapping TypeName="QLSCLModel.PHIEUDATSAN">
         <MappingFragment StoreEntitySet="PHIEUDATSAN">
           <ScalarProperty Name="MaPhieu" ColumnName="MaPhieu" />
@@ -62,7 +72,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="SANs">
+    <EntitySetMapping Name="SAN">
       <EntityTypeMapping TypeName="QLSCLModel.SAN">
         <MappingFragment StoreEntitySet="SAN">
           <ScalarProperty Name="MaSan" ColumnName="MaSan" />
@@ -70,7 +80,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="TINHTRANGSANs">
+    <EntitySetMapping Name="TINHTRANGSAN">
       <EntityTypeMapping TypeName="QLSCLModel.TINHTRANGSAN">
         <MappingFragment StoreEntitySet="TINHTRANGSAN">
           <ScalarProperty Name="MaTinhTrang" ColumnName="MaTinhTrang" />
@@ -80,17 +90,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="CHITIETDATSANs">
-      <EntityTypeMapping TypeName="QLSCLModel.CHITIETDATSAN">
-        <MappingFragment StoreEntitySet="CHITIETDATSAN">
-          <ScalarProperty Name="MaChiTietDatSan" ColumnName="MaChiTietDatSan" />
-          <ScalarProperty Name="MaPhieu" ColumnName="MaPhieu" />
-          <ScalarProperty Name="MaCaThue" ColumnName="MaCaThue" />
-          <ScalarProperty Name="TienCoc" ColumnName="TienCoc" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="CHITIETHOADONs">
+    <EntitySetMapping Name="CHITIETHOADON">
       <EntityTypeMapping TypeName="QLSCLModel.CHITIETHOADON">
         <MappingFragment StoreEntitySet="CHITIETHOADON">
           <ScalarProperty Name="MaChiTietHoaDon" ColumnName="MaChiTietHoaDon" />

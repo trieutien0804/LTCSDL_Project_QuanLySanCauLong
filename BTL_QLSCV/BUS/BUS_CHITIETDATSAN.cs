@@ -15,6 +15,10 @@ namespace BTL_QLSCV.BUS
         {
             dal_CHITIETDATSAN = new DAL_CHITIETDATSAN();
         }
+        public dynamic getCHITIETDATSAN()
+        {
+            return dal_CHITIETDATSAN.getCHITIETDATSAN();
+        }
 
         public bool addCHITIETDATSAN(int maPhieu, int maCaThue, int tienCoc)
         {

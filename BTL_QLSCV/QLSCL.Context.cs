@@ -13,10 +13,10 @@ namespace BTL_QLSCV
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class QLSCLEntities2 : DbContext
+    public partial class QLSCLEntities4 : DbContext
     {
-        public QLSCLEntities2()
-            : base("name=QLSCLEntities2")
+        public QLSCLEntities4()
+            : base("name=QLSCLEntities4")
         {
         }
     
@@ -27,13 +27,13 @@ namespace BTL_QLSCV
     
         public virtual DbSet<CA> CAs { get; set; }
         public virtual DbSet<CATHUE> CATHUEs { get; set; }
+        public virtual DbSet<CHITIETDATSAN> CHITIETDATSANs { get; set; }
+        public virtual DbSet<CHITIETHOADON> CHITIETHOADONs { get; set; }
         public virtual DbSet<HOADON> HOADONs { get; set; }
         public virtual DbSet<KHACHHANG> KHACHHANGs { get; set; }
         public virtual DbSet<NGUOIDUNG> NGUOIDUNGs { get; set; }
         public virtual DbSet<PHIEUDATSAN> PHIEUDATSANs { get; set; }
         public virtual DbSet<SAN> SANs { get; set; }
         public virtual DbSet<TINHTRANGSAN> TINHTRANGSANs { get; set; }
-        public virtual DbSet<CHITIETDATSAN> CHITIETDATSANs { get; set; }
-        public virtual DbSet<CHITIETHOADON> CHITIETHOADONs { get; set; }
     }
 }
