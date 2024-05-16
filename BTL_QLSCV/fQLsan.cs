@@ -35,7 +35,7 @@ namespace BTL_QLSCV
 
         private void btThemSan_Click_1(object sender, EventArgs e)
         {
-            if (txtMaSan.Text != "")
+            if (txtTenSan.Text != "")
             {
                 if (bus_SAN.addSAN(txtTenSan.Text))
                 {

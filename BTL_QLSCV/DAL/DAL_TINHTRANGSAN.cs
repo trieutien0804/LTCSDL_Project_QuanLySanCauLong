@@ -6,24 +6,24 @@ using System.Threading.Tasks;
 
 namespace BTL_QLSCV.DAL
 {
-    class DAL_CHITIETDATSAN
+    class DAL_TINHTRANGSAN
     {
         QLSCLEntities2 db;
 
-        public DAL_CHITIETDATSAN()
+        public DAL_TINHTRANGSAN()
         {
             db = new QLSCLEntities2();
         }
 
-        public bool addCHITIETDATSAN(int maPhieu, int maCaThue, int tienCoc)
+        public bool addTINHTRANGSAN(string ngay, string tinhTrang, int maCaThue)
         {
-            var chiTietDatSan = new CHITIETDATSAN()
+            var tinhTrangSan = new TINHTRANGSAN()
             {
-                MaPhieu = maPhieu,
-                MaCaThue = maCaThue,
-                TienCoc = tienCoc
+                Ngay = ngay,
+                TinhTrang = tinhTrang,
+                MaCaThue = maCaThue
             };
-            db.CHITIETDATSANs.Add(chiTietDatSan);
+            db.TINHTRANGSANs.Add(tinhTrangSan);
             db.SaveChanges();
             return true;
         }

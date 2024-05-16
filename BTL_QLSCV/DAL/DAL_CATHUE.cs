@@ -9,14 +9,14 @@ namespace BTL_QLSCV.DAL
 {
     class DAL_CATHUE
     {
-        QLSCLEntities1 db;
+        QLSCLEntities2 db;
         public DAL_CATHUE()
         {
-            db = new QLSCLEntities1();
+            db = new QLSCLEntities2();
         }
         public dynamic getCaThue()
         {
-            var dsCaThue = db.CATHUE.Select(s => new { s.MaCaThue, s.Gia, s.MaSan, s.MaCa }).ToList();
+            var dsCaThue = db.CATHUEs.Select(s => new { s.MaCaThue, s.Gia, s.MaSan, s.MaCa }).ToList();
             return dsCaThue;
         }
 
@@ -28,7 +28,7 @@ namespace BTL_QLSCV.DAL
                 MaSan = maSan,
                 MaCa = maCa
             };
-            db.CATHUE.Add(caThue);
+            db.CATHUEs.Add(caThue);
             db.SaveChanges();
             return true;  
         }
@@ -36,11 +36,21 @@ namespace BTL_QLSCV.DAL
         public bool ktCaThue(int maSan, int maCa)
         {
 
-            var dsCaDaDat = from s in db.CATHUE.ToList()
+            var dsCaDaDat = from s in db.CATHUEs.ToList()
                            where s.MaSan == maSan && s.MaCa == maCa
                            select s.MaSan;
             bool isDsCaDaDatEmpty = dsCaDaDat.Count() == 0;
             return isDsCaDaDatEmpty;
+        }
+
+        public int getMaCaThueByCaVaSan(int maCa, int maSan)
+        {
+            var dsCaDaDat = from s in db.CATHUEs.ToList()
+                            where s.MaSan == maSan && s.MaCa == maCa
+                            select s.MaCaThue;
+            List<int> a = dsCaDaDat.ToList();
+            int b = a.FirstOrDefault();
+            return b;
         }
     }
 }

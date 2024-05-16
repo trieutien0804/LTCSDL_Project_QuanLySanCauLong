@@ -17,7 +17,7 @@ namespace BTL_QLSCV
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public KHACHHANG()
         {
-            this.PHIEUDATSAN = new HashSet<PHIEUDATSAN>();
+            this.PHIEUDATSANs = new HashSet<PHIEUDATSAN>();
         }
     
         public int MaKH { get; set; }
@@ -26,6 +26,6 @@ namespace BTL_QLSCV
         public string DiaChi { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PHIEUDATSAN> PHIEUDATSAN { get; set; }
+        public virtual ICollection<PHIEUDATSAN> PHIEUDATSANs { get; set; }
     }
 }

@@ -8,19 +8,19 @@ namespace BTL_QLSCV.DAL
 {
     internal class DAL_KHACHHANG
     {
-        QLSCLEntities1 db;
+        QLSCLEntities2 db;
         public DAL_KHACHHANG()
         {
-            db = new QLSCLEntities1();
+            db = new QLSCLEntities2();
         }
         public dynamic getKH()
         {
-            var dsKHACHHANG = db.KHACHHANG.Select(s => new { s.MaKH, s.HoTen, s.SDT, s.DiaChi}).ToList();
+            var dsKHACHHANG = db.KHACHHANGs.Select(s => new { s.MaKH, s.HoTen, s.SDT, s.DiaChi}).ToList();
             return dsKHACHHANG;
         }
         public dynamic findKHBySDT(string sDT)
         {
-            var query = db.KHACHHANG.AsQueryable();
+            var query = db.KHACHHANGs.AsQueryable();
             if (!string.IsNullOrEmpty(sDT))
             {
                 query = query.Where(kh => kh.SDT.Contains(sDT));
@@ -39,7 +39,7 @@ namespace BTL_QLSCV.DAL
         }
         public dynamic timKhach(string sDT)
         {
-                var query = db.KHACHHANG.AsQueryable();
+                var query = db.KHACHHANGs.AsQueryable();
                 if (!string.IsNullOrEmpty(sDT))
                 {
                     query = query.Where(kh => kh.SDT.Contains(sDT));
@@ -64,20 +64,20 @@ namespace BTL_QLSCV.DAL
                 SDT = sDT,
                 DiaChi = diaChi
             };
-            db.KHACHHANG.Add(kh);
+            db.KHACHHANGs.Add(kh);
             db.SaveChanges();
             return true;    
         }
         public bool removeKH(int maKH)
         {
-            KHACHHANG kh = db.KHACHHANG.Where(k => k.MaKH == maKH).FirstOrDefault();
-            db.KHACHHANG.Remove(kh);
+            KHACHHANG kh = db.KHACHHANGs.Where(k => k.MaKH == maKH).FirstOrDefault();
+            db.KHACHHANGs.Remove(kh);
             db.SaveChanges();
             return true;
         }
         public bool editKH(int curMAKH, KHACHHANG kh)
         {
-            KHACHHANG k = db.KHACHHANG.Find(curMAKH);
+            KHACHHANG k = db.KHACHHANGs.Find(curMAKH);
             k.HoTen = kh.HoTen;
             k.SDT = kh.SDT;
             k.DiaChi = kh.DiaChi;   

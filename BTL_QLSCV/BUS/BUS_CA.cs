@@ -35,5 +35,6 @@ namespace BTL_QLSCV.BUS
         {
             return dal_CA.getCaTime();
         }
+        
     }
 }

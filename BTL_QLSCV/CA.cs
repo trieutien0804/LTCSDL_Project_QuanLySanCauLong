@@ -17,7 +17,7 @@ namespace BTL_QLSCV
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public CA()
         {
-            this.CATHUE = new HashSet<CATHUE>();
+            this.CATHUEs = new HashSet<CATHUE>();
         }
     
         public int MaCa { get; set; }
@@ -25,6 +25,6 @@ namespace BTL_QLSCV
         public string ThoiGianKT { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CATHUE> CATHUE { get; set; }
+        public virtual ICollection<CATHUE> CATHUEs { get; set; }
     }
 }

@@ -16,9 +16,17 @@ namespace BTL_QLSCV.BUS
             dal_PHIEUDATSAN = new DAL_PHIEUDATSAN();
         }
 
-        public bool addPHIEUDATSAN(string ngayLap, string ngayDat, int maKH)
+        public int addPHIEUDATSAN(int maPhieu, string ngayLap, string ngayDat, int maKH)
         {
-            return dal_PHIEUDATSAN.addPHIEUDATSAN(ngayLap, ngayDat, maKH);
+            return dal_PHIEUDATSAN.addPHIEUDATSAN(maPhieu,ngayLap, ngayDat, maKH);
+        }
+        public dynamic getPHIEUDATSAN()
+        {
+            return dal_PHIEUDATSAN.getPHIEUDATSAN();
+        }
+        public int nextMaPHIEUDATSAN()
+        {
+            return dal_PHIEUDATSAN.nextMaPHIEUDATSAN();
         }
     }
 }

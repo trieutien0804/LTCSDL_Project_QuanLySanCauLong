@@ -63,6 +63,7 @@
     <Compile Include="BUS\BUS_KHACHHANG.cs" />
     <Compile Include="BUS\BUS_NGUOIDUNG.cs" />
     <Compile Include="BUS\BUS_SAN.cs" />
+    <Compile Include="BUS\BUS_TINHTRANGSAN.cs" />
     <Compile Include="CA.cs">
       <DependentUpon>QLSCL.tt</DependentUpon>
     </Compile>
@@ -82,6 +83,7 @@
     <Compile Include="DAL\DAL_KHACHHANG.cs" />
     <Compile Include="DAL\DAL_NGUOIDUNG.cs" />
     <Compile Include="DAL\DAL_SAN.cs" />
+    <Compile Include="DAL\DAL_TINHTRANGSAN.cs" />
     <Compile Include="fAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,8 +250,18 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>QLSCL.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="QLSCL.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLSCL.edmx</DependentUpon>
+      <LastGenOutput>QLSCL.Context.cs</LastGenOutput>
+    </None>
     <None Include="QLSCL.edmx.diagram">
       <DependentUpon>QLSCL.edmx</DependentUpon>
+    </None>
+    <None Include="QLSCL.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLSCL.edmx</DependentUpon>
+      <LastGenOutput>QLSCL.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -257,18 +269,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="QLSCL.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QLSCL.edmx</DependentUpon>
-      <LastGenOutput>QLSCL.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="QLSCL.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QLSCL.edmx</DependentUpon>
-      <LastGenOutput>QLSCL.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
