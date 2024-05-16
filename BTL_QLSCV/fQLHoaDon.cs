@@ -26,5 +26,15 @@ namespace BTL_QLSCV
         {
             this.ControlBox = false;
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gbTTKH_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

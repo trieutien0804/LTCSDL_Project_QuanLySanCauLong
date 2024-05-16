@@ -224,6 +224,7 @@
             this.txtMaPhieu.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaPhieu.Location = new System.Drawing.Point(35, 43);
             this.txtMaPhieu.Name = "txtMaPhieu";
+            this.txtMaPhieu.ReadOnly = true;
             this.txtMaPhieu.Size = new System.Drawing.Size(215, 25);
             this.txtMaPhieu.TabIndex = 5;
             // 
@@ -309,7 +310,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1025, 523);
+            this.ClientSize = new System.Drawing.Size(1209, 613);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dsDaNhan);
             this.Controls.Add(this.groupBox1);

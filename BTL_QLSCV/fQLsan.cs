@@ -24,8 +24,7 @@ namespace BTL_QLSCV
 
         private void fQLsan_Load(object sender, EventArgs e)
         {
-            int maCa = comboTree1.ValueMember.FirstOrDefault();
-            txtTenSan.Text = maCa.ToString();
+            
             comboTree1.DataSource = bus_CA.getCA();
             cbTenSan.DataSource = bus_SAN.getTenSan();
             dsCaThue.DataSource = bus_CATHUE.getCaThue();   
@@ -35,7 +34,7 @@ namespace BTL_QLSCV
 
         private void btThemSan_Click_1(object sender, EventArgs e)
         {
-            if (txtMaSan.Text != "")
+            if (txtTenSan.Text != "")
             {
                 if (bus_SAN.addSAN(txtTenSan.Text))
                 {
@@ -109,19 +108,14 @@ namespace BTL_QLSCV
         {
 
         }
-
+       
         private void btThemCaThue_Click(object sender, EventArgs e)
         {
             if (cbTenSan.Text != "" && comboTree1.Text != "" && txtGia.Text != "")
             {
-                string maCaText = comboTree1.SelectedValue.ToString();
-                int startIndex = maCaText.IndexOf("=") + 1;
-                int endIndex = maCaText.IndexOf(",", startIndex);
-                int maCa = Convert.ToInt32(maCaText.Substring(startIndex, endIndex - startIndex).Trim());
                 int maSan = bus_SAN.findMaSanByTenSan(cbTenSan.Text);
-                txtTenSan.Text = maCa.ToString();
                 int gia = Convert.ToInt32(txtGia.Text);
-                if (bus_CATHUE.addCaThue(gia, maSan, maCa))
+                if (bus_CATHUE.addCaThue(gia, maSan, comboTree1.SelectedValue.ToString()))
                 {
                     dsCaThue.DataSource = bus_CATHUE.getCaThue();
                     MessageBox.Show("Thêm thành công");
@@ -134,6 +128,65 @@ namespace BTL_QLSCV
             else
             {
                 MessageBox.Show("Xin hãy nhập đầy đủ");
+            }
+        }
+
+        private void dsCaThue_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void tbSuaCaThue_Click(object sender, EventArgs e)
+        {
+            if (dsCaThue.SelectedRows.Count > 0)
+            {
+                DataGridViewRow row = dsCaThue.SelectedRows[0];
+                int maCaThue = Convert.ToInt32(row.Cells[0].Value.ToString());
+                CATHUE cathue = new CATHUE();
+                string maCaText = comboTree1.SelectedValue.ToString();
+                int startIndex = maCaText.IndexOf("=") + 1;
+                int endIndex = maCaText.IndexOf(",", startIndex);
+                int maCa = Convert.ToInt32(maCaText.Substring(startIndex, endIndex - startIndex).Trim());
+                cathue.Gia = Convert.ToInt32(txtGia.Text);
+                cathue.MaSan = Convert.ToInt32(cbTenSan.Text);
+                cathue.MaCa = maCa;
+                
+
+                if (bus_CATHUE.editCaThue(maCaThue, cathue))
+                {
+                    dsCaThue.DataSource = bus_CATHUE.getCaThue();
+                    MessageBox.Show("Sửa thành công");
+                }
+                else
+                {
+                    MessageBox.Show("Sửa không thành công");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn sân muốn sửa");
+            }
+        }
+
+        private void btXoaCaThue_Click(object sender, EventArgs e)
+        {
+            if (dsCaThue.SelectedRows.Count > 0)
+            {
+                DataGridViewRow row = dsCaThue.SelectedRows[0];
+                int maCaThue = Convert.ToInt32(row.Cells[0].Value.ToString());
+                if (bus_CATHUE.removeCaThue(maCaThue))
+                {
+                    dsCaThue.DataSource = bus_CATHUE.getCaThue();
+                    MessageBox.Show("Xóa thành công");
+                }
+                else
+                {
+                    MessageBox.Show("Xóa không thành công");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Xóa không thành công");
             }
         }
     }

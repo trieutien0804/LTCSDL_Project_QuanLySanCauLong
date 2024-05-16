@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
 using System.Data.SqlTypes;
 using System.Globalization;
 using System.Linq;
@@ -55,6 +57,7 @@ namespace BTL_QLSCV.DAL
         {
             var san = new SAN()
             {
+                MaSan = 1,
                 TenSan = tenSan
             };
             db.SAN.Add(san);

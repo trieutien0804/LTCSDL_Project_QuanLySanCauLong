@@ -99,8 +99,10 @@
             this.txtMaCa.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaCa.Location = new System.Drawing.Point(140, 40);
             this.txtMaCa.Name = "txtMaCa";
+            this.txtMaCa.ReadOnly = true;
             this.txtMaCa.Size = new System.Drawing.Size(187, 25);
             this.txtMaCa.TabIndex = 5;
+            this.txtMaCa.Text = "Auto";
             // 
             // label2
             // 
@@ -209,7 +211,7 @@
             this.Controls.Add(this.dsCaTheoSan);
             this.Controls.Add(this.gbCaTheoSan);
             this.Controls.Add(this.dgvdsCa);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "fCNCa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cập nhật ca";

@@ -82,5 +82,19 @@ namespace BTL_QLSCV
                 txtDiaChi.Text = row.Cells[3].Value.ToString();
             
         }
+
+        private void btHuy_Click(object sender, EventArgs e)
+        {
+            txtMaPhieu.Text = "";
+            txtNVdatsan.Text = "";
+            txtNgayNhan.Text = "";
+            txtCa.Text = "";
+            txtTienCoc.Text = "";
+            txtNote.Text = "";
+            txtMaKH.Text = "";
+            txtHoTen.Text = "";
+            txtSDT.Text = "";
+            txtDiaChi.Text = "";
+        }
     }
 }

@@ -136,6 +136,7 @@
             this.btHuy.TabIndex = 10;
             this.btHuy.Text = "Huỷ";
             this.btHuy.UseVisualStyleBackColor = true;
+            this.btHuy.Click += new System.EventHandler(this.btHuy_Click);
             // 
             // btHuySan
             // 
@@ -266,7 +267,7 @@
             this.groupBox1.Size = new System.Drawing.Size(517, 193);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông tin khách hàng";
+            this.groupBox1.Text = "Thông tin đặt sân";
             // 
             // txtNote
             // 
@@ -652,6 +653,7 @@
             this.txtDiaChi.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiaChi.Location = new System.Drawing.Point(269, 93);
             this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.ReadOnly = true;
             this.txtDiaChi.Size = new System.Drawing.Size(213, 25);
             this.txtDiaChi.TabIndex = 11;
             // 
@@ -671,6 +673,7 @@
             this.txtSDT.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSDT.Location = new System.Drawing.Point(35, 93);
             this.txtSDT.Name = "txtSDT";
+            this.txtSDT.ReadOnly = true;
             this.txtSDT.Size = new System.Drawing.Size(213, 25);
             this.txtSDT.TabIndex = 9;
             // 
@@ -690,6 +693,7 @@
             this.txtHoTen.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHoTen.Location = new System.Drawing.Point(269, 43);
             this.txtHoTen.Name = "txtHoTen";
+            this.txtHoTen.ReadOnly = true;
             this.txtHoTen.Size = new System.Drawing.Size(213, 25);
             this.txtHoTen.TabIndex = 7;
             // 
@@ -709,6 +713,7 @@
             this.txtMaKH.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaKH.Location = new System.Drawing.Point(35, 43);
             this.txtMaKH.Name = "txtMaKH";
+            this.txtMaKH.ReadOnly = true;
             this.txtMaKH.Size = new System.Drawing.Size(213, 25);
             this.txtMaKH.TabIndex = 5;
             // 

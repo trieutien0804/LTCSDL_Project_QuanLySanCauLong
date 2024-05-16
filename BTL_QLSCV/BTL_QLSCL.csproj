@@ -142,6 +142,12 @@
     <Compile Include="fTaiKhoan.Designer.cs">
       <DependentUpon>fTaiKhoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="fQLNguoDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fQLNguoDung.Designer.cs">
+      <DependentUpon>fQLNguoDung.cs</DependentUpon>
+    </Compile>
     <Compile Include="fThongKe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -218,6 +224,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fTaiKhoan.resx">
       <DependentUpon>fTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fQLNguoDung.resx">
+      <DependentUpon>fQLNguoDung.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fThongKe.resx">
       <DependentUpon>fThongKe.cs</DependentUpon>
