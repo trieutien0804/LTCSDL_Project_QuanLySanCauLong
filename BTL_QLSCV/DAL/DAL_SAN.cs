@@ -35,13 +35,6 @@ namespace BTL_QLSCV.DAL
         {
             var dsSAN = db.SANs.Select(s => new { s.MaSan, s.TenSan }).ToList();
 
-            //var dsSanDat = from s in db.SANs.ToList()
-            //               join c in db.CATHUEs.ToList() on s.MaSan equals c.MaSan
-            //               join ca in db.CAs.ToList() on c.MaCa equals ca.MaCa
-            //               join ttc in db.TINHTRANGSANs.ToList() on c.MaCaThue equals ttc.MaCaThue
-            //               where c.MaCa == maCA && ca.MaCa == maCA && ttc.Ngay == ngayDat
-            //               select s.MaSan;
-
             var results = from c in db.CAs.ToList()
                            join ct in db.CATHUEs.ToList() on c.MaCa equals ct.MaCa
                            join s in db.SANs.ToList() on ct.MaSan equals s.MaSan
@@ -49,7 +42,7 @@ namespace BTL_QLSCV.DAL
                            where ct.MaCa == maCA && ( ttc.TinhTrang != "DT" || ttc.TinhTrang != "HD") && ttc.Ngay == ngayDat
                            select (s.MaSan);
             var dsSanChuaDat = dsSAN.Where(s => !results.Contains(s.MaSan)).ToList();
-            //List<int> dsSanChuaDat = results.ToList();
+
             return dsSanChuaDat;
 
         }

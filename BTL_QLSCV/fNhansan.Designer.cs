@@ -135,6 +135,7 @@
             this.txtGKT.Location = new System.Drawing.Point(404, 217);
             this.txtGKT.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtGKT.Name = "txtGKT";
+            this.txtGKT.ReadOnly = true;
             this.txtGKT.Size = new System.Drawing.Size(318, 33);
             this.txtGKT.TabIndex = 15;
             // 
@@ -156,6 +157,7 @@
             this.txtGBD.Location = new System.Drawing.Point(52, 217);
             this.txtGBD.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtGBD.Name = "txtGBD";
+            this.txtGBD.ReadOnly = true;
             this.txtGBD.Size = new System.Drawing.Size(322, 33);
             this.txtGBD.TabIndex = 13;
             // 
@@ -177,6 +179,7 @@
             this.txtTienCoc.Location = new System.Drawing.Point(404, 143);
             this.txtTienCoc.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTienCoc.Name = "txtTienCoc";
+            this.txtTienCoc.ReadOnly = true;
             this.txtTienCoc.Size = new System.Drawing.Size(318, 33);
             this.txtTienCoc.TabIndex = 11;
             // 
@@ -198,6 +201,7 @@
             this.txtSDT.Location = new System.Drawing.Point(52, 143);
             this.txtSDT.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSDT.Name = "txtSDT";
+            this.txtSDT.ReadOnly = true;
             this.txtSDT.Size = new System.Drawing.Size(322, 33);
             this.txtSDT.TabIndex = 9;
             // 
@@ -219,6 +223,7 @@
             this.txtHoTen.Location = new System.Drawing.Point(404, 66);
             this.txtHoTen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtHoTen.Name = "txtHoTen";
+            this.txtHoTen.ReadOnly = true;
             this.txtHoTen.Size = new System.Drawing.Size(318, 33);
             this.txtHoTen.TabIndex = 7;
             // 
@@ -240,6 +245,7 @@
             this.txtMaPhieu.Location = new System.Drawing.Point(52, 66);
             this.txtMaPhieu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMaPhieu.Name = "txtMaPhieu";
+            this.txtMaPhieu.ReadOnly = true;
             this.txtMaPhieu.Size = new System.Drawing.Size(322, 33);
             this.txtMaPhieu.TabIndex = 5;
             // 
@@ -255,6 +261,7 @@
             // 
             // dsChuaNhan
             // 
+            this.dsChuaNhan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dsChuaNhan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dsChuaNhan.Location = new System.Drawing.Point(843, 85);
             this.dsChuaNhan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -296,6 +303,7 @@
             this.btNhanSan.TabIndex = 5;
             this.btNhanSan.Text = "Nhận sân";
             this.btNhanSan.UseVisualStyleBackColor = true;
+            this.btNhanSan.Click += new System.EventHandler(this.btNhanSan_Click);
             // 
             // label3
             // 

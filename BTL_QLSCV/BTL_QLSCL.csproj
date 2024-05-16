@@ -63,6 +63,7 @@
     <Compile Include="BUS\BUS_KHACHHANG.cs" />
     <Compile Include="BUS\BUS_NGUOIDUNG.cs" />
     <Compile Include="BUS\BUS_SAN.cs" />
+    <Compile Include="BUS\BUS_SANDADAT.cs" />
     <Compile Include="BUS\BUS_TINHTRANGSAN.cs" />
     <Compile Include="CA.cs">
       <DependentUpon>QLSCL.tt</DependentUpon>
@@ -83,6 +84,7 @@
     <Compile Include="DAL\DAL_KHACHHANG.cs" />
     <Compile Include="DAL\DAL_NGUOIDUNG.cs" />
     <Compile Include="DAL\DAL_SAN.cs" />
+    <Compile Include="DAL\DAL_SANDADAT.cs" />
     <Compile Include="DAL\DAL_TINHTRANGSAN.cs" />
     <Compile Include="fAdmin.cs">
       <SubType>Form</SubType>

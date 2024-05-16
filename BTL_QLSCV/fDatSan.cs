@@ -72,9 +72,7 @@ namespace BTL_QLSCV
                 string ngayLap = DateTime.Now.ToString("dd-MM-yyyy");
                 string ngayDat = txtNgayNhan.Text;
                 int maPhieu = Convert.ToInt32(txtMaPhieu.Text);
-                //khong duọc test
-                int maPhieuDatSan = bus_PHIEUDATSAN.addPHIEUDATSAN(maPhieu, ngayLap, ngayDat, Convert.ToInt32(txtMaKH.Text));
-                if (maPhieuDatSan != -1)
+                if (bus_PHIEUDATSAN.addPHIEUDATSAN(maPhieu, ngayLap, ngayDat, Convert.ToInt32(txtMaKH.Text)))
                 {
                     //lay ma san
                     DataGridViewRow row = dsSanDat.SelectedRows[0];
@@ -83,16 +81,29 @@ namespace BTL_QLSCV
 
                     //lay ma ca thue 
                     int maCaThue = bus_CATHUE.getMaCaThueByCaVaSan(maCa, maSan);
-                    bus_CHITIETDATSAN.addCHITIETDATSAN(maPhieuDatSan, maCaThue, Convert.ToInt32(txtTienCoc.Text));
-                    txtMaPhieu.Text = bus_PHIEUDATSAN.nextMaPHIEUDATSAN().ToString();
+                    bus_CHITIETDATSAN.addCHITIETDATSAN(Convert.ToInt32(txtMaPhieu.Text), maCaThue, Convert.ToInt32(txtTienCoc.Text));
+                    
 
                     //add tinh trang san
 
                     if(bus_TINHTRANGSAN.addTINHTRANGSAN(ngayDat, "DT", maCaThue))
                     {
                         MessageBox.Show("Đặt sân thành công");
+                        txtMaPhieu.Text = bus_PHIEUDATSAN.nextMaPHIEUDATSAN().ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Đặt sân không thành công");
                     }
                 }
+                else
+                {
+                    MessageBox.Show("Đặt sân không thành công");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin đặt sân");
             }
         }
 

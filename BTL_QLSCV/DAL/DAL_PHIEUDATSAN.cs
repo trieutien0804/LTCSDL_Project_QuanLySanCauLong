@@ -14,32 +14,26 @@ namespace BTL_QLSCV.DAL
         {
             db = new QLSCLEntities2();
         }
-        public int addPHIEUDATSAN(int maPhieu, string ngayLap, string ngayDat, int maKH)
+        public bool addPHIEUDATSAN(int maPhieu, string ngayLap, string ngayDat, int maKH)
         {
-            var phieudatsan = new PHIEUDATSAN()
+            try
             {
-                MaPhieu = maPhieu,
-                NgayLap = ngayLap,
-                NgayDat = ngayDat,
-                MaKH = maKH
-            };
-            db.PHIEUDATSANs.Add(phieudatsan);
-            db.SaveChanges();
-            return maPhieu;
-        }
-
-        public dynamic getPHIEUDATSAN() 
-        {
-
-            var dsPHIEUDATSAN = db.PHIEUDATSANs.Select(s => new {
-                s.MaPhieu,
-                s.MaKH,
-                s.NgayLap,
-                s.NgayDat
-            }).ToList();
-
-            return dsPHIEUDATSAN;
-        }
+                var phieudatsan = new PHIEUDATSAN()
+                {
+                    MaPhieu = maPhieu,
+                    NgayLap = ngayLap,
+                    NgayDat = ngayDat,
+                    MaKH = maKH
+                };
+                db.PHIEUDATSANs.Add(phieudatsan);
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }   
 
         public int nextMaPHIEUDATSAN()
         {
